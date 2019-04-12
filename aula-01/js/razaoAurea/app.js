@@ -12,10 +12,12 @@ const razaoAurea = (x, y, k) => {
         t = c;
         c = c + a;
         a = t;
-        i = i;
+        i++;
     }
 
-    return c/a;
+    let response = c/a;
+
+    return response;
 
 }
 
