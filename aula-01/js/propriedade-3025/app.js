@@ -2,14 +2,8 @@ var prompt = require('prompt');
 
 prompt.start();
 
-const prop3025 = number => {
-    let i = parseInt(number / 100);
-    let j = parseInt(number % 100);
-
-    let x = Math.pow((i + j), 2);
-
-    return (x == number);
-}
+// VEJA COMO PREJUDICAR A LEGIBILIDADE (mantendo a funcionalidade)
+const prop3025 = number => (parseInt(number / 100) + parseInt(number % 100))**2 == number;
 
 const askNumber = () => { 
 
