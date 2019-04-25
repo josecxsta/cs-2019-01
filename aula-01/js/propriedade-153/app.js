@@ -3,6 +3,8 @@ var prompt = require('prompt');
 prompt.start();
 
 const prop153 = number => {
+    // FIXME verificar a validade dos argumentos
+    
     let c = parseInt(number / 100);
     let du = parseInt(number % 100);
     let d = parseInt(du / 10);
