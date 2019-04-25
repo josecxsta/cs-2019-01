@@ -5,9 +5,6 @@ import java.util.Scanner;
 public class Number {
     private int number;
 
-    public void Number() {
-    }
-
     public void scan() {
 
         Scanner scan = new Scanner(System.in);
