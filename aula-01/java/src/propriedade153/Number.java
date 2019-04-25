@@ -5,23 +5,21 @@ import java.util.Scanner;
 public class Number {
     private int number;
 
-    public void Number(){
-
+    public void Number() {
     }
 
-    public void scan(){
+    public void scan() {
 
         Scanner scan = new Scanner(System.in);
         this.number = scan.nextInt();
 
-        if(this.number < 0 || this.number > 9999){
+        if(this.number < 0 || this.number > 9999) {
             this.scan();
         }
 
     }
 
     public boolean prop153() {
-
 
         int c = (number / 100);
         int du = (number % 100);
@@ -37,4 +35,5 @@ public class Number {
         return (x == number);
 
     }
+    
 }
