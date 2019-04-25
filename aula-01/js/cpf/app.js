@@ -1,4 +1,4 @@
-var prompt = require('prompt');
+const prompt = require('prompt');
 
 prompt.start();
 
