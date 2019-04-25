@@ -1,18 +1,28 @@
-var prompt = require('prompt');
+const prompt = require('prompt');
 
 prompt.start();
 
-const cpf = d => {
-  
-  let j = parseInt(d[0]) + (2 * parseInt(d[1])) + (3 * parseInt(d[2])) + (4 * parseInt(d[3])) + (5 * parseInt(d[4])) + (6 * parseInt(d[5])) + (7 * parseInt(d[6])) + (8 * parseInt(d[7])) + (9 * parseInt(d[8]));
+/**
+ * Esta é a função relevante. Demais elementos são, salvo melhor juízo,
+ * alheios ao que foi requisitado.
+ *
+ * @param {string} d Sequência de caracteres correspondente a um CPF.
+ *
+ * @returns {boolean} O valor lógico verdadeiro se...
+ *
+ * @throws {TypeError} Se não é fornecido argumento ou null ou não é string.
+ * @throws {RangeError} Se há caractere que não correspondente a um dígito.
+ */
+function cpf(d) {
 
-  let k = parseInt(d[1]) + (2 * parseInt(d[2])) + (3 * parseInt(d[3])) + (4 * parseInt(d[4])) + (5 * parseInt(d[5])) + (6 * parseInt(d[6])) + (7 * parseInt(d[7])) + (8 * parseInt(d[8])) + (9 * parseInt(d[9]));
+  // TODO remover chamadas redundantes para parseInt (apenas 1 vez por digito)
+  const j = parseInt(d[0]) + (2 * parseInt(d[1])) + (3 * parseInt(d[2])) + (4 * parseInt(d[3])) + (5 * parseInt(d[4])) + (6 * parseInt(d[5])) + (7 * parseInt(d[6])) + (8 * parseInt(d[7])) + (9 * parseInt(d[8]));
+  const k = parseInt(d[1]) + (2 * parseInt(d[2])) + (3 * parseInt(d[3])) + (4 * parseInt(d[4])) + (5 * parseInt(d[5])) + (6 * parseInt(d[6])) + (7 * parseInt(d[7])) + (8 * parseInt(d[8])) + (9 * parseInt(d[9]));
   
-  let dj = ((j % 11) % 10);
-  let dk = ((k % 11) % 10);
+  const dj = ((j % 11) % 10);
+  const dk = ((k % 11) % 10);
 
   return (dj == d[9] && dk == d[10]);
-  
 }
 
 
