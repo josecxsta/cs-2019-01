@@ -22,7 +22,7 @@ public class Number {
     public boolean prop153(int number) {
 
         int c = (number / 100);
-        int du = (this.number % 100);
+        int du = (number % 100);
         int d = (du / 10);
         int u = (du % 10);
 
@@ -32,7 +32,7 @@ public class Number {
 
         int x = c3 + d3 + u3;
 
-        return (x == this.number);
+        return (x == number);
 
     }
     
