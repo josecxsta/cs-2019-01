@@ -14,7 +14,6 @@ const prop3025 = number => {
 const askNumber = () => { 
 
     prompt.get(['number'], (err, result) => {
-//        console.log('Número inserido: ' + result.number)
 
         let number = result.number;
         
@@ -23,15 +22,7 @@ const askNumber = () => {
             let isSatistified = prop3025(number);
             console.log(isSatistified);
 
-//            if(isSatistified) {
-//                console.log('Numero satisfaz a propriedade');
-//            } else {
-//                console.log("Numero nao satisfaz a propriedade");
-//            }
-
-
         } else {
-//            console.log('Insira um número entre 0 e 9999');
             askNumber();
         }
 

@@ -28,7 +28,6 @@ const askNumber = () => {
             let isSatistified = prop153(number);
             console.log(isSatistified);
 
-
         } else {
             askNumber();
         }
