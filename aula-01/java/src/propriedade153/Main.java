@@ -2,6 +2,9 @@ package propriedade153;
 
 import java.util.Scanner;
 
+/**
+ * Código para interação com o usuário.
+ */
 public class Main {
 
     public static int scan() {
@@ -17,14 +20,7 @@ public class Main {
     }
 
     public static void main (String[] args) {
-
-        Number n = new Number();
-
-        int numero = scan();
-        boolean satisfied = n.prop153(numero);
-
-        System.out.println(satisfied);
-
+        System.out.println(Number.prop153(scan()));
     }
 
 }
