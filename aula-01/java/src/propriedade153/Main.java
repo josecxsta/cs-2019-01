@@ -7,7 +7,7 @@ public class Main {
         Number n = new Number();
 
         n.scan();
-        boolean satisfied = n.prop153();
+        boolean satisfied = n.prop153(n.number);
 
         System.out.println(satisfied);
 
