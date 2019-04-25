@@ -8,7 +8,7 @@ const prop153 = number => {
     let d = parseInt(du / 10);
     let u = parseInt(du % 10);
 
-    let c3 = Math.pow(c, 3);
+    let c3 = c ** 3;
     let d3 = Math.pow(d, 3);
     let u3 = Math.pow(u, 3);
 
