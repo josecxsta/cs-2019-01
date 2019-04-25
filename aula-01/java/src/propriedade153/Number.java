@@ -1,20 +1,6 @@
 package propriedade153;
 
-import java.util.Scanner;
-
 public class Number {
-    private int number;
-
-    public void scan() {
-
-        Scanner scan = new Scanner(System.in);
-        this.number = scan.nextInt();
-
-        if(this.number < 0 || this.number > 9999) {
-            this.scan();
-        }
-
-    }
 
     public boolean prop153(int number) {
 
@@ -30,7 +16,5 @@ public class Number {
         int x = c3 + d3 + u3;
 
         return (x == number);
-
     }
-    
 }
