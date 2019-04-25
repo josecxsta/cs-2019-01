@@ -2,7 +2,7 @@
 
 const crivoEratostenes = (a, n) => {
   let i = 2; 
-  let limite = sqrt(n); 
+  let limite = Math.sqrt(n);
   let multiplo;
   
   while(i <= limite){
