@@ -2,7 +2,7 @@ package propriedade153;
 
 public class Number {
 
-    public boolean prop153(int number) {
+    public static boolean prop153(int number) {
 
         int c = (number / 100);
         int du = (number % 100);
