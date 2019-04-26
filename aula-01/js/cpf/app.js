@@ -30,6 +30,18 @@ function cpf(d) {
   const dk = ((k % 11) % 10);
 
   return (dj == d[9] && dk == d[10]);
+
+}
+
+/**
+ * Converte uma string em um array de numeros
+ *
+ * @param {string} n
+ *
+ * @returns {array} colecao dos numeros que estavam em string...
+ *
+ */
+function convertStringToArray(n) {
   
 }
 
