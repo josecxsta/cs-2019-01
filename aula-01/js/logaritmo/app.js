@@ -2,7 +2,7 @@ var prompt = require('prompt');
 
 prompt.start();
 
-const logaritmo = (n, k) => {
+function logaritmo(n, k) {
 
     let i = 2;
     let e = 1 + n;

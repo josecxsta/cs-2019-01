@@ -2,10 +2,11 @@ var prompt = require('prompt');
 
 prompt.start();
 
-const mdc = (x, y) => {
+function mdc(x, y) {
 
   let m;
-  while(y != 0){
+
+  while(y != 0) {
     m = x % y;
     x = y;
     y = m;
