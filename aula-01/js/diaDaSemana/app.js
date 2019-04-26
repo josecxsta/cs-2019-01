@@ -15,8 +15,7 @@ const diaDaSemana = (d, m, y) => {
         y = y - 1; 
     }
 
-    // FIXME a divisão esperada é inteira, ao contrário daquelas abaixo
-    let s = (d + (2*m) + (3*(m+1)/5) + y + (y/4) - (y/100) + (y/400));
+    let s = parseInt(d + (2*m) + (3*(m+1)/5) + y + (y/4) - (y/100) + (y/400));
 
     return Math.floor(s % 7);
 }
