@@ -1,8 +1,8 @@
 /**
- * Funcao para calcular o Crivo de Eratostenes dado um array e um limite.
+ * Funcao para calcular o Crivo de Eratostenes dado uma começão de numeros e um limite.
  *
- * @param a
- * @param n
+ * @param a colecao de numeros
+ * @param n limite
  */
 function crivoEratostenes(a, n) {
   let i = 2; 
