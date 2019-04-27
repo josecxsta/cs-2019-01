@@ -19,7 +19,6 @@ function maiorDivisorComum2(a, b) {
         throw new RangeError(); 
     }
     
-    
     while(a != b) {
         
         if(a > b) {
