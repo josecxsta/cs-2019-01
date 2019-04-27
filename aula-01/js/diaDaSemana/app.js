@@ -8,7 +8,7 @@ const monthValidate = month => (month >= 1 && month <= 12);
 
 const yearValidate = year => (year >= 12 && year <= 1753);
 
-const diaDaSemana = (d, m, y) => {
+function diaDaSemana(d, m, y) {
 
     if( m == 1 || m == 2 ) {
         m = m + 12; 
