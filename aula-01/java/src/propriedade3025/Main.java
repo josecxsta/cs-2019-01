@@ -13,6 +13,8 @@ public class Main {
             scan();
         }
 
+        scan.close();
+
         return number;
     }
 

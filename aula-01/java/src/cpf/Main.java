@@ -13,11 +13,13 @@ public class Main {
         String cpf = scan.nextLine();
 
         int inArray[] = new int[10];
-
+        
         for (int i = 0; i < cpf.length(); i++){
             inArray[i] = (int) cpf.charAt(i);        
         }
-
+        
+        scan.close();
+        
         return inArray;
 
     }
