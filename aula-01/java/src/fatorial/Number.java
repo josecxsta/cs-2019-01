@@ -2,10 +2,10 @@ package fatorial;
 
 public class Number {
     
-    public static boolean fatorial(int n) {
+    public static int fatorial(int n) {
         
         if(1 > n){
-            // TODO: throw error
+            throw new IllegalArgumentException();
         }
         
         int i = 2; 

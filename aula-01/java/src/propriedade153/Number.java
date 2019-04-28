@@ -1,4 +1,3 @@
-// FIXME rename package to com.github.josecxsta.ufg.cs.aula01 (melhor)
 package propriedade153;
 
 public class Number {
