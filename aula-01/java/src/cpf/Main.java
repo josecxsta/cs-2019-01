@@ -12,10 +12,10 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         String cpf = scan.nextLine();
 
-        int inArray[] = new int[10];
+        int inArray[] = new int[11];
         
         for (int i = 0; i < cpf.length(); i++){
-            inArray[i] = (int) cpf.charAt(i);        
+            inArray[i] = Character.getNumericValue(cpf.charAt(i));   
         }
         
         scan.close();
@@ -23,8 +23,6 @@ public class Main {
         return inArray;
 
     }
-
-
 
     public static void main (String[] args) {
 

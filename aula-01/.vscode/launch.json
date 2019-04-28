@@ -4,6 +4,20 @@
       "type": "java",
       "name": "CodeLens (Launch) - Main",
       "request": "launch",
+      "mainClass": "propriedade3025.Main",
+      "projectName": "propriedade153"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Main",
+      "request": "launch",
+      "mainClass": "propriedade153.Main",
+      "projectName": "propriedade153"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Main",
+      "request": "launch",
       "mainClass": "cpf.Main",
       "projectName": "propriedade153"
     }
