@@ -27,3 +27,6 @@ hs_err_pid*
 
 node_modules
 bin
+
+.vscode
+.idea
