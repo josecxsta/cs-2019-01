@@ -1,5 +1,7 @@
 package raizQuadrada;
 
+import com.github.josecxsta.ufg.cs.aula01.Algoritmos;
+
 import java.util.Scanner;
 
 /**
@@ -22,7 +24,7 @@ public class Main {
     }
 
     public static void main (String[] args) {
-        System.out.println(Number.raizQuadrada(scan(), scan()));
+        System.out.println(Algoritmos.raizQuadrada(scan(), scan()));
     }
 
 }

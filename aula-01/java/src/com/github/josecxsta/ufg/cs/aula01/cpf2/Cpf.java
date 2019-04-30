@@ -1,4 +1,4 @@
-package cpf2;
+package com.github.josecxsta.ufg.cs.aula01.cpf2;
 
 public class Cpf {
     

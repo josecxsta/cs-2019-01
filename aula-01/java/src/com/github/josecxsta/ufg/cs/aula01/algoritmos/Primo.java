@@ -1,6 +1,6 @@
-package numeroPrimo;
+package com.github.josecxsta.ufg.cs.aula01.algoritmos;
 
-public class Number {
+public class Primo {
     
     public static boolean numeroPrimo(int n) {
         

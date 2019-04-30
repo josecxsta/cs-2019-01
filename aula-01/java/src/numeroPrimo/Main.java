@@ -1,5 +1,7 @@
 package numeroPrimo;
 
+import com.github.josecxsta.ufg.cs.aula01.algoritmos.Primo;
+
 import java.util.Scanner;
 
 /**
@@ -22,7 +24,7 @@ public class Main {
     }
 
     public static void main (String[] args) {
-        System.out.println(Number.numeroPrimo(scan()));
+        System.out.println(Primo.numeroPrimo(scan()));
     }
 
 }
