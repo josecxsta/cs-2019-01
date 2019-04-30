@@ -1,5 +1,5 @@
 /**
- * Valida CPF.
+ * Verifica se o CPF fornecido é válido.
  *
  * @param {string} d Sequência de caracteres correspondente a um CPF.
  *
@@ -10,7 +10,7 @@
  */
 function cpf(d) {
 
-    if(d == null || typeof(d) != 'string'){
+    if(d == null || typeof(d) != "string"){
         throw new TypeError();
     }
 
@@ -27,23 +27,26 @@ function cpf(d) {
     const dk = ((k % 11) % 10);
 
     return (dj == d[9] && dk == d[10]);
-
 }
 
 /**
- * Converte uma string em um array de numeros
+ * Converte cada caracteres de um sequência produzindo um vetor de inteiros
+ * correspondente.
  *
- * @param {string} n
+ * @param {string} sequencia A sequência de caracteres para a qual um vetor de
+ * inteiros será criado.
  *
- * @returns {array} colecao dos numeros que estavam em string...
+ * @returns {array} Vetor de inteiros correspondente aos caracteres da
+ * sequência fornecida.
  *
  */
-function convertStringToArray(n) {
-    let arrayOfNumbers = [];
-    for(i in n){
-        arrayOfNumbers.push(parseInt(n[i]));
+function convertStringToArray(sequencia) {
+    let inteiros = [];
+    for (let caractere of sequencia) {
+        inteiros.push(parseInt(caractere));
     }
-    return arrayOfNumbers;
+
+    return inteiros;
 }
 
 module.exports = cpf;
