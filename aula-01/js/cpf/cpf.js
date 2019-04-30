@@ -10,11 +10,11 @@
  */
 function cpf(d) {
 
-    if(d == null || typeof(d) != "string"){
+    if (d == null || typeof (d) != "string") {
         throw new TypeError("argumento deve ser uma string");
     }
 
-    if(d.length != 11){
+    if (d.length != 11) {
         throw new RangeError("argumento deve possuir 11 caracteres");
     }
 
