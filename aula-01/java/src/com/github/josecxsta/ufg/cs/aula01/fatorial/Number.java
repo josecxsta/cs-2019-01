@@ -1,4 +1,4 @@
-package fatorial;
+package com.github.josecxsta.ufg.cs.aula01.fatorial;
 
 public class Number {
     

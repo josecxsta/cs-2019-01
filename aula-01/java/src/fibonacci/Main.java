@@ -1,5 +1,7 @@
 package fibonacci;
 
+import com.github.josecxsta.ufg.cs.aula01.algoritmos.Fibonacci;
+
 import java.util.Scanner;
 
 /**
@@ -22,7 +24,7 @@ public class Main {
     }
 
     public static void main (String[] args) {
-        System.out.println(Number.fibonacci(scan()));
+        System.out.println(Fibonacci.fibonacci(scan()));
     }
 
 }

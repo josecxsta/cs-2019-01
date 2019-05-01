@@ -1,6 +1,6 @@
-package fibonacci;
+package com.github.josecxsta.ufg.cs.aula01.algoritmos;
 
-public class Number {
+public class Fibonacci {
     
     public static int fibonacci(int n) {
         

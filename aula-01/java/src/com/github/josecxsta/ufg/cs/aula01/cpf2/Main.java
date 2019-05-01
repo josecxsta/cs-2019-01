@@ -1,4 +1,4 @@
-package cpf;
+package com.github.josecxsta.ufg.cs.aula01.cpf2;
 
 import java.util.Scanner;
 
@@ -27,7 +27,6 @@ public class Main {
     public static void main (String[] args) {
 
         System.out.println(Cpf.validate(scan()));
-
     }
 
 }

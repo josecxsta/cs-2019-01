@@ -1,5 +1,7 @@
 package propriedade3025;
 
+import com.github.josecxsta.ufg.cs.aula01.Algoritmos;
+
 import java.util.Scanner;
 
 public class Main {
@@ -22,7 +24,7 @@ public class Main {
 
         Number n = new Number();
 
-        System.out.println(n.prop3025(scan()));
+        System.out.println(Algoritmos.prop3025(scan()));
 
     }
 

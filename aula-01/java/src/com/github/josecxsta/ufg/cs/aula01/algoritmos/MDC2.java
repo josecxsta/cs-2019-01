@@ -1,6 +1,6 @@
-package maiorDivisorComum2;
+package com.github.josecxsta.ufg.cs.aula01.algoritmos;
 
-public class Number {
+public class MDC2 {
     
     public static int maiorDivisorComum(int a, int b) {
         
