@@ -46,7 +46,7 @@ public class Algoritmos {
         int a = x;
         int i = 1;
         
-        while(i <= k){
+        while(i <= k) {
             final int t = c;
             c = c + a;
             a = t;
@@ -66,7 +66,7 @@ public class Algoritmos {
         int d = -1;
         int p = 0;
         
-        while(i <= n){
+        while(i <= n) {
             d = d + 2;
             s = -1 * s;
             p = p + (4 * s / d);
