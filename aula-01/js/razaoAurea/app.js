@@ -14,7 +14,6 @@ prompt.start();
  */
 function razaoAurea(x, y, k) {
 
-
     if(x < 0 || x > y || k <= 0) {
         throw new RangeError();
     }
