@@ -8,7 +8,7 @@
  */
 function fatorial(n){
 
-  if(n < 1){
+  if(n < 1) {
     throw new RangeError("Numero deve ser maior ou igual a 1");
   }
 
