@@ -11,7 +11,7 @@ prompt.start();
  * @returns {number} x maior divisor comum entre x e y.
  *
  * @throws {TypeError} Se um dos parametros nao for numero.
- * @throws {RangeError} Se b for maior que a ou b menor do que zero.
+ * @throws {RangeError} Se y for maior que x ou y menor do que zero.
 */
 function mdc(x, y) {
   

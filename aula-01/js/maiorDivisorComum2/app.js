@@ -7,7 +7,7 @@
 * @returns {number} a maior divisor comum entre a e b.
 *
 * @throws {TypeError} Se um dos parametros nao for numero.
-* @throws {RangeError} Se y for maior que x ou y menor do que zero.
+* @throws {RangeError} Se b for maior que a ou b menor do que zero.
 */
 function maiorDivisorComum2(a, b) {
     
@@ -16,7 +16,7 @@ function maiorDivisorComum2(a, b) {
     }
     
     if(b > a || b < 0){
-        throw new RangeError("b nao pode ser maior que a e deve ser maior ou igual a zero"); 
+        throw new RangeError("b nao pode ser maior que a e deve ser maior ou igual a zero."); 
     }
     
     while(a != b) {
