@@ -6,8 +6,9 @@ prompt.start();
  * Calcula o logaritmo natural de um numero.
  * @param {number} n .
  * @param {number} k.
+ * @returns {number} e.
  * 
- * @throws {RangeError}
+ * @throws {RangeError} Caso n seja menor que 1 ou k menor que 2.
  */
 function logaritmo(n, k) {
 
