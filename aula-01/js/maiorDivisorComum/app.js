@@ -3,12 +3,12 @@ var prompt = require('prompt');
 prompt.start();
 
 /**
-* Maior divisor comum entre dois numeros
+* Calcula maior divisor comum entre dois numeros.
 *
-* @param {number} x
-* @param {number} y
+* @param {number} x.
+* @param {number} y.
 *
-* @returns {number} 
+* @returns {number} x maior divisor comum entre x e y.
 *
 * @throws {TypeError} Se não é fornecido argumento ou null ou não é string.
 * @throws {RangeError} Se há caractere que não correspondente a um dígito.
