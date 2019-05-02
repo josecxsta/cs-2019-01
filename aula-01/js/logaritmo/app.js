@@ -2,7 +2,19 @@ var prompt = require('prompt');
 
 prompt.start();
 
+/**
+ * Calcula o logaritmo natural de um numero.
+ * @param {number} n .
+ * @param {number} k.
+ * @returns {number} e.
+ * 
+ * @throws {RangeError} Caso n seja menor que 1 ou k menor que 2.
+ */
 function logaritmo(n, k) {
+
+    if(n < 1 || k < 2) {
+        throw new RangeError();
+    }
 
     let i = 2;
     let e = 1 + n;

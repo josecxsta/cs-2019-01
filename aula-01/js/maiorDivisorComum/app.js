@@ -3,15 +3,15 @@ var prompt = require('prompt');
 prompt.start();
 
 /**
-* Maior divisor comum entre dois numeros
-*
-* @param {number} x
-* @param {number} y
-*
-* @returns {number} 
-*
-* @throws {TypeError} Se não é fornecido argumento ou null ou não é string.
-* @throws {RangeError} Se há caractere que não correspondente a um dígito.
+ * Calcula maior divisor comum entre dois numeros.
+ *
+ * @param {number} x.
+ * @param {number} y.
+ *
+ * @returns {number} x maior divisor comum entre x e y.
+ *
+ * @throws {TypeError} Se um dos parametros nao for numero.
+ * @throws {RangeError} Se y for maior que x ou y menor do que zero.
 */
 function mdc(x, y) {
   

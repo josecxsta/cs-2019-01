@@ -1,10 +1,16 @@
 /**
- * Funcao para calcular o Crivo de Eratostenes dado uma começão de numeros e um limite.
+ * Calcula o Crivo de Eratostenes dado uma coleção de numeros e um limite.
  *
- * @param a colecao de numeros
- * @param n limite
- */
+ * @param {number} a colecao de numeros
+ * @param {number} n limite
+ * @returns {boolean} a
+*/
 function crivoEratostenes(a, n) {
+
+  if(n < 2){
+    throw new RangeError("Parametro deve ser maior que 1")
+  }
+
   let i = 2; 
   const limite = Math.sqrt(n);
   
@@ -12,17 +18,21 @@ function crivoEratostenes(a, n) {
     
     if(a[i] == 0) {
       
-      let multiplo = i + i
-    
+      let multiplo = i + i;
+      
       while(multiplo <= n) {
         a[multiplo] = 1;
         multiplo++;
       }
-
+      
     }
-
+    
     i++;
-  }  
+    
+  } 
+  
+  return (a[n] == 1);
+  
 }
 
-crivoEratostenes([1, 2, 3, 0, 5], 6);
+crivoEratostenes([0, 0, 0, 0, 0], 4);
