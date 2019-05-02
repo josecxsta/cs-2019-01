@@ -2,7 +2,22 @@ var prompt = require('prompt');
 
 prompt.start();
 
-const razaoAurea = (x, y, k) => {
+/**
+ * Calcula a razao aurea
+ * 
+ * @param {number} x 
+ * @param {number} y 
+ * @param {number} k 
+ * @returns {number} razao aurea entre x, y e k.
+ * 
+ * @throws {RangeError}
+ */
+function razaoAurea(x, y, k) {
+
+
+    if(x < 0 || x > y || k <= 0) {
+        throw new RangeError();
+    }
 
     let c = y;
     let a = x;
