@@ -5,9 +5,9 @@ prompt.start();
 /**
  * Calcula a razao aurea
  * 
- * @param {number} x 
- * @param {number} y 
- * @param {number} k 
+ * @param {number} x numero inteiro.
+ * @param {number} y numero inteiro.
+ * @param {number} k soma do x e y.
  * @returns {number} razao aurea entre x, y e k.
  * 
  * @throws {RangeError}
