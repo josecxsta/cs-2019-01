@@ -1,14 +1,19 @@
 /**
  * Calcula se numero eh primo.
- * @param {number} n numero.
- * @returns {boolean} se numero eh primo ou nao. 
+ * @param {number} n numero
+ * @returns {boolean} se numero eh primo ou nao 
  * 
- * @throws {RangeError} se numero for menor ou igual a 1.
+ * @throws {RangeError} se aragumento for numero menor ou igual a 1
+ * @throws {TypeError} se argumento nao for um numero
 */
 function primo(n) {
+
+    if(typeof(n) != 'number') {
+        throw new TypeError("Argumento deve ser um numero.")
+    }
     
     if(n <= 1) {
-        throw new RangeError("Numero deve ser maior que 1");
+        throw new RangeError("Argumento deve ser um numero maior que 1.");
     }
     
     let i = 2; 
