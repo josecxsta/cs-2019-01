@@ -13,7 +13,7 @@ function cpf(sequencia) {
     if (sequencia == null || typeof (sequencia) != "string") {
         throw new TypeError("argumento deve ser uma string");
     }
-    
+
     if (sequencia.length != 11) {
         throw new RangeError("argumento deve possuir 11 caracteres");
     }

@@ -4,6 +4,14 @@ const monthValidate = month => (month >= 1 && month <= 12);
 
 const yearValidate = year => (year >= 12 && year <= 1753);
 
+/**
+ * Calcula o dia da semana de uma determinada data
+ * @param {number} d dia
+ * @param {number} m mês
+ * @param {number} y ano
+ * @returns {number} numero referente ao dia da semana
+ * @throws {RangeError} se data for invalida
+ */
 function diaDaSemana(d, m, y) {
 
     if(!dayValidate(d) || !monthValidate(m) || !yearValidate(y)) {
