@@ -1,14 +1,18 @@
 /**
- * Calcula o valor PI de um numero.
- * @param {number} n numero.
- * @returns {number} valor de pi. 
- * 
+ * Produz uma aproximação do valor de PI baseado no número de iterações fornecido, onde quanto maior o número de iterações, maior a precisão de PI.
+ * @param {number} n numero de iteracoes.
+ * @returns {number} aproximacao do valor de PI.
+ * @throws {TypeError} se argumento nao for um numero.
  * @throws {RangeError} se numero for menor que 1.
  */
 function valorPI(n) {
 
+    if (typeof(n) != "number") {
+        throw new TypeError("argumento deve ser um numero");
+    }
+
     if (n < 1) {
-        throw new RangeError("Numero deve ser maior ou igual a 1");
+        throw new RangeError("argumento deve ser numero maior ou igual a 1");
     }
 
     let i = 1;

@@ -4,11 +4,17 @@
  * @param {number} a colecao de numeros
  * @param {number} n limite
  * @returns {boolean} a
+ * @throws {TypeError} se argumento nao for um numero.
+ * @throws {RangeError} se parametro nao for numero maior que 1.
 */
 function crivoEratostenes(a, n) {
+
+    if (typeof(n) != "number") {
+        throw new TypeError("argumento deve ser um numero");
+    }
     
     if (n < 2) {
-        throw new RangeError("Parametro deve ser maior que 1");
+        throw new RangeError("argumento deve ser um numero maior que 1");
     }
     
     let i = 2; 
