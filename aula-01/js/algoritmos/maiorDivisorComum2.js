@@ -11,17 +11,17 @@
 */
 function maiorDivisorComum2(a, b) {
     
-    if(typeof(a) != "number" || typeof(b) != "number"){
+    if (typeof(a) != "number" || typeof(b) != "number") {
         throw new TypeError("Os parametros devem ser numerais");
     }
     
-    if(b > a || b < 0){
+    if (b > a || b < 0) {
         throw new RangeError("b nao pode ser maior que a e deve ser maior ou igual a zero."); 
     }
     
-    while(a != b) {
+    while (a != b) {
         
-        if(a > b) {
+        if (a > b) {
             a = a - b; 
         } else {
             b = b - a;

@@ -8,11 +8,11 @@
 */
 function primo(n) {
 
-    if(typeof(n) != 'number') {
-        throw new TypeError("Argumento deve ser um numero.")
+    if (typeof(n) != "number") {
+        throw new TypeError("Argumento deve ser um numero.");
     }
     
-    if(n <= 1) {
+    if (n <= 1) {
         throw new RangeError("Argumento deve ser um numero maior que 1.");
     }
     
@@ -20,7 +20,7 @@ function primo(n) {
     
     while (i < n) {
         
-        if(n % i == 0) {
+        if (n % i == 0) {
             return false; 
         }
         

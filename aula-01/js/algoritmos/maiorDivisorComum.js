@@ -11,17 +11,17 @@
 */
 function mdc(x, y) {
     
-    if(typeof(x) != "number" || typeof(y) != "number"){
+    if (typeof(x) != "number" || typeof(y) != "number") {
         throw new TypeError();
     }
     
-    if(y > x || y < 0){
+    if (y > x || y < 0) {
         throw new RangeError(); 
     }
     
     let m;
     
-    while(y != 0) {
+    while (y != 0) {
         m = x % y;
         x = y;
         y = m;

@@ -7,7 +7,7 @@
  */
 function propriedade153(number) {
 
-    if(number < 100 || number > 999 || !Number.isInteger(number)) {
+    if (number < 100 || number > 999 || !Number.isInteger(number)) {
         throw new RangeError("argumento deve ser numero inteiro entre 100 e 999");
     }
 

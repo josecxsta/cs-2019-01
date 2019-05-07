@@ -7,7 +7,7 @@
  */
 function propriedade3025 (number) {
 
-    if(number < 0 || number > 9999 || !Number.isInteger(number)) {
+    if (number < 0 || number > 9999 || !Number.isInteger(number)) {
         throw new RangeError("Numero deve ser entre 0 e 9999");
     }
 

@@ -1,7 +1,3 @@
-var prompt = require("prompt");
-
-prompt.start();
-
 /**
  * Calcula a razao aurea
  * 
@@ -14,7 +10,7 @@ prompt.start();
  */
 function razaoAurea(x, y, k) {
 
-    if(x < 0 || x > y || k <= 0) {
+    if (x < 0 || x > y || k <= 0) {
         throw new RangeError();
     }
 
@@ -23,7 +19,7 @@ function razaoAurea(x, y, k) {
     let i = 1;
     let t;
 
-    while(i <= k){
+    while (i <= k) {
         t = c;
         c = c + a;
         a = t;
@@ -36,22 +32,4 @@ function razaoAurea(x, y, k) {
 
 }
 
-const askNumber = () => { 
-
-    prompt.get(["x", "y", "k"], (err, result) => {
-
-        let x = parseInt(result.x);
-        let y = parseInt(result.y);
-        let k = parseInt(result.k);
-        
-        if(x >= 0 && x < y && 0 < k) {
-            console.log(razaoAurea(x, y, k));
-        } else {
-            askNumber();
-        }
-
-    });
-
-};
-
-askNumber();
+module.exports = razaoAurea;

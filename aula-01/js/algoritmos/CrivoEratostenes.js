@@ -7,20 +7,20 @@
 */
 function crivoEratostenes(a, n) {
     
-    if(n < 2){
+    if (n < 2) {
         throw new RangeError("Parametro deve ser maior que 1");
     }
     
     let i = 2; 
     const limite = Math.sqrt(n);
     
-    while(i <= limite) {
+    while (i <= limite) {
         
-        if(a[i] == 0) {
+        if (a[i] == 0) {
             
             let multiplo = i + i;
             
-            while(multiplo <= n) {
+            while (multiplo <= n) {
                 a[multiplo] = 1;
                 multiplo++;
             }
