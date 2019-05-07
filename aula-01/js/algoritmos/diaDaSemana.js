@@ -14,11 +14,11 @@ const yearValidate = year => (year >= 12 && year <= 1753);
  */
 function diaDaSemana(d, m, y) {
 
-    if(!dayValidate(d) || !monthValidate(m) || !yearValidate(y)) {
+    if (!dayValidate(d) || !monthValidate(m) || !yearValidate(y)) {
         throw new RangeError("data inserida eh invalida");
     }
 
-    if( m == 1 || m == 2 ) {
+    if ( m == 1 || m == 2 ) {
         m = m + 12; 
         y = y - 1; 
     }

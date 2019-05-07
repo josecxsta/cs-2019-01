@@ -7,7 +7,7 @@
  */
 function valorPI(n) {
 
-    if(n < 1) {
+    if (n < 1) {
         throw new RangeError("Numero deve ser maior ou igual a 1");
     }
 
@@ -16,7 +16,7 @@ function valorPI(n) {
     let d = -1;
     let p = 0;
 
-    while(i <= n) {
+    while (i <= n) {
         d = d + 2;
         s = -1 * s;
         p = p + (4 * s / d);

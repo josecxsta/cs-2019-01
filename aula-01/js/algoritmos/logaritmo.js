@@ -8,7 +8,7 @@
  */
 function logaritmo(n, k) {
 
-    if(n < 1 || k < 2) {
+    if (n < 1 || k < 2) {
         throw new RangeError();
     }
 
@@ -17,7 +17,7 @@ function logaritmo(n, k) {
     let numerador = n;
     let denominador = 1;
 
-    while (i <= k){
+    while (i <= k) {
         numerador = numerador * numerador;
         denominador = denominador * i;
         e = e + (numerador / denominador);

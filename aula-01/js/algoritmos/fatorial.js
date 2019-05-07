@@ -8,14 +8,14 @@
 */
 function fatorial(n){
     
-    if(n < 1) {
+    if (n < 1) {
         throw new RangeError("Numero deve ser maior ou igual a 1");
     }
     
     let i = 2; 
     let f = 1; 
     
-    while(i <= n) {
+    while (i <= n) {
         f = f * i; 
         i = i + 1; 
     } 
