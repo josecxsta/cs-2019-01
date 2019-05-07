@@ -3,12 +3,12 @@
  * @param {number} number numero.
  * @returns {boolean} se numero satisfaz a propriedade 153.
  * 
- * @throws {RangeError} se numero nao estiver entre 100 e 999.
+ * @throws {RangeError} se argumento nao for numero inteiro entre 100 e 999.
  */
 function propriedade153(number) {
 
-    if(number < 100 || number > 999) {
-        throw new RangeError("Numero deve ser entre 0 e 9999");
+    if(number < 100 || number > 999 || !Number.isInteger(number)) {
+        throw new RangeError("argumento deve ser numero inteiro entre 100 e 999");
     }
 
     const c = parseInt(number / 100);

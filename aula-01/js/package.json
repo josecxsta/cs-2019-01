@@ -2,8 +2,8 @@
   "name": "js",
   "version": "1.0.0",
   "scripts": {
-    "test": "jest",
-    "coverage": "jest --coverage",
+    "test": "jest \"./test/\"",
+    "coverage": "jest --coverage ./",
     "doc": "jsdoc ./algoritmos",
     "lint": "eslint \"./**/*.js\""
   },
