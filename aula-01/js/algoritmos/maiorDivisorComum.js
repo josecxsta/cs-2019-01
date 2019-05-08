@@ -3,9 +3,7 @@
  *
  * @param {number} x.
  * @param {number} y.
- *
  * @returns {number} x maior divisor comum entre x e y.
- *
  * @throws {TypeError} Se um dos parametros nao for numero.
  * @throws {RangeError} Se y for maior que x ou y menor do que zero.
 */

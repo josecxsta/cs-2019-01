@@ -1,5 +1,9 @@
 function raizQuadrada(x, y) {
 
+    if (typeof(x) != "number" || typeof(y) != "number") {
+        throw new TypeError("argumento deve ser um numero");
+    }
+
     if (x <= 0) {
         throw new RangeError("argumento deve ser maior do que zero");
     }

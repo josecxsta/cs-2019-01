@@ -2,7 +2,6 @@
  * Calcula se numero eh primo.
  * @param {number} n numero
  * @returns {boolean} se numero eh primo ou nao 
- * 
  * @throws {RangeError} se aragumento for numero menor ou igual a 1
  * @throws {TypeError} se argumento nao for um numero
 */

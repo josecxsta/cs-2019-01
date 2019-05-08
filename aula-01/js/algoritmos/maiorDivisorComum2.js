@@ -1,13 +1,10 @@
 /**
-* Calcula maior divisor comum entre dois numeros.
-*
-* @param {number} a.
-* @param {number} b.
-*
-* @returns {number} a maior divisor comum entre a e b.
-*
-* @throws {TypeError} Se um dos parametros nao for numero.
-* @throws {RangeError} Se b for maior que a ou b menor do que zero.
+ * Calcula maior divisor comum entre dois numeros.
+ * @param {number} a 1º numero
+ * @param {number} b 2º numero
+ * @returns {number} a maior divisor comum entre a e b.
+ * @throws {TypeError} Se um dos parametros nao for numero.
+ * @throws {RangeError} Se b for maior que a ou b menor do que zero.
 */
 function maiorDivisorComum2(a, b) {
     

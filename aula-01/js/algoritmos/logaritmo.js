@@ -3,10 +3,14 @@
  * @param {number} n .
  * @param {number} k.
  * @returns {number} e.
- * 
+ * @throws {TypeError} se argumento nao for um numero.
  * @throws {RangeError} Caso n seja menor que 1 ou k menor que 2.
  */
 function logaritmo(n, k) {
+
+    if (typeof(n) != "number") {
+        throw new TypeError("argumento deve ser um numero");
+    }
 
     if (n < 1 || k < 2) {
         throw new RangeError();

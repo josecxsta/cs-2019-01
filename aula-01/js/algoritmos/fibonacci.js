@@ -3,10 +3,14 @@
  * 
  * @param {number} n numero.
  * @returns {number} c n-esimo numero de Fibonacci.
- * 
+ * @throws {TypeError} se argumento nao for um numero.
  * @throws {RangeError} Se numero inserido for menor que zero. 
 */
 function fibonacci(n) {
+
+    if (typeof(n) != "number") {
+        throw new TypeError("argumento deve ser um numero");
+    }
     
     if (n < 0) {
         throw new RangeError("Numero deve ser maior ou igual a zero.");
