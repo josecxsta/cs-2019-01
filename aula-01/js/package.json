@@ -9,8 +9,8 @@
   },
   "devDependencies": {
     "eslint": "^5.16.0",
-    "jest": "^24.6.0",
-    "jsdoc": "^3.5.5"
+    "jest": "^24.8.0",
+    "jsdoc": "^3.6.1"
   },
   "description": "Projeto de algorítmos em JS",
   "repository": {
