@@ -1,6 +1,10 @@
 
 function produtoDeInteiros(a, b) {
 
+    if (typeof(a) != "number" || typeof(b) != "number") {
+        throw new TypeError("argumento deve ser um numero");
+    }
+
     let totalParcelas = a;
     let parcela = b;
 
