@@ -1,8 +1,29 @@
-const dayValidate = day => (day >= 1 && day <= 31);
+/**
+ * Valida o dia
+ * @param {number} day
+ * @returns {boolean} se o é válido (entre 1 e 31)
+ */
+function dayValidate(day) {
+    return day >= 1 && day <= 31;
+}
 
-const monthValidate = month => (month >= 1 && month <= 12);
+/**
+ * Valida o mês
+ * @param {number} month
+ * @returns {boolean} se o é válido (entre 1 e 12)
+ */
+function monthValidate(month) {
+    return month >= 1 && month <= 12;
+}
 
-const yearValidate = year => (year >= 12 && year <= 1753);
+/**
+ * Valida o ano
+ * @param {number} year
+ * @returns {boolean} se o é válido (entre 12 e 1753)
+ */
+function yearValidate(year) {
+    return year >= 12 && year <= 1753;
+}
 
 /**
  * Calcula o dia da semana de uma determinada data

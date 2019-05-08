@@ -11,7 +11,7 @@ function crivoEratostenes(a, n) {
 
     if (typeof(n) != "number") {
         throw new TypeError("argumento deve ser um numero");
-    }
+    } 
     
     if (n < 2) {
         throw new RangeError("argumento deve ser um numero maior que 1");
