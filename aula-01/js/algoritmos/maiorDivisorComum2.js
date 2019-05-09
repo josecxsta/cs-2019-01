@@ -29,4 +29,4 @@ function maiorDivisorComum2(a, b) {
     
 }
 
-module.exports - maiorDivisorComum2;
+module.exports = maiorDivisorComum2;
