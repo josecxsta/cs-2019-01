@@ -2,10 +2,14 @@
  * Calcula se o numero eh um quadrado perfeito.
  * @param {number} n numero.
  * @returns {boolean} se numero eh ou nao quadrado perfeito.
- * 
+ * @throws {TypeError} se argumento nao for numeral.
  * @throws {RangeError} se numero for menor do que 1.
 */
 function quadradoPerfeito(n) {
+
+    if (typeof(n) != "number") {
+        throw new TypeError("argumento deve ser um numero");
+    }
     
     if (n < 1) {
         throw new RangeError("Numero deve ser maior ou igual a 1");
