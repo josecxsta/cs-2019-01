@@ -5,7 +5,7 @@ test("CPF gerado satisfaz", () => {
 });
 
 test("CPF inventado nao satisfaz", () => {
-  expect(funcao("54606451071")).toBe(true);
+  expect(funcao("54606451071")).toBe(false);
 });
 
 test("argumento null/undefined", () => {

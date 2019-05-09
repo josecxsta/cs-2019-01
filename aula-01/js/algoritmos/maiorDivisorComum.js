@@ -7,7 +7,7 @@
  * @throws {TypeError} Se um dos parametros nao for numero.
  * @throws {RangeError} Se y for maior que x ou y menor do que zero.
 */
-function mdc(x, y) {
+function maiorDivisorComum(x, y) {
     
     if (typeof(x) != "number" || typeof(y) != "number") {
         throw new TypeError();
@@ -29,4 +29,4 @@ function mdc(x, y) {
     
 }
 
-module.exports = mdc;
+module.exports = maiorDivisorComum;
