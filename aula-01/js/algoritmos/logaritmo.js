@@ -1,10 +1,10 @@
 /**
- * Calcula o logaritmo natural de um numero.
- * @param {number} n .
- * @param {number} k.
- * @returns {number} e.
- * @throws {TypeError} se argumento nao for um numero.
- * @throws {RangeError} Caso n seja menor que 1 ou k menor que 2.
+ * Calcula o logaritmo natural de um número expoente com a precisão fornecida
+ * @param {number} n número expoente
+ * @param {number} k precisão
+ * @returns {number} logaritmo natural
+ * @throws {TypeError} se argumento nao for um numero
+ * @throws {RangeError} se n for menor que 1 ou k menor que 2
  */
 function logaritmo(n, k) {
 

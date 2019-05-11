@@ -2,13 +2,17 @@
  * Calcula se numero satisfaz a propriedade 3025.
  * @param {number} number numero.
  * @returns {boolean} se numero satisfaz a propriedade 3025.
- * 
+ * @throws {TypeError} se argumento nao for numeral
  * @throws {RangeError} se numero nao for inteiro ou nao estiver entre 0 e 9999.
  */
 function propriedade3025 (number) {
 
     if (number < 0 || number > 9999 || !Number.isInteger(number)) {
         throw new RangeError("Numero deve ser entre 0 e 9999");
+    }
+
+    if (typeof(number) != "number") {
+        throw new TypeError("argumento deve ser numeral");
     }
 
     const i = parseInt(number / 100);
