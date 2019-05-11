@@ -1,5 +1,5 @@
 /**
- * Calcula o n-esimo numero de Fibonacci.
+ * Calcula o n-esimo numero da sequência de Fibonacci.
  * 
  * @param {number} n numero.
  * @returns {number} c n-esimo numero de Fibonacci.

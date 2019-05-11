@@ -1,25 +1,42 @@
 /**
- * 
- * @param {number} n 
- * @throws {TypeError} se argumento nao for um numero
- */
-function polinomio(n) {
+* Calcula resultado de polinômio
+* @param {number} n numero
+* @param {array} c array de coeficientes
+* @throws {TypeError} se argumento nao for numeral inteiro
+* @throws {RangeError} se grau de polinômio for inválido
+*/
+function polinomio(n, c) {
 
+    const grau = c.length;
+    
     if (typeof(n) != "number") {
-        throw new TypeError("argumento deve ser um numero");
+        throw new TypeError("argumento deve ser numeral");
+    }
+    
+    if (grau < 1) {
+        throw new RangeError("polinomio de grau invalido");
     }
 
-    let i = 2;
-
-    while (i < n) {
-        if (n % i == 0) {
-            return false;
+    for (let i = 0; i < grau; i++) {
+        
+        if (c[i] === null || c[i] === undefined) {
+            throw new TypeError("argumento deve ser numeral");
         }
 
-        i++;
-    }
+        if (!Number.isInteger(c[i])) {
+            throw new TypeError("argumento deve ser inteiro");
+        }
 
-    return true;
+    }
+    
+    let p = c[grau - 1];
+
+    for (i = grau - 2; i >= 0; i--) {
+        p = p * numero + c[i];
+    }
+    
+    return p;
+
 }
 
 module.exports = polinomio;

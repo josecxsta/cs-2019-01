@@ -1,12 +1,13 @@
 /**
- * Calcula a razao aurea
+ * Calcula a razao aurea entre dois numeros
  * 
  * @param {number} x numero inteiro.
  * @param {number} y numero inteiro.
- * @param {number} k soma do x e y.
- * @returns {number} razao aurea entre x, y e k.
+ * @param {number} k precisão
+ * @returns {number} razao aurea entre x e y de acordo com a precisão
  * @throws {TypeError} se argumentos nao forem numerais
- * @throws {RangeError} se x for menor que 0, ou maior que y. Se k for menor que 1.
+ * @throws {RangeError} se x for menor que 0, ou maior que y. Se k for menor que 1
+ * @throws {RangeError} se argumentos nao forem números inteiros
  */
 function razaoAurea(x, y, k) {
 
@@ -15,7 +16,11 @@ function razaoAurea(x, y, k) {
     }
 
     if (x < 0 || x > y || k <= 0) {
-        throw new RangeError();
+        throw new RangeError("argumentos fora da faixa");
+    }
+
+    if (!Number.isInteger(x), !Number.isInteger(y), !Number.isInteger(k)) {
+        throw new RangeError("argumentos devem ser numeros inteiros");
     }
 
     let c = y;
