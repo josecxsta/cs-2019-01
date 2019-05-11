@@ -4,12 +4,17 @@
  * @param {number} k precisão
  * @returns {number} logaritmo natural
  * @throws {TypeError} se argumento nao for um numero
+ * @throws {RangeError} se argumento nao for numero inteiro
  * @throws {RangeError} se n for menor que 1 ou k menor que 2
  */
 function logaritmo(n, k) {
 
-    if (typeof(n) != "number") {
+    if (typeof(n) != "number" || typeof(k) != "number") {
         throw new TypeError("argumento deve ser um numero");
+    }
+
+    if (!Number.isInteger(n) || !Number.isInteger(k)) {
+        throw new RangeError("argumento deve ser numero inteiro");
     }
 
     if (n < 1 || k < 2) {

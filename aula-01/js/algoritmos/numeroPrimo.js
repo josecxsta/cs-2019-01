@@ -2,13 +2,18 @@
  * Calcula se numero eh primo.
  * @param {number} n numero
  * @returns {boolean} se numero eh primo ou nao 
- * @throws {RangeError} se aragumento for numero menor ou igual a 1
  * @throws {TypeError} se argumento nao for um numero
+ * @throws {RangeError} se argumento nao for numero inteiro
+ * @throws {RangeError} se argumento for numero menor ou igual a 1
 */
 function primo(n) {
 
     if (typeof(n) != "number") {
         throw new TypeError("Argumento deve ser um numero.");
+    }
+
+    if (!Number.isInteger(n)) {
+        throw new RangeError("")
     }
     
     if (n <= 1) {
