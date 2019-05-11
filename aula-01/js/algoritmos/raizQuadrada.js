@@ -5,6 +5,7 @@
  * @returns {number} raiz quadrada
  * @throws {TypeError} se argumento nao for numero
  * @throws {RangeError} se argumento não for maior que zero
+ * @throws {RangeError} se algum dos argumentos não for inteiro
  */
 function raizQuadrada(x, y) {
 
@@ -14,6 +15,10 @@ function raizQuadrada(x, y) {
 
     if (x <= 0) {
         throw new RangeError("argumento deve ser maior do que zero");
+    }
+
+    if (!Number.isInteger(x) || !Number.isInteger(y)) {
+        throw new RangeError("argumentos devem ser numeros inteiros");
     }
     
     let r = 1;

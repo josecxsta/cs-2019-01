@@ -31,9 +31,19 @@ function yearValidate(year) {
  * @param {number} m mês
  * @param {number} y ano
  * @returns {number} numero referente ao dia da semana
+ * @throws {TypeError} se algum dos argumentos nao for numero
  * @throws {RangeError} se data for invalida
+ * @throws {RangeError} se argumentos nao forem numeros inteiros
  */
 function diaDaSemana(d, m, y) {
+
+    if (typeof(d) != "number", typeof(m) != "number", typeof(y) != "number") {
+        throw new TypeError("argumentos devem ser numerais");
+    }
+    
+    if (!Number.isInteger(d), !Number.isInteger(m), !Number.isInteger(y)) {
+        throw new RangeError("numeros devem ser inteiros");
+    }
 
     if (!dayValidate(d) || !monthValidate(m) || !yearValidate(y)) {
         throw new RangeError("data inserida eh invalida");
