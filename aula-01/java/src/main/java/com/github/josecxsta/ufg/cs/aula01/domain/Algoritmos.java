@@ -1,4 +1,6 @@
-package com.github.josecxsta.ufg.cs.aula01;
+package com.github.josecxsta.ufg.cs.aula01.domain;
+
+import java.lang.Math;
 
 public class Algoritmos {
     public static boolean prop153(int number) {
