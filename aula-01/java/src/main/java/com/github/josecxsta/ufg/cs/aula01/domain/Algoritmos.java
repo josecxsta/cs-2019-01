@@ -49,6 +49,11 @@ public class Algoritmos {
         
     }
     
+    /**
+    * Calcula se o numero eh um quadrado perfeito.
+    * @param n
+    * @return
+    */
     public static boolean quadradoPerfeito(int n) {
         
         if (n < 1) {
@@ -67,6 +72,12 @@ public class Algoritmos {
         
     }
     
+    /**
+    * Calcula a raiz quadrada de um numero de acordo com a precisão fornecida
+    * @param x numero
+    * @param y precisão
+    * @return raiz quadrada
+    */
     public static int raizQuadrada(int x, int y) {
         
         if (x < 1) {
@@ -84,6 +95,13 @@ public class Algoritmos {
         
     }
     
+    /**
+    * Calcula a razão aurea entre dois numeros
+    * @param x 1º número
+    * @param y 2º número
+    * @param k precisão
+    * @return razão aurea entre x e y
+    */
     public static int razaoAurea(int x, int y, int k) {
         
         if (x < 0 || x > y || k <= 0) {
@@ -107,6 +125,11 @@ public class Algoritmos {
         
     }
     
+    /**
+    * Produz uma aproximação do valor de PI baseado no número de iterações fornecido, onde quanto maior o número de iterações, maior a precisão de PI
+    * @param n numero de iteracoes
+    * @return aproximacao do valor de PI
+    */
     public static int valorPi(int n) {
         
         if (n < 1) {
@@ -129,6 +152,11 @@ public class Algoritmos {
         
     }
     
+    /**
+    * Converte cada caracteres de um sequência produzindo um vetor de inteiros correspondente.
+    * @param sequencia A sequência de caracteres para a qual um vetor de
+    * inteiros será criado.
+    */
     public static int[] converteSequenciaEmInteiros(String sequencia) {
         int[] inteiros = new int[sequencia.length()];
         
@@ -139,6 +167,12 @@ public class Algoritmos {
         return inteiros;
     }
     
+    /**
+    * Verifica se o CPF fornecido é válido.
+    * @param sequencia
+    * @throws IllegalArgumentException se argumento tiver quantidade de caracteres diferente de 11
+    * @return se CPF é válido.
+    */
     public static boolean CPF(String sequencia) {
         
         int[] d = converteSequenciaEmInteiros(sequencia);
@@ -157,6 +191,12 @@ public class Algoritmos {
         
     }
     
+    /**
+    * Verifica se o CPF fornecido é válido.
+    * @param sequencia
+    * @throws IllegalArgumentException se argumento tiver quantidade de caracteres diferente de 11
+    * @return se CPF é válido.
+    */
     public static boolean CPF2(String sequencia) {
         
         int[] d = converteSequenciaEmInteiros(sequencia);
@@ -182,6 +222,12 @@ public class Algoritmos {
         
     }
     
+    /**
+    * Calcula o fatorial de dado numero
+    * @param n numero
+    * @return fatorial de n
+    * @throws IllegalArgumentException Se o numero informado for menor que 1 
+    */
     public static int fatorial(int n) {
         
         if (1 > n) {
@@ -200,6 +246,12 @@ public class Algoritmos {
         
     }
     
+    /**
+    * Calcula o n-esimo numero da sequência de Fibonacci.
+    * @param n numero
+    * @throws IllegalArgumentException Se numero inserido for menor que zero.
+    * @return c n-esimo numero de Fibonacci.
+    */
     public static int fibonacci(int n) {
         
         if (1 > n) {
