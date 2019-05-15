@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Algoritmos.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">com.github.josecxsta:cs-2019-01</a> &gt; <a href="index.source.html" class="el_package">com.github.josecxsta.ufg.cs.aula01.domain</a> &gt; <span class="el_source">Algoritmos.java</span></div><h1>Algoritmos.java</h1><pre class="source lang-java linenums">package com.github.josecxsta.ufg.cs.aula01.domain;
+
+import java.lang.Math;
+
+<span class="nc" id="L5">public class Algoritmos {</span>
+    public static boolean prop153(int number) {
+        
+<span class="fc bfc" id="L8" title="All 4 branches covered.">        if (number &lt; 0 || number &gt; 999) {</span>
+<span class="fc" id="L9">            throw new IllegalArgumentException(&quot;Argumento fora da faixa&quot;);</span>
+        }
+        
+<span class="fc" id="L12">        final int c = number / 100;</span>
+<span class="fc" id="L13">        final int du = number % 100;</span>
+<span class="fc" id="L14">        final int d = (du / 10);</span>
+<span class="fc" id="L15">        final int u = (du % 10);</span>
+        
+<span class="fc" id="L17">        final int c3 = c * c * c;</span>
+<span class="fc" id="L18">        final int d3 = d * d * d;</span>
+<span class="fc" id="L19">        final int u3 = u * u * u;</span>
+        
+<span class="fc bfc" id="L21" title="All 2 branches covered.">        return (c3 + d3 + u3) == number;</span>
+    }
+    
+    public static boolean prop3025(int number) {
+        
+<span class="fc bfc" id="L26" title="All 4 branches covered.">        if (number &lt; 0 || number &gt; 9999) {</span>
+<span class="fc" id="L27">            throw new IllegalArgumentException(&quot;Argumento fora da faixa&quot;);</span>
+        }
+        
+<span class="fc" id="L30">        int i = (number / 100);</span>
+<span class="fc" id="L31">        int j = (number % 100);</span>
+        
+<span class="fc" id="L33">        int ij = (int) Math.round(i + j);</span>
+        
+<span class="fc" id="L35">        int x = ij * ij;</span>
+        
+<span class="fc bfc" id="L37" title="All 2 branches covered.">        return (x == number);</span>
+        
+    }
+    
+    public static boolean quadradoPerfeito(int n) {
+        
+<span class="nc" id="L43">        int i = 1;</span>
+<span class="nc" id="L44">        int s = 1;</span>
+        
+<span class="nc bnc" id="L46" title="All 2 branches missed.">        while (s &lt; n) {</span>
+<span class="nc" id="L47">            i = i + 2;</span>
+<span class="nc" id="L48">            s = s + 1;</span>
+        }
+        
+<span class="nc bnc" id="L51" title="All 2 branches missed.">        return (s == n);</span>
+        
+    }
+    
+    public static int raizQuadrada(int x, int y) {
+        
+<span class="nc" id="L57">        int r = 1;</span>
+        
+<span class="nc bnc" id="L59" title="All 2 branches missed.">        while (0 &lt;= y) {</span>
+<span class="nc" id="L60">            r = (r + (x/r))/2;</span>
+<span class="nc" id="L61">            y = y - 1;</span>
+        }
+        
+<span class="nc" id="L64">        return r;</span>
+        
+    }
+    
+    public static int razaoAurea(int x, int y, int k) {
+        
+<span class="nc" id="L70">        int c = y;</span>
+<span class="nc" id="L71">        int a = x;</span>
+<span class="nc" id="L72">        int i = 1;</span>
+        
+<span class="nc bnc" id="L74" title="All 2 branches missed.">        while (i &lt;= k) {</span>
+<span class="nc" id="L75">            final int t = c;</span>
+<span class="nc" id="L76">            c = c + a;</span>
+<span class="nc" id="L77">            a = t;</span>
+<span class="nc" id="L78">            i++;</span>
+        }
+        
+<span class="nc" id="L81">        final int response = c/a;</span>
+        
+<span class="nc" id="L83">        return response;</span>
+        
+    }
+    
+    public static int valorPi(int n) {
+        
+<span class="nc" id="L89">        int i = 1;</span>
+<span class="nc" id="L90">        int s = -1;</span>
+<span class="nc" id="L91">        int d = -1;</span>
+<span class="nc" id="L92">        int p = 0;</span>
+        
+<span class="nc bnc" id="L94" title="All 2 branches missed.">        while (i &lt;= n) {</span>
+<span class="nc" id="L95">            d = d + 2;</span>
+<span class="nc" id="L96">            s = -1 * s;</span>
+<span class="nc" id="L97">            p = p + (4 * s / d);</span>
+<span class="nc" id="L98">            i = i + 1;</span>
+        }
+        
+<span class="nc" id="L101">        return p;</span>
+        
+    }
+    
+    public static int[] converteSequenciaEmInteiros(String sequencia) {
+<span class="fc" id="L106">        int[] inteiros = new int[sequencia.length()];</span>
+        
+<span class="fc bfc" id="L108" title="All 2 branches covered.">        for(int i = 0; i &lt; sequencia.length(); i++) {</span>
+<span class="fc" id="L109">            inteiros[i] = Character.getNumericValue(sequencia.charAt(i));</span>
+        }
+        
+<span class="fc" id="L112">        return inteiros;</span>
+    }
+    
+    public static boolean CPF(String sequencia) {
+        
+<span class="fc" id="L117">        int[] d = converteSequenciaEmInteiros(sequencia);</span>
+        
+<span class="fc bfc" id="L119" title="All 2 branches covered.">        if (d.length != 11) {</span>
+<span class="fc" id="L120">            throw new IllegalArgumentException(&quot;CPF precisa ter 11 caracteres&quot;);</span>
+        }
+        
+<span class="fc" id="L123">        final int j = d[0] + (2 * d[1]) + (3 * d[2]) + (4 * d[3]) + (5 * d[4]) + (6 * d[5]) + (7 * d[6]) + (8 * d[7]) + (9 * d[8]);</span>
+<span class="fc" id="L124">        final int k = d[1] + (2 * d[2]) + (3 * d[3]) + (4 * d[4]) + (5 * d[5]) + (6 * d[6]) + (7 * d[7]) + (8 * d[8]) + (9 * d[9]);</span>
+        
+<span class="fc" id="L126">        final int dj = ((j % 11) % 10);</span>
+<span class="fc" id="L127">        final int dk = ((k % 11) % 10);</span>
+
+<span class="pc bpc" id="L129" title="1 of 4 branches missed.">        return (dj == d[9] &amp;&amp; dk == d[10]);</span>
+        
+    }
+    
+    public static boolean CPF2(String sequencia) {
+        
+<span class="fc" id="L135">        int[] d = converteSequenciaEmInteiros(sequencia);</span>
+        
+<span class="fc bfc" id="L137" title="All 2 branches covered.">        if (d.length != 11) {</span>
+<span class="fc" id="L138">            throw new IllegalArgumentException(&quot;CPF precisa ter 11 caracteres&quot;);</span>
+        }
+        
+<span class="fc" id="L141">        int c = 7;</span>
+<span class="fc" id="L142">        int p = d[8];</span>
+<span class="fc" id="L143">        int s = d[8];</span>
+        
+<span class="fc bfc" id="L145" title="All 2 branches covered.">        while (c &gt;= 0) {</span>
+<span class="fc" id="L146">            p = p + d[c];</span>
+<span class="fc" id="L147">            s = s + p;</span>
+<span class="fc" id="L148">            c = c - 1;</span>
+        }
+        
+<span class="fc" id="L151">        final int j = (s % 11) % 10;</span>
+<span class="fc" id="L152">        final int k = ((s - p + 9 * d[9]) % 11) % 10;</span>
+        
+<span class="pc bpc" id="L154" title="1 of 4 branches missed.">        return (j == d[9] &amp;&amp; k == d[10]);</span>
+        
+    }
+    
+    public static int fatorial(int n) {
+        
+<span class="nc bnc" id="L160" title="All 2 branches missed.">        if (1 &gt; n) {</span>
+<span class="nc" id="L161">            throw new IllegalArgumentException();</span>
+        }
+        
+<span class="nc" id="L164">        int i = 2; </span>
+<span class="nc" id="L165">        int f = 1; </span>
+        
+<span class="nc bnc" id="L167" title="All 2 branches missed.">        while (i &lt;= n) {</span>
+<span class="nc" id="L168">            f = f * i; </span>
+<span class="nc" id="L169">            i = i + 1; </span>
+        } 
+        
+<span class="nc" id="L172">        return f;</span>
+        
+    }
+    
+    public static int fibonacci(int n) {
+
+<span class="nc bnc" id="L178" title="All 2 branches missed.">        if (1 &gt; n) {</span>
+<span class="nc" id="L179">            throw new IllegalArgumentException(&quot;Argumento deve ser maior que 1&quot;);</span>
+        }
+        
+<span class="nc" id="L182">        int a = 0;</span>
+<span class="nc" id="L183">        int c = 1;</span>
+        
+<span class="nc bnc" id="L185" title="All 4 branches missed.">        if (n == 0 || n == 1) {</span>
+<span class="nc" id="L186">            return n;</span>
+        }
+        
+<span class="nc" id="L189">        int i = 2;</span>
+        int t;
+        
+<span class="nc bnc" id="L192" title="All 2 branches missed.">        while (i &lt;= n) {</span>
+<span class="nc" id="L193">            t = c;</span>
+<span class="nc" id="L194">            c = c + a;</span>
+<span class="nc" id="L195">            a = t;</span>
+<span class="nc" id="L196">            i++;</span>
+        }
+        
+<span class="nc" id="L199">        return c;</span>
+        
+    }
+    
+    public static int maiorDivisorComum(int x, int y) {
+        
+<span class="nc" id="L205">        if (b &lt; 1 || b &gt; a) {</span>
+            throw new IllegalArgumentException(&quot;Argumento fora da faixa&quot;);
+        }
+
+        int m;
+        
+        while (y != 0) {
+            m = x % y;
+            x = y;
+            y = m;
+        }
+        
+        return x;
+        
+    }
+    
+    public static int maiorDivisorComum2(int a, int b) {
+
+<span class="nc bnc" id="L223" title="All 4 branches missed.">        if (b &lt; 1 || b &gt; a) {</span>
+<span class="nc" id="L224">            throw new IllegalArgumentException(&quot;Argumento fora da faixa&quot;);</span>
+        }
+        
+<span class="nc bnc" id="L227" title="All 2 branches missed.">        while (a != b) {</span>
+            
+<span class="nc bnc" id="L229" title="All 2 branches missed.">            if (a &gt; b) {</span>
+<span class="nc" id="L230">                a = a - b; </span>
+<span class="nc" id="L231">            } else {</span>
+<span class="nc" id="L232">                b = b - a;</span>
+            } 
+            
+        } 
+        
+<span class="nc" id="L237">        return a;</span>
+        
+    }
+    
+    public static boolean numeroPrimo(int n) {
+
+<span class="nc bnc" id="L243" title="All 2 branches missed.">        if (n &lt; 0) {</span>
+<span class="nc" id="L244">            throw new IllegalArgumentException(&quot;Argumento deve ser positivo&quot;);</span>
+        }
+        
+<span class="nc" id="L247">        int i = 2;</span>
+<span class="nc bnc" id="L248" title="All 2 branches missed.">        while (i &lt; n) {</span>
+<span class="nc bnc" id="L249" title="All 2 branches missed.">            if (n % i == 0) {</span>
+<span class="nc" id="L250">                return false;</span>
+            }
+            
+<span class="nc" id="L253">            i++;</span>
+        }
+        
+<span class="nc" id="L256">        return true;</span>
+        
+    }
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>
