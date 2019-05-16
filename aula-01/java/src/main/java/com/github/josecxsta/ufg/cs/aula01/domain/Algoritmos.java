@@ -7,6 +7,7 @@ public class Algoritmos {
     /**
     * Calcula se numero satisfaz a propriedade 153.
     * @param number numero.
+    * @return se satisfaz propriedade 153
     * @throws IllegalArgumentException se argumento nao for numero inteiro entre 100 e 999.
     */
     public static boolean prop153(int number) {
@@ -30,6 +31,7 @@ public class Algoritmos {
     /**
     * Calcula se numero satisfaz a propriedade 3025.
     * @param number numero.
+    * @return se satisfaz propriedade 3025
     * @throws IllegalArgumentException se argumento nao for numero inteiro entre 100 e 9999.
     */
     public static boolean prop3025(int number) {
@@ -158,8 +160,8 @@ public class Algoritmos {
     
     /**
     * Converte cada caracteres de um sequência produzindo um vetor de inteiros correspondente.
-    * @param sequencia A sequência de caracteres para a qual um vetor de
-    * inteiros será criado.
+    * @param sequencia A sequência de caracteres para a qual um vetor de inteiros será criado.
+    * @return coleção de inteiros
     */
     public static int[] converteSequenciaEmInteiros(String sequencia) {
         int[] inteiros = new int[sequencia.length()];
@@ -173,7 +175,7 @@ public class Algoritmos {
     
     /**
     * Verifica se o CPF fornecido é válido.
-    * @param sequencia
+    * @param sequencia coleção de números que formam o cpf
     * @throws IllegalArgumentException se argumento tiver quantidade de caracteres diferente de 11
     * @return se CPF é válido.
     */
@@ -197,7 +199,7 @@ public class Algoritmos {
     
     /**
     * Verifica se o CPF fornecido é válido.
-    * @param sequencia
+    * @param sequencia coleção de números que formam o cpf
     * @throws IllegalArgumentException se argumento tiver quantidade de caracteres diferente de 11
     * @return se CPF é válido.
     */
@@ -287,6 +289,7 @@ public class Algoritmos {
     * Calcula maior divisor comum entre dois numeros.
     * @param x 1º numero
     * @param y 2º numero
+    * @return maior divisor comum entre x e y
     * @throws IllegalArgumentException Se y for maior que x ou y menor do que zero.
     */
     public static int maiorDivisorComum(int x, int y) {
@@ -309,8 +312,9 @@ public class Algoritmos {
     
     /**
     * Calcula maior divisor comum entre dois numeros.
-    * @param x 1º numero
-    * @param y 2º numero
+    * @param a 1º numero
+    * @param b 2º numero
+    * @return maior divisor comum entre a e b
     * @throws IllegalArgumentException Se y for maior que x ou y menor do que zero.
     */
     public static int maiorDivisorComum2(int a, int b) {
@@ -528,7 +532,7 @@ public class Algoritmos {
     
     /**
     * Valida o dia
-    * @param day
+    * @param day dia
     * @return se o dia é válido (entre 1 e 31)
     */
     public static boolean dayValidate(int day) {
@@ -537,7 +541,7 @@ public class Algoritmos {
     
     /**
     * Valida o mês
-    * @param month
+    * @param month mês
     * @return se o mês é válido (entre 1 e 12)
     */
     public static boolean monthValidate(int month) {
@@ -546,7 +550,7 @@ public class Algoritmos {
     
     /**
     * Valida o ano
-    * @param year
+    * @param year ano
     * @return se o ano é válido (entre 12 e 1753)
     */
     public static boolean yearValidate(int year) {

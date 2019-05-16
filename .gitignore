@@ -30,3 +30,24 @@ bin
 
 .vscode
 .idea
+
+
+/reports
+/bin
+/target
+target/
+.idea/
+*.iml
+.metadata/
+RemoteSystemsTempFiles/
+Servers/
+*.log
+*.log*
+nohup.out
+.DS_Store
+*.orig
+tmp.txt
+*.hprof
+tmp.txt
+ca.uhn.fhir.jpa.entity.ResourceIndexedSearchParamString/
+ca.uhn.fhir.jpa.entity.ResourceTable/
