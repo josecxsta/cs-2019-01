@@ -34,8 +34,6 @@ bin
 
 /reports
 /bin
-/target
-target/
 .idea/
 *.iml
 .metadata/
