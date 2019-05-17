@@ -5,6 +5,11 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 public class AlgoritmosTest {
+
+    @Test 
+    public void classTest() {
+        new Algoritmos();
+    }
     
     @Test
     public void prop153True() {
@@ -206,6 +211,7 @@ public class AlgoritmosTest {
         assertEquals(6, Algoritmos.maiorDivisorComum(12, 6));
         assertEquals(6, Algoritmos.maiorDivisorComum2(12, 6));
         assertEquals(24, Algoritmos.maiorDivisorComum2(24, 24));
+        assertEquals(4, Algoritmos.maiorDivisorComum2(24, 20));
     }
     
     @Test
