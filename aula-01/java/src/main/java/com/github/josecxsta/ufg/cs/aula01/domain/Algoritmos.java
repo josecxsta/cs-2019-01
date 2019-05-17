@@ -68,7 +68,7 @@ public class Algoritmos {
         
         while (s < n) {
             i = i + 2;
-            s = s + 1;
+            s = s + i;
         }
         
         return (s == n);
@@ -260,7 +260,7 @@ public class Algoritmos {
     */
     public static int fibonacci(int n) {
         
-        if (1 > n) {
+        if (0 > n) {
             throw new IllegalArgumentException("Argumento deve ser maior que 1");
         }
         
