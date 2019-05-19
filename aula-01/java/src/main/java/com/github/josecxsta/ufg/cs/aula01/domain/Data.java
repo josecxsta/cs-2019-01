@@ -135,7 +135,7 @@ public class Data {
     */
     public static int diaDaSemana(final int dia, final int mes, final int ano) {
 
-        if (!dayValidate(dia) || !monthValidate(mes) || !yearValidate(y)) {
+        if (!dayValidate(dia) || !monthValidate(mes) || !yearValidate(ano)) {
             throw new IllegalArgumentException("data invalida");
         }
 
