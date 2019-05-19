@@ -1,7 +1,8 @@
 package com.github.josecxsta.ufg.cs.aula01.domain;
 
 /**
-*
+* Implementa algoritmos matemáticos.
+* @author José da Costa
 */
 public class Algoritmos {
 
@@ -16,94 +17,75 @@ public class Algoritmos {
     public static final int LIMIT_PROP3025 = 9999;
 
     /**
-    * Último dia válido na validação de dia.
-    */
-    public static final int LAST_DAY = 31;
-
-    /**
-    * Último mês válido na validação de mês.
-    */
-    public static final int LAST_MONTH = 12;
-    /**
-    * Primeiro ano válido na validação de ano.
-    */
-    public static final int FIRST_YEAR = 12;
-
-    /**
-    * Último ano válido na validação de ano.
-    */
-    public static final int LAST_YEAR = 1753;
-
-    /**
-    *
+    * Atributo que representa o número 1 a fim de evitar
+    * a utilização de número mágico.
     */
     public static final int DIG_1 = 1;
+
     /**
-    *
+    * Atributo que representa o número 2 a fim de evitar
+    * a utilização de número mágico.
     */
     public static final int DIG_2 = 2;
+
     /**
-    *
+    * Atributo que representa o número 3 a fim de evitar
+    * a utilização de número mágico.
     */
     public static final int DIG_3 = 3;
+
     /**
-    *
+    * Atributo que representa o número 4 a fim de evitar
+    * a utilização de número mágico.
     */
     public static final int DIG_4 = 4;
     /**
-    *
+    * Atributo que representa o número 5 a fim de evitar
+    * a utilização de número mágico.
     */
     public static final int DIG_5 = 5;
+
     /**
-    *
-    */
-    public static final int DIG_6 = 6;
-    /**
-    *
+    * Atributo que representa o número 7 a fim de evitar
+    * a utilização de número mágico.
     */
     public static final int DIG_7 = 7;
+
     /**
-    *
-    */
-    public static final int DIG_8 = 8;
-    /**
-    *
-    */
-    public static final int DIG_9 = 9;
-    /**
-    *
+    * Atributo que representa o número 10 a fim de evitar
+    * a utilização de número mágico.
     */
     public static final int DIG_10 = 10;
+
     /**
-    *
+    * Atributo que representa o número 100 a fim de evitar
+    * a utilização de número mágico.
     */
     public static final int DIG_100 = 100;
 
     /**
-    *
+    * Atributo que representa o número 1000 a fim de evitar
+    * a utilização de número mágico.
     */
     public static final int DIG_1000 = 1000;
 
     /**
-    *
-    */
-    public static final int DIG_11 = 11;
-
-    /**
-    *
+    * Atributo que representa o número 12 a fim de evitar
+    * a utilização de número mágico.
     */
     public static final int DIG_12 = 12;
 
     /**
-    *
+    * Atributo que representa o número 400 a fim de evitar
+    * a utilização de número mágico.
     */
     public static final int DIG_400 = 400;
 
     /**
+    * Evita a instanciação da clase.
     * @throws UnsupportedOperationException
     */
     protected Algoritmos() {
-        // prevents calls from subclass
         throw new UnsupportedOperationException();
     }
 
@@ -268,85 +250,6 @@ public class Algoritmos {
     }
 
     /**
-    * Converte cada caracteres de um sequência produzindo um vetor
-    de inteiros correspondente.
-    * @param sequencia A sequência de caracteres para a qual um
-    vetor de inteiros será criado.
-    * @return coleção de inteiros
-    */
-    public static int[] converteSequenciaEmInteiros(final String sequencia) {
-        int[] inteiros = new int[sequencia.length()];
-
-        for (int i = 0; i < sequencia.length(); i++) {
-            inteiros[i] = Character.getNumericValue(sequencia.charAt(i));
-        }
-
-        return inteiros;
-    }
-
-    /**
-    * Verifica se o CPF fornecido é válido.
-    * @param sequencia coleção de números que formam o cpf
-    * @throws IllegalArgumentException se argumento tiver quantidade
-    de caracteres diferente de 11
-    * @return se CPF é válido.
-    */
-    public static boolean validaCpf(final String sequencia) {
-
-        int[] d = converteSequenciaEmInteiros(sequencia);
-
-        if (d.length != DIG_11) {
-            throw new IllegalArgumentException("CPF precisa ter 11 caracteres");
-        }
-
-        final int j = d[0] + (DIG_2 * d[DIG_1]) + (DIG_3 * d[DIG_2])
-        + (DIG_4 * d[DIG_3]) + (DIG_5 * d[DIG_4]) + (DIG_6 * d[DIG_5])
-        + (DIG_7 * d[DIG_6]) + (DIG_8 * d[DIG_7]) + (DIG_9 * d[DIG_8]);
-
-        final int k = d[DIG_1] + (DIG_2 * d[DIG_2]) + (DIG_3 * d[DIG_3])
-        + (DIG_4 * d[DIG_4]) + (DIG_5 * d[DIG_5]) + (DIG_6 * d[DIG_6])
-        + (DIG_7 * d[DIG_7]) + (DIG_8 * d[DIG_8]) + (DIG_9 * d[DIG_9]);
-
-        final int dj = ((j % DIG_11) % DIG_10);
-        final int dk = ((k % DIG_11) % DIG_10);
-
-        return (dj == d[DIG_9] && dk == d[DIG_10]);
-
-    }
-
-    /**
-    * Verifica se o CPF fornecido é válido.
-    * @param sequencia coleção de números que formam o cpf
-    * @throws IllegalArgumentException se argumento tiver quantidade
-    de caracteres diferente de 11
-    * @return se CPF é válido.
-    */
-    public static boolean validaCpf2(final String sequencia) {
-
-        int[] d = converteSequenciaEmInteiros(sequencia);
-
-        if (d.length != DIG_11) {
-            throw new IllegalArgumentException("CPF precisa de 11 caracteres");
-        }
-
-        int c = DIG_7;
-        int p = d[DIG_8];
-        int s = d[DIG_8];
-
-        while (c >= 0) {
-            p = p + d[c];
-            s = s + p;
-            c = c - 1;
-        }
-
-        final int j = (s % DIG_11) % DIG_10;
-        final int k = ((s - p + DIG_9 * d[DIG_9]) % DIG_11) % DIG_10;
-
-        return (j == d[DIG_9] && k == d[DIG_10]);
-
-    }
-
-    /**
     * Calcula o fatorial de dado numero.
     * @param n numero
     * @return fatorial de n
@@ -465,19 +368,19 @@ public class Algoritmos {
 
     /**
     * Calcula se numero é primo.
-    * @param n numero
+    * @param numero numero
     * @return se numero é primo ou não
     * @throws IllegalArgumentException se n for numero menor ou igual a 1
     */
-    public static boolean numeroPrimo(final int n) {
+    public static boolean numeroPrimo(final int numero) {
 
-        if (n < 0) {
+        if (numero < 0) {
             throw new IllegalArgumentException("Argumento deve ser positivo");
         }
 
         int i = 2;
-        while (i < n) {
-            if (n % i == 0) {
+        while (i < numero) {
+            if (numero % i == 0) {
                 return false;
             }
 
@@ -595,7 +498,7 @@ public class Algoritmos {
 
         }
 
-        return (a[n] == 1);
+        return a[n] == 1;
 
     }
 
@@ -657,72 +560,16 @@ public class Algoritmos {
     }
 
     /**
-    * Valida o dia.
-    * @param day dia
-    * @return se o dia é válido (entre 1 e 31)
-    */
-    public static boolean dayValidate(final int day) {
-        return day >= DIG_1 && day <= LAST_DAY;
-    }
-
-    /**
-    * Valida o mês.
-    * @param month mês
-    * @return se o mês é válido (entre 1 e 12)
-    */
-    public static boolean monthValidate(final int month) {
-        return month >= DIG_1 && month <= LAST_MONTH;
-    }
-
-    /**
-    * Valida o ano.
-    * @param year ano
-    * @return se o ano é válido (entre 12 e 1753)
-    */
-    public static boolean yearValidate(final int year) {
-        return (year >= FIRST_YEAR && year <= LAST_YEAR);
-    }
-
-    /**
-    * Calcula o dia da semana de uma determinada data.
-    * @param d dia
-    * @param m mês
-    * @param y ano
-    * @return numero referente ao dia da semana
-    * @throws IllegalArgumentException se data for invalida
-    */
-    public static int diaDaSemana(final int d, final int m, final int y) {
-
-        if (!dayValidate(d) || !monthValidate(m) || !yearValidate(y)) {
-            throw new IllegalArgumentException("data invalida");
-        }
-
-        int month = m;
-        int year = y;
-
-        if (month == 1 || month == 2) {
-            month = month + DIG_12;
-            year = year - 1;
-        }
-
-        int s = (d + (DIG_2 * month) + (DIG_3 * (month + 1) / DIG_5)
-        + year + (year / DIG_4) - (year / DIG_100) + (year / DIG_400));
-
-        return (int) Math.floor(s % DIG_7);
-
-    }
-
-    /**
     * Calcula o logaritmo natural de um número expoente com a
     precisão fornecida.
     * @param n número expoente
-    * @param k precisão
+    * @param precisao precisão
     * @return logaritmo natural
-    * @throws IllegalArgumentException se n for menor que 1 ou k menor que 2
+    * @throws IllegalArgumentException se n for menor que 1 ou precisao menor que 2
     */
-    public static int logaritmo(final int n, final int k) {
+    public static int logaritmo(final int n, final int precisao) {
 
-        if (n < 1 || k < 2) {
+        if (n < 1 || precisao < 2) {
             throw new IllegalArgumentException("argumentos fora da faixa");
         }
 
@@ -731,7 +578,7 @@ public class Algoritmos {
         int numerador = n;
         int denominador = DIG_1;
 
-        while (i <= k) {
+        while (i <= precisao) {
             numerador = numerador * numerador;
             denominador = denominador * i;
             e = e + (numerador / denominador);

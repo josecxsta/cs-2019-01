@@ -1,5 +1,5 @@
 /**
- * @see com.github.josecxsta.ufg.cs.aula01.application.Application
- * @see com.github.josecxsta.ufg.cs.aula01.domain.Algoritmos
+ * @see com.github.josecxsta.ufg.cs.aula01.domain.AlgoritmosUtils
+ * @see com.github.josecxsta.ufg.cs.aula01.domain.CpfUtils
  */
 package com.github.josecxsta.ufg.cs.aula01;
