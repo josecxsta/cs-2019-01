@@ -325,7 +325,7 @@ public class Algoritmos {
         int argX = x;
         int argY = y;
 
-        while (y != 0) {
+        while (argY != 0) {
             m = argX % argY;
             argX = argY;
             argY = m;
@@ -352,12 +352,12 @@ public class Algoritmos {
         int argA = a;
         int argB = b;
 
-        while (a != b) {
+        while (argA != argB) {
 
-            if (a > b) {
+            if (argA > argB) {
                 argA = argA - argB;
             } else {
-                argB = argB - a;
+                argB = argB - argA;
             }
 
         }

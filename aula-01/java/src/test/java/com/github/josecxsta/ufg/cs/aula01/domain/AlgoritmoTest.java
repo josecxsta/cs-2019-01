@@ -1,10 +1,10 @@
 package com.github.josecxsta.ufg.cs.aula01.domain;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.Test;
+import com.github.josecxsta.ufg.cs.aula01.domain.Algoritmos;
 
-public class AlgoritmosTest {
+public class AlgoritmoTest {
 
     @Test
     public void classTest() {
@@ -12,42 +12,18 @@ public class AlgoritmosTest {
     }
 
     @Test
-    public void prop153True() {
+    public void prop153() {
         assertTrue(Algoritmos.prop153(153));
-    }
-
-    @Test
-    public void prop153False() {
         assertFalse(Algoritmos.prop153(154));
-    }
-
-    @Test
-    public void prop153HigherArgument() {
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.prop153(-2));
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.prop153(99999));
     }
 
     @Test
-    public void prop153LowerArgument() {
-        assertThrows(IllegalArgumentException.class, () -> Algoritmos.prop153(-2));
-    }
-
-    @Test
-    public void prop3025True() {
-        assertTrue(Algoritmos.prop3025(3025));
-    }
-
-    @Test
-    public void prop3025False() {
+    public void prop3025() {
         assertFalse(Algoritmos.prop3025(154));
-    }
-
-    @Test
-    public void prop3025HigherArgument() {
+        assertTrue(Algoritmos.prop3025(3025));
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.prop3025(99999));
-    }
-
-    @Test
-    public void prop3025LowerArgument() {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.prop3025(-2));
     }
 
@@ -77,15 +53,11 @@ public class AlgoritmosTest {
     }
 
     @Test
-    public void fatorialErro() {
-        assertThrows(IllegalArgumentException.class, () -> Algoritmos.fatorial(0));
-    }
-
-    @Test
     public void fatorialAcertos() {
         assertEquals(1, Algoritmos.fatorial(1));
         assertEquals(6, Algoritmos.fatorial(3));
         assertEquals(24, Algoritmos.fatorial(4));
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.fatorial(0));
     }
 
     @Test
@@ -99,12 +71,9 @@ public class AlgoritmosTest {
     public void numeroPrimoAcerto() {
         assertTrue(Algoritmos.numeroPrimo(3));
         assertFalse(Algoritmos.numeroPrimo(4));
-    }
-
-    @Test
-    public void numeroPrimoErro() {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.numeroPrimo(-1));
     }
+
 
     @Test
     public void produtoDeInteirosErro() {
@@ -129,17 +98,12 @@ public class AlgoritmosTest {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.razaoAurea(2, -2, 0));
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.razaoAurea(2, 1, 5));
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.razaoAurea(-2, -1, 5));
-    }
-
-    @Test
-    public void razaoAureaCerto() {
         assertEquals(1, Algoritmos.razaoAurea(5, 9, 2));
     }
 
-
     @Test
     public void maiorDivisorComumCerto() {
-        // assertEquals(6, Algoritmos.maiorDivisorComum(12, 6));
+        assertEquals(6, Algoritmos.maiorDivisorComum(12, 6));
         assertEquals(6, Algoritmos.maiorDivisorComum2(12, 6));
         assertEquals(24, Algoritmos.maiorDivisorComum2(24, 24));
         assertEquals(4, Algoritmos.maiorDivisorComum2(24, 20));
@@ -149,7 +113,6 @@ public class AlgoritmosTest {
     public void maiorDivisorComumErro() {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.maiorDivisorComum(3,5));
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.maiorDivisorComum2(3,5));
-
     }
 
     @Test
@@ -166,6 +129,7 @@ public class AlgoritmosTest {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.restoDivisao(3,-1));
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.restoDivisao(-1,2));
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.polinomio(-12, seq));
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.somaPrimeirosNaturais(-12));
     }
 
     @Test
