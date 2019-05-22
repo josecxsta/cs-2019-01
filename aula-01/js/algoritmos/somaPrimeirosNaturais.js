@@ -10,21 +10,19 @@ function somaPrimeirosNaturais(n) {
     if (typeof(n) != "number") {
         throw new TypeError("argumento nao eh numero inteiro");
     }
-    
+
     if (1 > n || !Number.isInteger(n)){
         throw new RangeError("argumento nao eh numero inteiro maior que 1");
     }
-    
+
     let i = 2;
     let s = 1;
-    
     while (i <= n) {
-        s = s + i; 
+        s = s + i;
         i++;
-    } 
-    
+    }
+
     return s;
-    
 }
 
 module.exports = somaPrimeirosNaturais;

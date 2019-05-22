@@ -8,35 +8,33 @@
 * @throws {RangeError} se algum dos argumentos for menor que 1
 */
 function produtoDeInteiros(a, b) {
-    
+
     if (typeof(a) != "number" || typeof(b) != "number") {
         throw new TypeError("argumento deve ser um numero");
     }
-    
+
     if (a < 1 || b < 1) {
         throw new RangeError("argumentos devem ser maiores que 0");
     }
-    
+
     if (!Number.isInteger(a) || !Number.isInteger(a)) {
         throw new RangeError("argumentos devem ser numerais inteiros");
     }
-    
+
     let totalParcelas = a;
     let parcela = b;
-    
     if (b < a) {
         totalParcelas = b;
         parcela = a;
     }
-    
+
     let i = 1;
     let s = 0;
-    
     while (i <= totalParcelas) {
         s = s + parcela;
         i = i + 1;
     }
-    
+
     return s;
 }
 

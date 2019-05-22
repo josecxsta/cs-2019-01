@@ -8,17 +8,17 @@
 function polinomio(n, c) {
 
     const grau = c.length;
-    
+
     if (typeof(n) != "number") {
         throw new TypeError("argumento deve ser numeral");
     }
-    
+
     if (grau < 1) {
         throw new RangeError("polinomio de grau invalido");
     }
 
     for (let i = 0; i < grau; i++) {
-        
+
         if (c[i] === null || c[i] === undefined) {
             throw new TypeError("argumento deve ser numeral");
         }
@@ -28,15 +28,13 @@ function polinomio(n, c) {
         }
 
     }
-    
-    let p = c[grau - 1];
 
+    let p = c[grau - 1];
     for (i = grau - 2; i >= 0; i--) {
         p = p * n + c[i];
     }
-    
-    return p;
 
+    return p;
 }
 
 module.exports = polinomio;

@@ -12,7 +12,7 @@ function restoDivisao(x, y) {
     if (typeof(x) != "number" || typeof(y) != "number") {
         throw new TypeError("argumentos devem ser numerais");
     }
-    
+
     if (y < 0 || x < 0) {
         throw new RangeError("numeros devem ser maiores que zero");
     }
@@ -20,9 +20,8 @@ function restoDivisao(x, y) {
     if (!Number.isInteger(x) || !Number.isInteger(y)) {
         throw new RangeError("argumentos devem ser numeros inteiros");
     }
-    
-    let s = x;
 
+    let s = x;
     while (y <= s) {
         s = s -y;
     }
