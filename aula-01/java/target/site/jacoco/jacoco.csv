@@ -1,0 +1,4 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+com.github.josecxsta:cs-2019-01,com.github.josecxsta.ufg.cs.aula01.domain,Algoritmos,0,593,4,106,0,174,4,70,0,19
+com.github.josecxsta:cs-2019-01,com.github.josecxsta.ufg.cs.aula01.domain,Data,0,103,2,20,0,14,2,14,0,5
+com.github.josecxsta:cs-2019-01,com.github.josecxsta.ufg.cs.aula01.domain,Cpf,0,242,2,14,0,27,2,10,0,4
