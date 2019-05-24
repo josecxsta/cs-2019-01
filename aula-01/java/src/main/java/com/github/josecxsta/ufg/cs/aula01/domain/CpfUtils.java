@@ -137,18 +137,19 @@ public final class CpfUtils {
             throw new IllegalArgumentException("CPF precisa de 11 caracteres");
         }
 
-        int c = DIG_7;
+        int aux = DIG_7;
         int regiao = inteiros[DIG_8];
-        int s = inteiros[DIG_8];
+        int regiaoFiscal = inteiros[DIG_8];
 
-        while (c >= 0) {
-            regiao = regiao + inteiros[c];
-            s = s + regiao;
-            c = c - 1;
+        while (aux >= 0) {
+            regiao = regiao + inteiros[aux];
+            regiaoFiscal = regiaoFiscal + regiao;
+            aux = aux - 1;
         }
 
-        final int verificador1 = (s % DIG_11) % DIG_10;
-        final int verificador2 = ((s - regiao + DIG_9 * inteiros[DIG_9]) % DIG_11) % DIG_10;
+        final int verificador1 = (regiaoFiscal % DIG_11) % DIG_10;
+        final int verificador2 = ((regiaoFiscal - regiao + DIG_9 * inteiros[DIG_9])
+        % DIG_11) % DIG_10;
 
         return verificador1 == inteiros[DIG_9] && verificador2 == inteiros[DIG_10];
 

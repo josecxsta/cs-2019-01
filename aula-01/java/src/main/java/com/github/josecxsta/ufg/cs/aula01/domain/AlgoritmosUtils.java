@@ -7,16 +7,6 @@ package com.github.josecxsta.ufg.cs.aula01.domain;
 public final class AlgoritmosUtils {
 
     /**
-    * Limite para o argumento do método prop153.
-    */
-    public static final int LIMIT_PROP153 = 999;
-
-    /**
-    * Limite para o argumento do método prop3025.
-    */
-    public static final int LIMIT_PROP3025 = 9999;
-
-    /**
     * Atributo que representa o número 1 a fim de evitar
     * a utilização de número mágico.
     */
@@ -89,25 +79,25 @@ public final class AlgoritmosUtils {
 
     /**
     * Calcula se o numero eh um quadrado perfeito.
-    * @param n numero
+    * @param num numero
     * @return se numero é quadrado perfeito
     * @throws IllegalArgumentException se n for menor que 1
     */
-    public static boolean quadradoPerfeito(final int numero) {
+    public static boolean quadradoPerfeito(final int num) {
 
-        final boolean ehMenorQueUm = numero < 1;
+        final boolean ehMenorQueUm = num < 1;
         if (ehMenorQueUm) {
             throw new IllegalArgumentException("n deve ser maior que 0");
         }
 
         int indice = 1;
         int somaIndice = 1;
-        while (somaIndice < numero) {
+        while (somaIndice < num) {
             indice = indice + 2;
             somaIndice = somaIndice + indice;
         }
 
-        return somaIndice == numero;
+        return somaIndice == num;
     }
 
     /**
@@ -126,7 +116,6 @@ public final class AlgoritmosUtils {
 
         int retorno = 1;
         int precisaoAjustado = precisao;
-
         while (0 <= precisaoAjustado) {
             retorno = (retorno + (numero / retorno)) / 2;
             precisaoAjustado = precisaoAjustado - 1;
@@ -137,179 +126,166 @@ public final class AlgoritmosUtils {
 
     /**
     * Calcula a razão aurea entre dois numeros.
-    * @param x 1º número
-    * @param y 2º número
-    * @param k precisão
+    * @param num1 1º número
+    * @param num2 2º número
+    * @param prec precisão
     * @return razão aurea entre x e y
-    * @throws IllegalArgumentException se x for menor que 0, se k menor que 1
-    se y menor que x.
+    * @throws IllegalArgumentException se argumentos estiverem fora da faixa.
     */
-    public static int razaoAurea(final int x, final int y, final int k) {
+    public static int razaoAurea(final int num1, final int num2, final int prec) {
 
-        final boolean xMenorQueZero = x < 0;
-        final boolean xMaiorQueY = x > y;
-        final boolean kMenorQueUm = k <= 0;
-
-        if (xMenorQueZero || xMaiorQueY || kMenorQueUm) {
+        final boolean num1MenorQueZero = num1 < 0;
+        final boolean num1MaiorQuenum2 = num1 > num2;
+        final boolean precMenorQueUm = prec <= 0;
+        if (num1MenorQueZero || num1MaiorQuenum2 || precMenorQueUm) {
             throw new IllegalArgumentException("argumentos fora da faixa");
         }
 
-        int c = y;
-        int a = x;
+        int aux1 = num2;
+        int aux2 = num1;
         int indice = 1;
-        while (indice <= k) {
-            final int t = c;
-            c = c + a;
-            a = t;
+        while (indice <= prec) {
+            final int aux = aux1;
+            aux1 = aux1 + aux2;
+            aux2 = aux;
             indice++;
         }
 
-        return c / a;
+        return aux1 / aux2;
     }
 
     /**
     * Produz uma aproximação do valor de PI baseado no número de
     iterações fornecido, onde quanto maior o número de
     iterações, maior a precisão de PI.
-    * @param n numero de iteracoes
+    * @param numero numero de iteracoes
     * @return aproximacao do valor de PI
     * @throws IllegalArgumentException se n for menor que 1
     */
-    public static int valorPi(final int n) {
+    public static int valorPi(final int numero) {
 
-        if (n < 1) {
+        final boolean numeroMenorQueUm = numero < 1;
+        if (numeroMenorQueUm) {
             throw new IllegalArgumentException("n deve ser positivo");
         }
 
-        int i = 1;
-        int s = -1;
-        int d = -1;
-        int p = 0;
-        while (i <= n) {
-            d = d + 2;
-            s = -1 * s;
-            p = p + (DIG_4 * s / d);
-            i = i + 1;
+        int indice = 1;
+        int aux1 = -1;
+        int aux2 = -1;
+        int valorPi = 0;
+        while (indice <= numero) {
+            aux2 = aux2 + 2;
+            aux1 = -1 * aux1;
+            valorPi = valorPi + (DIG_4 * aux1 / aux2);
+            indice = indice + 1;
         }
 
-        return p;
+        return valorPi;
     }
 
     /**
     * Calcula o fatorial de dado numero.
-    * @param n numero
+    * @param numero numero
     * @return fatorial de n
     * @throws IllegalArgumentException Se n for menor que 1
     */
     public static int fatorial(final int numero) {
 
         final boolean nMenorQueUm = 1 > numero;
-
         if (nMenorQueUm) {
             throw new IllegalArgumentException("n deve ser positivo");
         }
 
         int indice = 2;
-        int f = 1;
-
+        int fatorial = 1;
         while (indice <= numero) {
-            f = f * indice;
+            fatorial = fatorial * indice;
             indice = indice + 1;
         }
 
-        return f;
-
+        return fatorial;
     }
 
     /**
     * Calcula o n-esimo numero da sequência de Fibonacci.
-    * @param n numero
+    * @param numero numero
     * @throws IllegalArgumentException se n for menor que zero.
     * @return c n-esimo numero de Fibonacci.
     */
     public static int fibonacci(final int numero) {
 
-        if (0 > n) {
+        if (0 > numero) {
             throw new IllegalArgumentException("n deve ser positivo");
         }
 
-        int a = 0;
-        int c = 1;
-
+        int aux1 = 0;
+        int aux2 = 1;
         final boolean ehZeroOuUm = numero == 0 || numero == 1;
-
         int indice = 2;
-        int t;
-
+        int aux3;
         while (indice <= numero) {
-            t = c;
-            c = c + a;
-            a = t;
+            aux3 = aux2;
+            aux2 = aux2 + aux1;
+            aux1 = aux3;
             indice++;
         }
 
-        return ehZeroOuUm ? numero : c;
-
+        return ehZeroOuUm ? numero : aux2;
     }
 
     /**
     * Calcula maior divisor comum entre dois numeros.
-    * @param x 1º numero
-    * @param y 2º numero
+    * @param num1 1º numero
+    * @param num2 2º numero
     * @return maior divisor comum entre x e y
     * @throws IllegalArgumentException Se y for maior que x
     ou y menor do que zero.
     */
-    public static int maiorDivisorComum(final int x, final int y) {
+    public static int maiorDivisorComum(final int num1, final int num2) {
 
-        if (x < 1 || y > x) {
+        if (num1 < 1 || num2 > num1) {
             throw new IllegalArgumentException("Argumento fora da faixa");
         }
 
-        int m;
-
-        int argX = x;
-        int argY = y;
-
-        while (argY != 0) {
-            m = argX % argY;
-            argX = argY;
-            argY = m;
+        int aux;
+        int num1Ajustado = num1;
+        int num2Ajustado = num2;
+        while (num2Ajustado != 0) {
+            aux = num1Ajustado % num2Ajustado;
+            num1Ajustado = num2Ajustado;
+            num2Ajustado = aux;
         }
 
-        return argX;
-
+        return num1Ajustado;
     }
 
     /**
     * Calcula maior divisor comum entre dois numeros.
-    * @param a 1º numero
-    * @param b 2º numero
+    * @param num1 1º numero
+    * @param num2 2º numero
     * @return maior divisor comum entre a e b
     * @throws IllegalArgumentException Se y for maior que x
     ou y menor do que zero.
     */
-    public static int maiorDivisorComum2(final int a, final int b) {
+    public static int maiorDivisorComum2(final int num1, final int num2) {
 
-        if (b < 1 || b > a) {
-            throw new IllegalArgumentException("Argumento fora da faixa");
+        if (num2 < 1 || num2 > num1) {
+            throw new IllegalArgumentException("argumentos fora da faixa");
         }
 
-        int argA = a;
-        int argB = b;
+        int num1Ajustado = num1;
+        int num2Ajustado = num2;
+        while (num1Ajustado != num2Ajustado) {
 
-        while (argA != argB) {
-
-            if (argA > argB) {
-                argA = argA - argB;
+            if (num1Ajustado > num2Ajustado) {
+                num1Ajustado = num1Ajustado - num2Ajustado;
             } else {
-                argB = argB - argA;
+                num2Ajustado = num2Ajustado - num1Ajustado;
             }
 
         }
 
-        return argA;
-
+        return num1Ajustado;
     }
 
     /**
@@ -334,7 +310,6 @@ public final class AlgoritmosUtils {
         }
 
         return true;
-
     }
 
     /**
@@ -343,130 +318,119 @@ public final class AlgoritmosUtils {
     * @return resultado da soma.
     * @throws IllegalArgumentException se numero n for menor que 2
     */
-    public static int somaPrimeirosNaturais(final int n) {
+    public static int somaPrimeirosNaturais(final int num) {
 
-        final boolean nMenorQueUm = 1 > n;
+        final boolean nMenorQueUm = 1 > num;
 
         if (nMenorQueUm) {
             throw new IllegalArgumentException("n deve ser maior que 1");
         }
 
         int indice = 2;
-        int s = 1;
-
-        while (indice <= n) {
-            s = s + indice;
+        int soma = 1;
+        while (indice <= num) {
+            soma = soma + indice;
             indice++;
         }
 
-        return s;
-
+        return soma;
     }
 
     /**
     * Calcula o resto da divisao entre dois numeros inteiros.
-    * @param x numerador
-    * @param y denominador
+    * @param num1 numerador
+    * @param num2 denominador
     * @return resto da divisao entre os dois numeros
-    * @throws IllegalArgumentException se x ou y for menor que 0
+    * @throws IllegalArgumentException se num1 ou num2 for menor que 0
     */
-    public static int restoDivisao(final int x, final int y) {
+    public static int restoDivisao(final int num1, final int num2) {
 
-        if (y < 0 || x < 0) {
-            throw new IllegalArgumentException("x e y devem ser maiores que 0");
+        if (num2 < 0 || num1 < 0) {
+            throw new IllegalArgumentException("num1 e num2 devem ser maiores que 0");
         }
 
-        int s = x;
-
-        while (y <= s) {
-            s = s - y;
+        int resto = num1;
+        while (num2 <= resto) {
+            resto = resto - num2;
         }
 
-        return s;
+        return resto;
     }
 
     /**
     * Calcula resultado de polinômio.
-    * @param n numero
-    * @param c array de coeficientes
+    * @param numero numero
+    * @param coeficientes array de coeficientes
     * @return polinomio de n
     * @throws IllegalArgumentException se argumento não for positivo.
     */
-    public static int polinomio(final int n, final int[] c) {
+    public static int polinomio(final int numero, final int[] coeficientes) {
 
-        final int grau = c.length;
-
-        if (n < 0) {
+        final int grau = coeficientes.length;
+        if (numero < 0) {
             throw new IllegalArgumentException("argumento deve ser positivo");
         }
 
-        int p = c[grau - 1];
-
-
+        int polinomio = coeficientes[grau - 1];
         for (int indice = grau - 2; indice >= 0; indice--) {
-            p = p * n + c[indice];
+            polinomio = polinomio * numero + coeficientes[indice];
         }
 
-        return p;
-
+        return polinomio;
     }
 
     /**
     * Aplica o método conhecido por Crivo de Eratostenes para
     identificar se um valor é primo.
-    * @param a colecao de numeros
-    * @param n valor
+    * @param numeros colecao de numeros
+    * @param valor valor
     * @return se o valor é primo
     * @throws IllegalArgumentException se n nao for maior que 1.
     */
-    public static boolean crivoEratostenes(final int[] a, final int n) {
+    public static boolean crivoEratostenes(final int[] numeros, final int valor) {
 
-        if (n < 2) {
+        final boolean valorMenorQue2 = valor < 2;
+        if (valorMenorQue2) {
             throw new IllegalArgumentException("n deve ser maior que 1");
         }
 
         int indice = 2;
-        final int limite = (int) Math.sqrt(n);
-
+        final int limite = (int) Math.sqrt(valor);
         while (indice <= limite) {
 
-            if (a[indice] == 0) {
-
+            if (numeros[indice] == 0) {
                 int multiplo = indice + indice;
-
-                while (multiplo <= n) {
-                    a[multiplo] = 1;
+                while (multiplo <= valor) {
+                    numeros[multiplo] = 1;
                     multiplo++;
                 }
 
             }
 
             indice++;
-
         }
 
-        return a[n] == 1;
-
+        return numeros[valor] == 1;
     }
 
     /**
     * Calcula potencia apenas usando somas.
-    * @param x numero
-    * @param y numero de iteracoes para calcular a potencia de x
+    * @param num numero
+    * @param iteracoes numero de iteracoes para calcular a potencia de num
     * @return potencia
     * @throws IllegalArgumentException Se algum dos numeros for menor que zero.
     */
-    public static int potenciaSomas(final int x, final int y) {
+    public static int potenciaSomas(final int num, final int iteracoes) {
 
-        if (x < 0 || y < 0) {
-            throw new IllegalArgumentException("x e y devem ser positivos");
+        if (num < 0 || iteracoes < 0) {
+            throw new IllegalArgumentException("argumentos devem ser positivos");
         }
 
         int potencia = 1;
         int indice = 1;
 
-        while (indice <= y) {
-            potencia = potencia * x;
+        while (indice <= iteracoes) {
+            potencia = potencia * num;
             indice++;
         }
 
@@ -475,8 +439,8 @@ public final class AlgoritmosUtils {
 
     /**
     * Calcula o produto dos numeros inteiros fornecidos.
-    * @param a multiplicando
-    * @param b multiplicador
+    * @param multiplicando multiplicando
+    * @param multiplicador multiplicador
     * @return resultado da multiplicação
     * @throws IllegalArgumentException se a ou b for menor que 1
     */
@@ -489,7 +453,6 @@ public final class AlgoritmosUtils {
 
         int totalParcelas = multiplicando;
         int parcela = multiplicador;
-
         if (multiplicador < multiplicando) {
             totalParcelas = multiplicador;
             parcela = multiplicando;
@@ -497,7 +460,6 @@ public final class AlgoritmosUtils {
 
         int indice = 1;
         int parcelas = 0;
-
         while (indice <= totalParcelas) {
             parcelas = parcelas + parcela;
             indice = indice + 1;
@@ -524,7 +486,6 @@ public final class AlgoritmosUtils {
         int result = DIG_1 + numero;
         int numerador = numero;
         int denominador = DIG_1;
-
         while (indice <= precisao) {
             numerador = numerador * numerador;
             denominador = denominador * indice;
@@ -533,7 +494,6 @@ public final class AlgoritmosUtils {
         }
 
         return result;
-
     }
 
 }
