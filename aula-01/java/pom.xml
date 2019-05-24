@@ -103,7 +103,7 @@
         <!-- Define o nome do arquivo a ser gerado (.jar é acrescentada) -->
         <finalName>algoritmos</finalName>
 
-        <plugins>            
+        <plugins>
 
             <!-- spotbugs -->
             <!-- mvn compile           -->
@@ -171,7 +171,7 @@
             </plugin>
 
             <!-- FIM DE ATUALIZACAO DE PLUGINS -->
-                 
+
             <!-- mvn checkstyle:checkstyle -->
             <!-- mvn checkstyle:check      -->
             <plugin>
@@ -212,7 +212,7 @@
                 <configuration>
                     <show>public</show>
                     <additionalOptions>
-                        <additionalOption>-html5</additionalOption>
+                        <!-- <additionalOption>-html5</additionalOption> -->
                     </additionalOptions>
                 </configuration>
             </plugin>
@@ -451,7 +451,7 @@
             <id>api</id>
             <build>
                 <finalName>api</finalName>
-                <plugins>            
+                <plugins>
                     <plugin>
                         <groupId>org.springframework.boot</groupId>
                         <artifactId>spring-boot-maven-plugin</artifactId>
@@ -562,10 +562,10 @@
                             <threshold>Low</threshold>
                             <failOnError>true</failOnError>
                             <includeFilterFile>
-                                ${project.basedir}/spotbugs-security-include.xml
+                                ${project.basedir}\spotbugs-security-include.xml
                             </includeFilterFile>
                             <excludeFilterFile>
-                                ${project.basedir}/spotbugs-security-exclude.xml
+                                ${project.basedir}\spotbugs-security-exclude.xml
                             </excludeFilterFile>
                             <plugins>
                                 <plugin>

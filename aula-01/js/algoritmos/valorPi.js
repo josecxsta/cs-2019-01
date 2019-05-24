@@ -24,7 +24,6 @@ function valorPI(n) {
     let s = -1;
     let d = -1;
     let p = 0;
-
     while (i <= n) {
         d = d + 2;
         s = -1 * s;
@@ -33,7 +32,6 @@ function valorPI(n) {
     }
 
     return p;
-
 }
 
 module.exports = valorPI;

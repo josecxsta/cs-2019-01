@@ -1,6 +1,6 @@
 /**
  * Calcula a razao aurea entre dois numeros
- * 
+ *
  * @param {number} x numero inteiro.
  * @param {number} y numero inteiro.
  * @param {number} k precisão
@@ -27,7 +27,6 @@ function razaoAurea(x, y, k) {
     let a = x;
     let i = 1;
     let t;
-
     while (i <= k) {
         t = c;
         c = c + a;
@@ -38,7 +37,6 @@ function razaoAurea(x, y, k) {
     let response = c/a;
 
     return response;
-
 }
 
 module.exports = razaoAurea;

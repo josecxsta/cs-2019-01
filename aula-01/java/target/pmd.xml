@@ -2,449 +2,222 @@
 <pmd xmlns="http://pmd.sourceforge.net/report/2.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd"
-    version="6.8.0" timestamp="2019-05-19T17:19:23.857">
-<file name="C:\Users\Usuario\Downloads\cs\cs-2019-01\aula-01\java\src\main\java\com\github\josecxsta\ufg\cs\aula01\domain\Algoritmos.java">
-<violation beginline="7" endline="592" begincolumn="25" endcolumn="1" rule="UseUtilityClass" ruleset="Design" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_design.html#useutilityclass" priority="3">
-All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
-</violation>
-<violation beginline="7" endline="592" begincolumn="8" endcolumn="1" rule="CyclomaticComplexity" ruleset="Design" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_design.html#cyclomaticcomplexity" priority="3">
-The class 'Algoritmos' has a total cyclomatic complexity of 89 (highest 6).
-</violation>
-<violation beginline="7" endline="592" begincolumn="8" endcolumn="1" rule="ClassNamingConventions" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#classnamingconventions" priority="1">
-The utility class name 'Algoritmos' doesn't match '[A-Z][a-zA-Z0-9]+(Utils?|Helper)'
-</violation>
-<violation beginline="7" endline="592" begincolumn="25" endcolumn="1" rule="TooManyMethods" ruleset="Design" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_design.html#toomanymethods" priority="3">
+    version="6.8.0" timestamp="2019-05-23T21:47:55.251">
+<file name="C:\Users\Usuario\Downloads\cs\cs-2019-01\aula-01\java\src\main\java\com\github\josecxsta\ufg\cs\aula01\domain\AlgoritmosUtils.java">
+<violation beginline="7" endline="539" begincolumn="36" endcolumn="1" rule="TooManyMethods" ruleset="Design" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_design.html#toomanymethods" priority="3">
 This class has too many methods, consider refactoring it.
 </violation>
-<violation beginline="101" endline="101" begincolumn="48" endcolumn="72" rule="AvoidDuplicateLiterals" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="prop153" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#avoidduplicateliterals" priority="3">
-The String literal &quot;Argumento fora da faixa&quot; appears 4 times in this file; the first occurrence is on line 101
+<violation beginline="103" endline="106" begincolumn="13" endcolumn="31" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="quadradoPerfeito" variable="indice" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'indice' (lines '103'-'106').
 </violation>
-<violation beginline="104" endline="104" begincolumn="19" endcolumn="19" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="prop153" variable="c" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like c
+<violation beginline="103" endline="111" begincolumn="13" endcolumn="22" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="quadradoPerfeito" variable="indice" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'indice' (lines '103'-'111').
 </violation>
-<violation beginline="105" endline="105" begincolumn="19" endcolumn="20" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="prop153" variable="du" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like du
+<violation beginline="127" endline="131" begincolumn="13" endcolumn="56" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="raizQuadrada" variable="retorno" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'retorno' (lines '127'-'131').
 </violation>
-<violation beginline="106" endline="106" begincolumn="19" endcolumn="19" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="prop153" variable="d" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like d
-</violation>
-<violation beginline="106" endline="106" begincolumn="24" endcolumn="34" rule="UselessParentheses" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="prop153" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
-Useless parentheses.
-</violation>
-<violation beginline="107" endline="107" begincolumn="19" endcolumn="19" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="prop153" variable="u" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like u
-</violation>
-<violation beginline="107" endline="107" begincolumn="24" endcolumn="34" rule="UselessParentheses" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="prop153" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
-Useless parentheses.
-</violation>
-<violation beginline="109" endline="109" begincolumn="19" endcolumn="20" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="prop153" variable="c3" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like c3
-</violation>
-<violation beginline="110" endline="110" begincolumn="19" endcolumn="20" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="prop153" variable="d3" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like d3
-</violation>
-<violation beginline="111" endline="111" begincolumn="19" endcolumn="20" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="prop153" variable="u3" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like u3
-</violation>
-<violation beginline="113" endline="113" begincolumn="17" endcolumn="28" rule="UselessParentheses" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="prop153" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
-Useless parentheses.
-</violation>
-<violation beginline="129" endline="129" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="prop3025" variable="i" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like i
-</violation>
-<violation beginline="129" endline="129" begincolumn="9" endcolumn="34" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="prop3025" variable="i" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
-Local variable 'i' could be declared final
-</violation>
-<violation beginline="129" endline="129" begincolumn="18" endcolumn="33" rule="UselessParentheses" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="prop3025" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
-Useless parentheses.
-</violation>
-<violation beginline="130" endline="130" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="prop3025" variable="j" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like j
-</violation>
-<violation beginline="130" endline="130" begincolumn="9" endcolumn="34" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="prop3025" variable="j" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
-Local variable 'j' could be declared final
-</violation>
-<violation beginline="130" endline="130" begincolumn="18" endcolumn="33" rule="UselessParentheses" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="prop3025" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
-Useless parentheses.
-</violation>
-<violation beginline="132" endline="132" begincolumn="13" endcolumn="14" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="prop3025" variable="ij" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like ij
-</violation>
-<violation beginline="132" endline="132" begincolumn="9" endcolumn="40" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="prop3025" variable="ij" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
-Local variable 'ij' could be declared final
-</violation>
-<violation beginline="134" endline="134" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="prop3025" variable="x" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like x
-</violation>
-<violation beginline="134" endline="134" begincolumn="9" endcolumn="23" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="prop3025" variable="x" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
-Local variable 'x' could be declared final
-</violation>
-<violation beginline="136" endline="136" begincolumn="17" endcolumn="27" rule="UselessParentheses" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="prop3025" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
-Useless parentheses.
-</violation>
-<violation beginline="146" endline="146" begincolumn="54" endcolumn="54" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="quadradoPerfeito" variable="n" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like n
-</violation>
-<violation beginline="148" endline="148" begincolumn="17" endcolumn="17" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="quadradoPerfeito" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
-Avoid using Literals in Conditional Statements
-</violation>
-<violation beginline="152" endline="152" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="quadradoPerfeito" variable="i" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like i
-</violation>
-<violation beginline="152" endline="156" begincolumn="13" endcolumn="21" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="quadradoPerfeito" variable="i" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'i' (lines '152'-'156').
-</violation>
-<violation beginline="152" endline="162" begincolumn="13" endcolumn="17" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="quadradoPerfeito" variable="i" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'i' (lines '152'-'162').
-</violation>
-<violation beginline="153" endline="153" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="quadradoPerfeito" variable="s" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like s
-</violation>
-<violation beginline="160" endline="160" begincolumn="17" endcolumn="22" rule="UselessParentheses" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="quadradoPerfeito" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
-Useless parentheses.
-</violation>
-<violation beginline="170" endline="170" begincolumn="46" endcolumn="46" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="raizQuadrada" variable="x" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like x
-</violation>
-<violation beginline="170" endline="170" begincolumn="59" endcolumn="59" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="raizQuadrada" variable="y" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like y
-</violation>
-<violation beginline="172" endline="172" begincolumn="17" endcolumn="17" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="raizQuadrada" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
-Avoid using Literals in Conditional Statements
-</violation>
-<violation beginline="176" endline="176" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="raizQuadrada" variable="r" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like r
-</violation>
-<violation beginline="176" endline="181" begincolumn="13" endcolumn="33" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="raizQuadrada" variable="r" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'r' (lines '176'-'181').
-</violation>
-<violation beginline="189" endline="198" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+<violation beginline="138" endline="146" begincolumn="1" endcolumn="2" rule="CommentSize" ruleset="Documentation" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_documentation.html#commentsize" priority="3">
 Comment is too large: Too many lines
 </violation>
-<violation beginline="199" endline="199" begincolumn="70" endcolumn="70" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="razaoAurea" variable="k" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="147" endline="147" begincolumn="70" endcolumn="70" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="razaoAurea" variable="k" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like k
 </violation>
-<violation beginline="199" endline="199" begincolumn="44" endcolumn="44" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="razaoAurea" variable="x" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="147" endline="147" begincolumn="44" endcolumn="44" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="razaoAurea" variable="x" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like x
 </violation>
-<violation beginline="199" endline="199" begincolumn="57" endcolumn="57" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="razaoAurea" variable="y" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="147" endline="147" begincolumn="57" endcolumn="57" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="razaoAurea" variable="y" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like y
 </violation>
-<violation beginline="205" endline="205" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="razaoAurea" variable="c" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="157" endline="157" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="razaoAurea" variable="c" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like c
 </violation>
-<violation beginline="206" endline="206" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="razaoAurea" variable="a" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="158" endline="158" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="razaoAurea" variable="a" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like a
 </violation>
-<violation beginline="207" endline="207" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="razaoAurea" variable="i" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like i
-</violation>
-<violation beginline="210" endline="210" begincolumn="23" endcolumn="23" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="razaoAurea" variable="t" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="161" endline="161" begincolumn="23" endcolumn="23" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="razaoAurea" variable="t" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like t
 </violation>
-<violation beginline="218" endline="218" begincolumn="9" endcolumn="24" rule="UnnecessaryLocalBeforeReturn" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="razaoAurea" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#unnecessarylocalbeforereturn" priority="3">
-Consider simply returning the value vs storing it in local variable 'response'
-</violation>
-<violation beginline="230" endline="230" begincolumn="41" endcolumn="41" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="valorPi" variable="n" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="178" endline="178" begincolumn="41" endcolumn="41" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="valorPi" variable="n" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like n
 </violation>
-<violation beginline="232" endline="232" begincolumn="17" endcolumn="17" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="valorPi" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+<violation beginline="180" endline="180" begincolumn="17" endcolumn="17" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="valorPi" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
 Avoid using Literals in Conditional Statements
 </violation>
-<violation beginline="236" endline="236" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="valorPi" variable="i" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="184" endline="184" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="valorPi" variable="i" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like i
 </violation>
-<violation beginline="237" endline="237" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="valorPi" variable="s" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="185" endline="185" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="valorPi" variable="s" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like s
 </violation>
-<violation beginline="237" endline="243" begincolumn="13" endcolumn="22" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="valorPi" variable="s" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 's' (lines '237'-'243').
+<violation beginline="185" endline="190" begincolumn="13" endcolumn="22" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="valorPi" variable="s" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 's' (lines '185'-'190').
 </violation>
-<violation beginline="237" endline="250" begincolumn="13" endcolumn="18" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="valorPi" variable="s" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 's' (lines '237'-'250').
+<violation beginline="185" endline="196" begincolumn="13" endcolumn="18" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="valorPi" variable="s" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 's' (lines '185'-'196').
 </violation>
-<violation beginline="238" endline="238" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="valorPi" variable="d" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="186" endline="186" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="valorPi" variable="d" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like d
 </violation>
-<violation beginline="238" endline="242" begincolumn="13" endcolumn="21" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="valorPi" variable="d" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'd' (lines '238'-'242').
+<violation beginline="186" endline="189" begincolumn="13" endcolumn="21" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="valorPi" variable="d" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'd' (lines '186'-'189').
 </violation>
-<violation beginline="238" endline="250" begincolumn="13" endcolumn="18" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="valorPi" variable="d" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'd' (lines '238'-'250').
+<violation beginline="186" endline="196" begincolumn="13" endcolumn="18" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="valorPi" variable="d" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'd' (lines '186'-'196').
 </violation>
-<violation beginline="239" endline="239" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="valorPi" variable="p" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="187" endline="187" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="valorPi" variable="p" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like p
 </violation>
-<violation beginline="239" endline="244" begincolumn="13" endcolumn="35" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="valorPi" variable="p" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'p' (lines '239'-'244').
+<violation beginline="187" endline="191" begincolumn="13" endcolumn="35" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="valorPi" variable="p" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'p' (lines '187'-'191').
 </violation>
-<violation beginline="258" endline="258" begincolumn="42" endcolumn="42" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="fatorial" variable="n" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like n
-</violation>
-<violation beginline="260" endline="260" begincolumn="13" endcolumn="13" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="fatorial" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
-Avoid using Literals in Conditional Statements
-</violation>
-<violation beginline="264" endline="264" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="fatorial" variable="i" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like i
-</violation>
-<violation beginline="265" endline="265" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="fatorial" variable="f" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="213" endline="213" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="fatorial" variable="f" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like f
 </violation>
-<violation beginline="265" endline="268" begincolumn="13" endcolumn="21" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="fatorial" variable="f" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'f' (lines '265'-'268').
+<violation beginline="213" endline="216" begincolumn="13" endcolumn="26" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="fatorial" variable="f" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'f' (lines '213'-'216').
 </violation>
-<violation beginline="282" endline="282" begincolumn="43" endcolumn="43" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="fibonacci" variable="n" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like n
-</violation>
-<violation beginline="288" endline="288" begincolumn="9" endcolumn="17" rule="PrematureDeclaration" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="fibonacci" variable="a" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#prematuredeclaration" priority="3">
-Avoid declaring a variable if it is unreferenced before a possible exit point.
-</violation>
-<violation beginline="288" endline="288" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="fibonacci" variable="a" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="236" endline="236" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="fibonacci" variable="a" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like a
 </violation>
-<violation beginline="288" endline="307" begincolumn="13" endcolumn="17" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="fibonacci" variable="a" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'a' (lines '288'-'307').
+<violation beginline="236" endline="253" begincolumn="13" endcolumn="17" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="fibonacci" variable="a" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'a' (lines '236'-'253').
 </violation>
-<violation beginline="289" endline="289" begincolumn="9" endcolumn="17" rule="PrematureDeclaration" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="fibonacci" variable="c" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#prematuredeclaration" priority="3">
-Avoid declaring a variable if it is unreferenced before a possible exit point.
-</violation>
-<violation beginline="289" endline="289" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="fibonacci" variable="c" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="237" endline="237" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="fibonacci" variable="c" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like c
 </violation>
-<violation beginline="289" endline="307" begincolumn="13" endcolumn="17" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="fibonacci" variable="c" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'c' (lines '289'-'307').
-</violation>
-<violation beginline="292" endline="292" begincolumn="13" endcolumn="21" rule="OnlyOneReturn" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="fibonacci" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
-A method should have only one exit point, and that should be the last statement in the method
-</violation>
-<violation beginline="295" endline="295" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="fibonacci" variable="i" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like i
-</violation>
-<violation beginline="296" endline="296" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="fibonacci" variable="t" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="242" endline="242" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="fibonacci" variable="t" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like t
 </violation>
-<violation beginline="301" endline="307" begincolumn="13" endcolumn="17" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="fibonacci" variable="a" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'a' (lines '301'-'307').
+<violation beginline="247" endline="253" begincolumn="13" endcolumn="17" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="fibonacci" variable="a" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'a' (lines '247'-'253').
 </violation>
-<violation beginline="317" endline="317" begincolumn="51" endcolumn="51" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="maiorDivisorComum" variable="x" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="263" endline="263" begincolumn="51" endcolumn="51" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="maiorDivisorComum" variable="x" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like x
 </violation>
-<violation beginline="317" endline="317" begincolumn="64" endcolumn="64" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="maiorDivisorComum" variable="y" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="263" endline="263" begincolumn="64" endcolumn="64" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="maiorDivisorComum" variable="y" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like y
 </violation>
-<violation beginline="323" endline="323" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="maiorDivisorComum" variable="m" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="269" endline="269" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="maiorDivisorComum" variable="m" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like m
 </violation>
-<violation beginline="326" endline="336" begincolumn="13" endcolumn="20" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="maiorDivisorComum" variable="argY" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'argY' (lines '326'-'336').
-</violation>
-<violation beginline="331" endline="336" begincolumn="13" endcolumn="20" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="maiorDivisorComum" variable="argY" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'argY' (lines '331'-'336').
-</violation>
-<violation beginline="346" endline="346" begincolumn="52" endcolumn="52" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="maiorDivisorComum2" variable="a" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="292" endline="292" begincolumn="52" endcolumn="52" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="maiorDivisorComum2" variable="a" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like a
 </violation>
-<violation beginline="346" endline="346" begincolumn="65" endcolumn="65" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="maiorDivisorComum2" variable="b" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="292" endline="292" begincolumn="65" endcolumn="65" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="maiorDivisorComum2" variable="b" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like b
 </violation>
-<violation beginline="352" endline="358" begincolumn="17" endcolumn="34" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="maiorDivisorComum2" variable="argA" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'argA' (lines '352'-'358').
-</violation>
-<violation beginline="353" endline="360" begincolumn="17" endcolumn="31" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="maiorDivisorComum2" variable="argB" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'argB' (lines '353'-'360').
-</violation>
-<violation beginline="353" endline="367" begincolumn="13" endcolumn="20" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="maiorDivisorComum2" variable="argB" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'argB' (lines '353'-'367').
-</violation>
-<violation beginline="381" endline="381" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="numeroPrimo" variable="i" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like i
-</violation>
-<violation beginline="384" endline="384" begincolumn="17" endcolumn="29" rule="OnlyOneReturn" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="numeroPrimo" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+<violation beginline="330" endline="330" begincolumn="17" endcolumn="29" rule="OnlyOneReturn" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="numeroPrimo" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
 A method should have only one exit point, and that should be the last statement in the method
 </violation>
-<violation beginline="400" endline="400" begincolumn="55" endcolumn="55" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="somaPrimeirosNaturais" variable="n" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="346" endline="346" begincolumn="55" endcolumn="55" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="somaPrimeirosNaturais" variable="n" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like n
 </violation>
-<violation beginline="402" endline="402" begincolumn="13" endcolumn="13" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="somaPrimeirosNaturais" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
-Avoid using Literals in Conditional Statements
-</violation>
-<violation beginline="406" endline="406" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="somaPrimeirosNaturais" variable="i" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like i
-</violation>
-<violation beginline="407" endline="407" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="somaPrimeirosNaturais" variable="s" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="355" endline="355" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="somaPrimeirosNaturais" variable="s" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like s
 </violation>
-<violation beginline="407" endline="410" begincolumn="13" endcolumn="21" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="somaPrimeirosNaturais" variable="s" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 's' (lines '407'-'410').
+<violation beginline="355" endline="358" begincolumn="13" endcolumn="26" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="somaPrimeirosNaturais" variable="s" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 's' (lines '355'-'358').
 </violation>
-<violation beginline="425" endline="425" begincolumn="46" endcolumn="46" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="restoDivisao" variable="x" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="373" endline="373" begincolumn="46" endcolumn="46" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="restoDivisao" variable="x" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like x
 </violation>
-<violation beginline="425" endline="425" begincolumn="59" endcolumn="59" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="restoDivisao" variable="y" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="373" endline="373" begincolumn="59" endcolumn="59" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="restoDivisao" variable="y" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like y
 </violation>
-<violation beginline="431" endline="431" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="restoDivisao" variable="s" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="379" endline="379" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="restoDivisao" variable="s" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like s
 </violation>
-<violation beginline="447" endline="447" begincolumn="58" endcolumn="58" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="polinomio" variable="c" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="395" endline="395" begincolumn="58" endcolumn="58" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="polinomio" variable="c" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like c
 </violation>
-<violation beginline="447" endline="447" begincolumn="43" endcolumn="43" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="polinomio" variable="n" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="395" endline="395" begincolumn="43" endcolumn="43" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="polinomio" variable="n" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like n
 </violation>
-<violation beginline="447" endline="447" begincolumn="46" endcolumn="58" rule="UseVarargs" ruleset="Best Practices" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="polinomio" variable="c" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_bestpractices.html#usevarargs" priority="4">
+<violation beginline="395" endline="395" begincolumn="46" endcolumn="58" rule="UseVarargs" ruleset="Best Practices" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="polinomio" variable="c" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_bestpractices.html#usevarargs" priority="4">
 Consider using varargs for methods or constructors which take an array the last parameter.
 </violation>
-<violation beginline="449" endline="449" begincolumn="9" endcolumn="33" rule="PrematureDeclaration" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="polinomio" variable="grau" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#prematuredeclaration" priority="3">
+<violation beginline="397" endline="397" begincolumn="9" endcolumn="33" rule="PrematureDeclaration" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="polinomio" variable="grau" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#prematuredeclaration" priority="3">
 Avoid declaring a variable if it is unreferenced before a possible exit point.
 </violation>
-<violation beginline="449" endline="465" begincolumn="19" endcolumn="33" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="polinomio" variable="grau" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'grau' (lines '449'-'465').
+<violation beginline="397" endline="412" begincolumn="19" endcolumn="33" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="polinomio" variable="grau" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'grau' (lines '397'-'412').
 </violation>
-<violation beginline="455" endline="455" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="polinomio" variable="p" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="403" endline="403" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="polinomio" variable="p" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like p
 </violation>
-<violation beginline="455" endline="460" begincolumn="13" endcolumn="28" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="polinomio" variable="p" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'p' (lines '455'-'460').
+<violation beginline="403" endline="407" begincolumn="13" endcolumn="33" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="polinomio" variable="p" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'p' (lines '403'-'407').
 </violation>
-<violation beginline="457" endline="457" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="polinomio" variable="i" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like i
-</violation>
-<violation beginline="475" endline="475" begincolumn="56" endcolumn="56" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="crivoEratostenes" variable="a" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="422" endline="422" begincolumn="56" endcolumn="56" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="crivoEratostenes" variable="a" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like a
 </violation>
-<violation beginline="475" endline="475" begincolumn="69" endcolumn="69" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="crivoEratostenes" variable="n" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="422" endline="422" begincolumn="69" endcolumn="69" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="crivoEratostenes" variable="n" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like n
 </violation>
-<violation beginline="477" endline="477" begincolumn="17" endcolumn="17" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="crivoEratostenes" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+<violation beginline="424" endline="424" begincolumn="17" endcolumn="17" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="crivoEratostenes" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
 Avoid using Literals in Conditional Statements
 </violation>
-<violation beginline="481" endline="481" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="crivoEratostenes" variable="i" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like i
-</violation>
-<violation beginline="512" endline="512" begincolumn="47" endcolumn="47" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="potenciaSomas" variable="x" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="459" endline="459" begincolumn="47" endcolumn="47" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="potenciaSomas" variable="x" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like x
 </violation>
-<violation beginline="512" endline="512" begincolumn="60" endcolumn="60" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="potenciaSomas" variable="y" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="459" endline="459" begincolumn="60" endcolumn="60" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="potenciaSomas" variable="y" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like y
 </violation>
-<violation beginline="518" endline="522" begincolumn="13" endcolumn="35" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="potenciaSomas" variable="potencia" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'potencia' (lines '518'-'522').
+<violation beginline="465" endline="469" begincolumn="13" endcolumn="35" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="potenciaSomas" variable="potencia" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'potencia' (lines '465'-'469').
 </violation>
-<violation beginline="519" endline="519" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="potenciaSomas" variable="i" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like i
+<violation beginline="486" endline="486" begincolumn="13" endcolumn="65" rule="AvoidFinalLocalVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="produtoDeInteiros" variable="error" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#avoidfinallocalvariable" priority="3">
+Avoid using final local variables, turn them into fields
 </violation>
-<violation beginline="536" endline="536" begincolumn="51" endcolumn="51" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="produtoDeInteiros" variable="a" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like a
+<violation beginline="490" endline="494" begincolumn="13" endcolumn="41" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="produtoDeInteiros" variable="totalParcelas" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'totalParcelas' (lines '490'-'494').
 </violation>
-<violation beginline="536" endline="536" begincolumn="64" endcolumn="64" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="produtoDeInteiros" variable="b" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like b
+<violation beginline="491" endline="495" begincolumn="13" endcolumn="35" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="produtoDeInteiros" variable="parcela" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'parcela' (lines '491'-'495').
 </violation>
-<violation beginline="539" endline="539" begincolumn="13" endcolumn="52" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="produtoDeInteiros" variable="msg" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
-Local variable 'msg' could be declared final
+<violation beginline="491" endline="507" begincolumn="13" endcolumn="35" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="produtoDeInteiros" variable="parcela" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'parcela' (lines '491'-'507').
 </violation>
-<violation beginline="543" endline="547" begincolumn="13" endcolumn="29" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="produtoDeInteiros" variable="totalParcelas" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'totalParcelas' (lines '543'-'547').
+<violation beginline="495" endline="507" begincolumn="13" endcolumn="35" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="produtoDeInteiros" variable="parcela" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'parcela' (lines '495'-'507').
 </violation>
-<violation beginline="544" endline="548" begincolumn="13" endcolumn="23" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="produtoDeInteiros" variable="parcela" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'parcela' (lines '544'-'548').
+<violation beginline="499" endline="502" begincolumn="13" endcolumn="41" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="produtoDeInteiros" variable="parcelas" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'parcelas' (lines '499'-'502').
 </violation>
-<violation beginline="544" endline="560" begincolumn="13" endcolumn="23" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="produtoDeInteiros" variable="parcela" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'parcela' (lines '544'-'560').
+<violation beginline="524" endline="531" begincolumn="13" endcolumn="55" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="logaritmo" variable="result" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'result' (lines '524'-'531').
 </violation>
-<violation beginline="548" endline="560" begincolumn="13" endcolumn="23" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="produtoDeInteiros" variable="parcela" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'parcela' (lines '548'-'560').
+<violation beginline="525" endline="529" begincolumn="13" endcolumn="45" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="logaritmo" variable="numerador" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'numerador' (lines '525'-'529').
 </violation>
-<violation beginline="551" endline="551" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="produtoDeInteiros" variable="i" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like i
+<violation beginline="525" endline="537" begincolumn="13" endcolumn="30" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="logaritmo" variable="numerador" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'numerador' (lines '525'-'537').
 </violation>
-<violation beginline="552" endline="552" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="produtoDeInteiros" variable="s" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like s
+<violation beginline="526" endline="530" begincolumn="13" endcolumn="46" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="logaritmo" variable="denominador" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'denominador' (lines '526'-'530').
 </violation>
-<violation beginline="552" endline="555" begincolumn="13" endcolumn="27" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="produtoDeInteiros" variable="s" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 's' (lines '552'-'555').
-</violation>
-<violation beginline="570" endline="570" begincolumn="43" endcolumn="43" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="logaritmo" variable="n" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like n
-</violation>
-<violation beginline="576" endline="576" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="logaritmo" variable="i" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like i
-</violation>
-<violation beginline="577" endline="577" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="logaritmo" variable="e" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like e
-</violation>
-<violation beginline="577" endline="584" begincolumn="13" endcolumn="45" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="logaritmo" variable="e" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'e' (lines '577'-'584').
-</violation>
-<violation beginline="578" endline="582" begincolumn="13" endcolumn="45" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="logaritmo" variable="numerador" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'numerador' (lines '578'-'582').
-</violation>
-<violation beginline="578" endline="590" begincolumn="13" endcolumn="25" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="logaritmo" variable="numerador" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'numerador' (lines '578'-'590').
-</violation>
-<violation beginline="579" endline="583" begincolumn="13" endcolumn="41" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="logaritmo" variable="denominador" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'denominador' (lines '579'-'583').
-</violation>
-<violation beginline="579" endline="590" begincolumn="13" endcolumn="31" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Algoritmos" method="logaritmo" variable="denominador" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'denominador' (lines '579'-'590').
+<violation beginline="526" endline="537" begincolumn="13" endcolumn="31" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="logaritmo" variable="denominador" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'denominador' (lines '526'-'537').
 </violation>
 </file>
-<file name="C:\Users\Usuario\Downloads\cs\cs-2019-01\aula-01\java\src\main\java\com\github\josecxsta\ufg\cs\aula01\domain\Cpf.java">
-<violation beginline="8" endline="159" begincolumn="18" endcolumn="1" rule="UseUtilityClass" ruleset="Design" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Cpf" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_design.html#useutilityclass" priority="3">
-All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+<file name="C:\Users\Usuario\Downloads\cs\cs-2019-01\aula-01\java\src\main\java\com\github\josecxsta\ufg\cs\aula01\domain\CpfUtils.java">
+<violation beginline="85" endline="87" begincolumn="13" endcolumn="72" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="CpfUtils" method="converteSequenciaEmInteiros" variable="inteiros" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'inteiros' (lines '85'-'87').
 </violation>
-<violation beginline="8" endline="159" begincolumn="8" endcolumn="1" rule="ShortClassName" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Cpf" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortclassname" priority="4">
-Avoid short class names like Cpf
+<violation beginline="87" endline="87" begincolumn="13" endcolumn="72" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="CpfUtils" method="converteSequenciaEmInteiros" variable="inteiros" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'inteiros' (lines '87'-'87').
 </violation>
-<violation beginline="8" endline="159" begincolumn="8" endcolumn="1" rule="ClassNamingConventions" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Cpf" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#classnamingconventions" priority="1">
-The utility class name 'Cpf' doesn't match '[A-Z][a-zA-Z0-9]+(Utils?|Helper)'
-</violation>
-<violation beginline="86" endline="89" begincolumn="13" endcolumn="72" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Cpf" method="converteSequenciaEmInteiros" variable="inteiros" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'inteiros' (lines '86'-'89').
-</violation>
-<violation beginline="89" endline="89" begincolumn="13" endcolumn="72" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Cpf" method="converteSequenciaEmInteiros" variable="inteiros" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'inteiros' (lines '89'-'89').
-</violation>
-<violation beginline="136" endline="136" begincolumn="21" endcolumn="21" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Cpf" method="validaCpf2" variable="d" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like d
-</violation>
-<violation beginline="142" endline="142" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Cpf" method="validaCpf2" variable="c" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="140" endline="140" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="CpfUtils" method="validaCpf2" variable="c" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like c
 </violation>
-<violation beginline="143" endline="143" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Cpf" method="validaCpf2" variable="p" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like p
+<violation beginline="141" endline="145" begincolumn="13" endcolumn="41" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="CpfUtils" method="validaCpf2" variable="regiao" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'regiao' (lines '141'-'145').
 </violation>
-<violation beginline="143" endline="147" begincolumn="13" endcolumn="24" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Cpf" method="validaCpf2" variable="p" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'p' (lines '143'-'147').
-</violation>
-<violation beginline="144" endline="144" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Cpf" method="validaCpf2" variable="s" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="142" endline="142" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="CpfUtils" method="validaCpf2" variable="s" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like s
 </violation>
-<violation beginline="144" endline="148" begincolumn="13" endcolumn="21" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Cpf" method="validaCpf2" variable="s" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 's' (lines '144'-'148').
-</violation>
-</file>
-<file name="C:\Users\Usuario\Downloads\cs\cs-2019-01\aula-01\java\src\main\java\com\github\josecxsta\ufg\cs\aula01\domain\Data.java">
-<violation beginline="7" endline="157" begincolumn="19" endcolumn="1" rule="UseUtilityClass" ruleset="Design" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Data" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_design.html#useutilityclass" priority="3">
-All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
-</violation>
-<violation beginline="7" endline="157" begincolumn="8" endcolumn="1" rule="ShortClassName" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Data" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortclassname" priority="4">
-Avoid short class names like Data
-</violation>
-<violation beginline="7" endline="157" begincolumn="8" endcolumn="1" rule="ClassNamingConventions" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Data" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#classnamingconventions" priority="1">
-The utility class name 'Data' doesn't match '[A-Z][a-zA-Z0-9]+(Utils?|Helper)'
-</violation>
-<violation beginline="143" endline="147" begincolumn="13" endcolumn="27" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Data" method="diaDaSemana" variable="year" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'year' (lines '143'-'147').
-</violation>
-<violation beginline="150" endline="150" begincolumn="13" endcolumn="13" rule="ShortVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Data" method="diaDaSemana" variable="s" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like s
-</violation>
-<violation beginline="150" endline="151" begincolumn="9" endcolumn="70" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Data" method="diaDaSemana" variable="s" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
-Local variable 's' could be declared final
-</violation>
-<violation beginline="150" endline="151" begincolumn="18" endcolumn="69" rule="UselessParentheses" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="Data" method="diaDaSemana" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
-Useless parentheses.
+<violation beginline="142" endline="146" begincolumn="13" endcolumn="26" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="CpfUtils" method="validaCpf2" variable="s" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 's' (lines '142'-'146').
 </violation>
 </file>
 </pmd>

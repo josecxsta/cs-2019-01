@@ -20,7 +20,6 @@ function propriedade3025 (number) {
     const x = Math.pow((i + j), 2);
 
     return (x == number);
-
-} 
+}
 
 module.exports = propriedade3025;

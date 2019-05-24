@@ -7,25 +7,23 @@
  * @throws {RangeError} Se y for maior que x ou y menor do que zero.
 */
 function maiorDivisorComum(x, y) {
-    
+
     if (typeof(x) != "number" || typeof(y) != "number") {
         throw new TypeError();
     }
-    
+
     if (y > x || y < 0) {
-        throw new RangeError(); 
+        throw new RangeError();
     }
-    
+
     let m;
-    
     while (y != 0) {
         m = x % y;
         x = y;
         y = m;
     }
-    
+
     return x;
-    
 }
 
 module.exports = maiorDivisorComum;
