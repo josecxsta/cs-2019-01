@@ -2,97 +2,85 @@
 <pmd xmlns="http://pmd.sourceforge.net/report/2.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd"
-    version="6.8.0" timestamp="2019-05-24T16:05:23.620">
+    version="6.8.0" timestamp="2019-05-24T18:31:31.346">
 <file name="C:\Users\Usuario\Downloads\cs\cs-2019-01\aula-01\java\src\main\java\com\github\josecxsta\ufg\cs\aula01\domain\AlgoritmosUtils.java">
-<violation beginline="7" endline="499" begincolumn="36" endcolumn="1" rule="TooManyMethods" ruleset="Design" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_design.html#toomanymethods" priority="3">
+<violation beginline="7" endline="464" begincolumn="14" endcolumn="1" rule="CyclomaticComplexity" ruleset="Design" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_design.html#cyclomaticcomplexity" priority="3">
+The class 'AlgoritmosUtils' has a total cyclomatic complexity of 80 (highest 7).
+</violation>
+<violation beginline="7" endline="464" begincolumn="36" endcolumn="1" rule="TooManyMethods" ruleset="Design" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_design.html#toomanymethods" priority="3">
 This class has too many methods, consider refactoring it.
 </violation>
-<violation beginline="93" endline="96" begincolumn="13" endcolumn="31" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="quadradoPerfeito" variable="indice" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'indice' (lines '93'-'96').
+<violation beginline="58" endline="61" begincolumn="13" endcolumn="31" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="quadradoPerfeito" variable="indice" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'indice' (lines '58'-'61').
 </violation>
-<violation beginline="93" endline="101" begincolumn="13" endcolumn="22" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="quadradoPerfeito" variable="indice" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'indice' (lines '93'-'101').
+<violation beginline="58" endline="66" begincolumn="13" endcolumn="22" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="quadradoPerfeito" variable="indice" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'indice' (lines '58'-'66').
 </violation>
-<violation beginline="117" endline="120" begincolumn="13" endcolumn="56" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="raizQuadrada" variable="retorno" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'retorno' (lines '117'-'120').
+<violation beginline="81" endline="84" begincolumn="13" endcolumn="56" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="raizQuadrada" variable="retorno" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'retorno' (lines '81'-'84').
 </violation>
-<violation beginline="173" endline="178" begincolumn="13" endcolumn="28" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="valorPi" variable="aux1" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'aux1' (lines '173'-'178').
+<violation beginline="137" endline="142" begincolumn="13" endcolumn="28" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="valorPi" variable="aux1" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'aux1' (lines '137'-'142').
 </violation>
-<violation beginline="173" endline="184" begincolumn="13" endcolumn="21" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="valorPi" variable="aux1" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'aux1' (lines '173'-'184').
+<violation beginline="137" endline="148" begincolumn="13" endcolumn="21" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="valorPi" variable="aux1" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'aux1' (lines '137'-'148').
 </violation>
-<violation beginline="174" endline="177" begincolumn="13" endcolumn="27" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="valorPi" variable="aux2" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'aux2' (lines '174'-'177').
+<violation beginline="138" endline="141" begincolumn="13" endcolumn="27" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="valorPi" variable="aux2" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'aux2' (lines '138'-'141').
 </violation>
-<violation beginline="174" endline="184" begincolumn="13" endcolumn="21" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="valorPi" variable="aux2" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'aux2' (lines '174'-'184').
+<violation beginline="138" endline="148" begincolumn="13" endcolumn="21" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="valorPi" variable="aux2" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'aux2' (lines '138'-'148').
 </violation>
-<violation beginline="175" endline="179" begincolumn="13" endcolumn="53" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="valorPi" variable="valorPi" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'valorPi' (lines '175'-'179').
+<violation beginline="139" endline="143" begincolumn="13" endcolumn="53" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="valorPi" variable="valorPi" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'valorPi' (lines '139'-'143').
 </violation>
-<violation beginline="200" endline="202" begincolumn="13" endcolumn="40" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="fatorial" variable="fatorial" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'fatorial' (lines '200'-'202').
+<violation beginline="164" endline="166" begincolumn="13" endcolumn="40" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="fatorial" variable="fatorial" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'fatorial' (lines '164'-'166').
 </violation>
-<violation beginline="221" endline="234" begincolumn="13" endcolumn="20" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="fibonacci" variable="aux1" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'aux1' (lines '221'-'234').
+<violation beginline="185" endline="198" begincolumn="13" endcolumn="20" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="fibonacci" variable="aux1" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'aux1' (lines '185'-'198').
 </violation>
-<violation beginline="229" endline="234" begincolumn="13" endcolumn="23" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="fibonacci" variable="aux1" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'aux1' (lines '229'-'234').
+<violation beginline="193" endline="198" begincolumn="13" endcolumn="23" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="fibonacci" variable="aux1" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'aux1' (lines '193'-'198').
 </violation>
-<violation beginline="306" endline="306" begincolumn="17" endcolumn="29" rule="OnlyOneReturn" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="numeroPrimo" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+<violation beginline="271" endline="271" begincolumn="17" endcolumn="29" rule="OnlyOneReturn" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="numeroPrimo" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
 A method should have only one exit point, and that should be the last statement in the method
 </violation>
-<violation beginline="330" endline="332" begincolumn="13" endcolumn="32" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="somaPrimeirosNaturais" variable="soma" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'soma' (lines '330'-'332').
+<violation beginline="295" endline="297" begincolumn="13" endcolumn="32" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="somaPrimeirosNaturais" variable="soma" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'soma' (lines '295'-'297').
 </violation>
-<violation beginline="367" endline="367" begincolumn="51" endcolumn="74" rule="UseVarargs" ruleset="Best Practices" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="polinomio" variable="coeficientes" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_bestpractices.html#usevarargs" priority="4">
-Consider using varargs for methods or constructors which take an array the last parameter.
-</violation>
-<violation beginline="369" endline="369" begincolumn="9" endcolumn="44" rule="PrematureDeclaration" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="polinomio" variable="grau" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#prematuredeclaration" priority="3">
+<violation beginline="335" endline="335" begincolumn="9" endcolumn="44" rule="PrematureDeclaration" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="polinomio" variable="grau" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#prematuredeclaration" priority="3">
 Avoid declaring a variable if it is unreferenced before a possible exit point.
 </violation>
-<violation beginline="369" endline="380" begincolumn="19" endcolumn="44" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="polinomio" variable="grau" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'grau' (lines '369'-'380').
+<violation beginline="335" endline="346" begincolumn="19" endcolumn="44" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="polinomio" variable="grau" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'grau' (lines '335'-'346').
 </violation>
-<violation beginline="374" endline="376" begincolumn="13" endcolumn="65" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="polinomio" variable="polinomio" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'polinomio' (lines '374'-'376').
+<violation beginline="340" endline="342" begincolumn="13" endcolumn="65" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="polinomio" variable="polinomio" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'polinomio' (lines '340'-'342').
 </violation>
-<violation beginline="429" endline="433" begincolumn="13" endcolumn="37" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="potenciaSomas" variable="potencia" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'potencia' (lines '429'-'433').
+<violation beginline="395" endline="399" begincolumn="13" endcolumn="37" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="potenciaSomas" variable="potencia" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'potencia' (lines '395'-'399').
 </violation>
-<violation beginline="450" endline="450" begincolumn="13" endcolumn="65" rule="AvoidFinalLocalVariable" ruleset="Code Style" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="produtoDeInteiros" variable="error" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#avoidfinallocalvariable" priority="3">
-Avoid using final local variables, turn them into fields
+<violation beginline="424" endline="434" begincolumn="19" endcolumn="75" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="produtoDeInteiros" variable="parcela" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'parcela' (lines '424'-'434').
 </violation>
-<violation beginline="454" endline="457" begincolumn="13" endcolumn="41" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="produtoDeInteiros" variable="totalParcelas" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'totalParcelas' (lines '454'-'457').
+<violation beginline="427" endline="429" begincolumn="13" endcolumn="41" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="produtoDeInteiros" variable="parcelas" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'parcelas' (lines '427'-'429').
 </violation>
-<violation beginline="455" endline="458" begincolumn="13" endcolumn="35" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="produtoDeInteiros" variable="parcela" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'parcela' (lines '455'-'458').
+<violation beginline="451" endline="457" begincolumn="13" endcolumn="55" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="logaritmo" variable="result" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'result' (lines '451'-'457').
 </violation>
-<violation beginline="455" endline="469" begincolumn="13" endcolumn="35" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="produtoDeInteiros" variable="parcela" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'parcela' (lines '455'-'469').
+<violation beginline="452" endline="455" begincolumn="13" endcolumn="45" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="logaritmo" variable="numerador" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'numerador' (lines '452'-'455').
 </violation>
-<violation beginline="458" endline="469" begincolumn="13" endcolumn="35" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="produtoDeInteiros" variable="parcela" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'parcela' (lines '458'-'469').
+<violation beginline="452" endline="462" begincolumn="13" endcolumn="30" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="logaritmo" variable="numerador" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'numerador' (lines '452'-'462').
 </violation>
-<violation beginline="462" endline="464" begincolumn="13" endcolumn="41" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="produtoDeInteiros" variable="parcelas" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'parcelas' (lines '462'-'464').
+<violation beginline="453" endline="456" begincolumn="13" endcolumn="46" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="logaritmo" variable="denominador" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'denominador' (lines '453'-'456').
 </violation>
-<violation beginline="486" endline="492" begincolumn="13" endcolumn="55" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="logaritmo" variable="result" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'result' (lines '486'-'492').
-</violation>
-<violation beginline="487" endline="490" begincolumn="13" endcolumn="45" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="logaritmo" variable="numerador" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'numerador' (lines '487'-'490').
-</violation>
-<violation beginline="487" endline="497" begincolumn="13" endcolumn="30" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="logaritmo" variable="numerador" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'numerador' (lines '487'-'497').
-</violation>
-<violation beginline="488" endline="491" begincolumn="13" endcolumn="46" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="logaritmo" variable="denominador" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'denominador' (lines '488'-'491').
-</violation>
-<violation beginline="488" endline="497" begincolumn="13" endcolumn="31" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="logaritmo" variable="denominador" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'denominador' (lines '488'-'497').
+<violation beginline="453" endline="462" begincolumn="13" endcolumn="31" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.github.josecxsta.ufg.cs.aula01.domain" class="AlgoritmosUtils" method="logaritmo" variable="denominador" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'denominador' (lines '453'-'462').
 </violation>
 </file>
 <file name="C:\Users\Usuario\Downloads\cs\cs-2019-01\aula-01\java\src\main\java\com\github\josecxsta\ufg\cs\aula01\domain\CpfUtils.java">

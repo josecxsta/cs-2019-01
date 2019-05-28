@@ -19,27 +19,10 @@ public final class AlgoritmosUtils {
     public static final int DIG_2 = 2;
 
     /**
-    * Atributo que representa o número 3 a fim de evitar
-    * a utilização de número mágico.
-    */
-    public static final int DIG_3 = 3;
-
-    /**
     * Atributo que representa o número 4 a fim de evitar
     * a utilização de número mágico.
     */
     public static final int DIG_4 = 4;
-    /**
-    * Atributo que representa o número 5 a fim de evitar
-    * a utilização de número mágico.
-    */
-    public static final int DIG_5 = 5;
-
-    /**
-    * Atributo que representa o número 7 a fim de evitar
-    * a utilização de número mágico.
-    */
-    public static final int DIG_7 = 7;
 
     /**
     * Atributo que representa o número 10 a fim de evitar
@@ -52,24 +35,6 @@ public final class AlgoritmosUtils {
     * a utilização de número mágico.
     */
     public static final int DIG_100 = 100;
-
-    /**
-    * Atributo que representa o número 1000 a fim de evitar
-    * a utilização de número mágico.
-    */
-    public static final int DIG_1000 = 1000;
-
-    /**
-    * Atributo que representa o número 12 a fim de evitar
-    * a utilização de número mágico.
-    */
-    public static final int DIG_12 = 12;
-
-    /**
-    * Atributo que representa o número 400 a fim de evitar
-    * a utilização de número mágico.
-    */
-    public static final int DIG_400 = 400;
 
     /**
     * Construtor privado para evitar instância de classe utilitária.
@@ -102,14 +67,13 @@ public final class AlgoritmosUtils {
 
     /**
     * Calcula a raiz quadrada de um numero de acordo com a precisão fornecida.
-    * @param x numero
-    * @param y precisão
+    * @param numero numero
+    * @param precisao precisão
     * @return raiz quadrada
     */
     public static int raizQuadrada(final int numero, final int precisao) {
 
         final boolean menorQueUm = numero < 1;
-
         if (menorQueUm) {
             throw new IllegalArgumentException("numero deve ser maior que 0");
         }
@@ -270,7 +234,8 @@ public final class AlgoritmosUtils {
     public static int maiorDivisorComum2(final int num1, final int num2) {
 
         if (num2 < 1 || num2 > num1) {
-            throw new IllegalArgumentException("argumentos fora da faixa");
+            throw new IllegalArgumentException(
+            "argumentos fora da faixa");
         }
 
         int num1Ajustado = num1;
@@ -346,7 +311,8 @@ public final class AlgoritmosUtils {
     public static int restoDivisao(final int num1, final int num2) {
 
         if (num2 < 0 || num1 < 0) {
-            throw new IllegalArgumentException("num1 e num2 devem ser maiores que 0");
+            throw new IllegalArgumentException(
+            "num1 e num2 devem ser maiores que 0");
         }
 
         int resto = num1;
@@ -364,7 +330,7 @@ public final class AlgoritmosUtils {
     * @return polinomio de n
     * @throws IllegalArgumentException se argumento não for positivo.
     */
-    public static int polinomio(final int numero, final int[] coeficientes) {
+    public static int polinomio(final int numero, final int... coeficientes) {
 
         final int grau = coeficientes.length;
         if (numero < 0) {
@@ -444,19 +410,17 @@ public final class AlgoritmosUtils {
     * @return resultado da multiplicação
     * @throws IllegalArgumentException se a ou b for menor que 1
     */
-    public static int produtoDeInteiros(final int multiplicando, final int multiplicador) {
+    public static int produtoDeInteiros(final int multiplicando,
+    final int multiplicador) {
 
         if (multiplicando < 1 || multiplicador < 1) {
-            final String error = "argumentos devem ser positivos";
-            throw new IllegalArgumentException(error);
+            throw new IllegalArgumentException(
+            "argumentos devem ser positivos");
         }
 
-        int totalParcelas = multiplicando;
-        int parcela = multiplicador;
-        if (multiplicador < multiplicando) {
-            totalParcelas = multiplicador;
-            parcela = multiplicando;
-        }
+        final boolean multiplicadorMen = multiplicador < multiplicando;
+        final int totalParcelas = multiplicadorMen ?  multiplicador: multiplicando;
+        final int parcela = multiplicadorMen ? multiplicando: multiplicador;
 
         int indice = 1;
         int parcelas = 0;

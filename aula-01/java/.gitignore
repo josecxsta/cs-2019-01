@@ -1,1 +1,5 @@
 /bin/
+.settings/
+.project
+.classpath
+cs-2019-01.iml
