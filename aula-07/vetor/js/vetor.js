@@ -108,8 +108,13 @@ function sorteio() {
 
     const sorteadosEmOrdem = sorteados.sort((a, b) => b.quantidade - a.quantidade);
     let maiores = sorteadosEmOrdem.filter(sort => sort.quantidade == sorteadosEmOrdem[0].quantidade);
+    let resultado;
     if (maiores.length == 1) {
-        maiores = maiores[0];
+        resultado = maiores[0].numero;
+    } else {
+        maiores.forEach(numero => {
+            resultado.push(numero);
+        })
     }
 
     return maiores;
