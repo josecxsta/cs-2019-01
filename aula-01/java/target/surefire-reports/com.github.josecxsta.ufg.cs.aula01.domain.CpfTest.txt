@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.github.josecxsta.ufg.cs.aula01.domain.CpfTest
--------------------------------------------------------------------------------
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.053 s - in com.github.josecxsta.ufg.cs.aula01.domain.CpfTest

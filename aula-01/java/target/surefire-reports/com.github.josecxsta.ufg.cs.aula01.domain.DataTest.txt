@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.github.josecxsta.ufg.cs.aula01.domain.DataTest
--------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.158 s - in com.github.josecxsta.ufg.cs.aula01.domain.DataTest
