@@ -16,3 +16,10 @@ test("numero fora da faixa", () => {
   expect(() => valorPi(-2)).toThrow(RangeError);
 });
 
+test("numero nao inteiro", () => {
+  expect(() => valorPi(1.2)).toThrow(RangeError);
+});
+
+test("pi", () => {
+  expect(valorPi(1)).toBe(4);
+});

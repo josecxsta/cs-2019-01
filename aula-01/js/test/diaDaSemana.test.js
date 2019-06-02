@@ -9,7 +9,7 @@ test("argumento de formato diferente", () => {
 });
 
 test("argumento nao inteiro", () => {
-  expect(() => { diaDaSemana(2.5, 2, 1990); }).toThrow(RangeError);
+  expect(() => { diaDaSemana(2.5, 2, 1750); }).toThrow(RangeError);
 });
 
 test("data invalida", () => {
@@ -18,4 +18,8 @@ test("data invalida", () => {
 
 test("valor real", () => {
   expect(diaDaSemana(11, 5, 1750)).toBe(0);
+});
+
+test("valor real", () => {
+  expect(diaDaSemana(11, 2, 1750)).toBe(2);
 });

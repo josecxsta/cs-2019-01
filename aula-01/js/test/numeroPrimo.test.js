@@ -16,6 +16,10 @@ test("argumento fora da faixa", () => {
   expect(() => { numeroPrimo(1.1); }).toThrow();
 });
 
+test("argumento negativo", () => {
+  expect(() => { numeroPrimo(-1); }).toThrow(RangeError);
+});
+
 test("numero primo", () => {
   expect(numeroPrimo(5)).toBe(true);
 });

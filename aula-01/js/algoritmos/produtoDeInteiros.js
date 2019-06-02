@@ -17,7 +17,7 @@ function produtoDeInteiros(a, b) {
         throw new RangeError("argumentos devem ser maiores que 0");
     }
 
-    if (!Number.isInteger(a) || !Number.isInteger(a)) {
+    if (!Number.isInteger(a) || !Number.isInteger(b)) {
         throw new RangeError("argumentos devem ser numerais inteiros");
     }
 

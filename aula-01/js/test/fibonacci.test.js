@@ -12,6 +12,10 @@ test("argumento de formato diferente", () => {
   expect(() => { fibonacci("a"); }).toThrow(TypeError);
 });
 
+test("numero negativo", () => {
+  expect(() => { fibonacci(-1); }).toThrow(RangeError);
+});
+
 test("1 termo da sequencia", () => {
   expect(fibonacci(1)).toEqual(1);
 });

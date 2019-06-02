@@ -14,6 +14,7 @@ test("argumento de formato diferente", () => {
 
 test("argumento fora da faixa", () => {
   expect(() => { potenciaSomas([], 1.1); }).toThrow();
+  expect(() => { potenciaSomas(-1, 0); }).toThrow(RangeError);
 });
 
 test("3", () => {

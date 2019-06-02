@@ -14,8 +14,13 @@ test("argumento de formato diferente", () => {
 
 test("devem ser dois numerais", () => {
   expect(() => mdc(5)).toThrow(TypeError);
-}); 
+});
 
-test("12 e 6", () => {
+test("certos", () => {
   expect(mdc(12, 6)).toEqual(6);
+  expect(mdc(18, 15)).toEqual(3);
+});
+
+test("fora da faixa", () => {
+  expect(() => { mdc(2, -1); }).toThrow(RangeError);
 });

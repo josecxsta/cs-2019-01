@@ -19,7 +19,7 @@ function quadradoPerfeito(n) {
     let s = 1;
     while (s < n) {
         i = i + 2;
-        s = s + 1;
+        s = s + i;
     }
 
     return (s == n);

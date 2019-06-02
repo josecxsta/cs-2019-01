@@ -7,12 +7,12 @@
  */
 function propriedade3025 (number) {
 
-    if (number < 0 || number > 9999 || !Number.isInteger(number)) {
-        throw new RangeError("Numero deve ser entre 0 e 9999");
-    }
-
     if (typeof(number) != "number") {
         throw new TypeError("argumento deve ser numeral");
+    }
+
+    if (number < 0 || number > 9999 || !Number.isInteger(number)) {
+        throw new RangeError("Numero deve ser entre 0 e 9999");
     }
 
     const i = parseInt(number / 100);

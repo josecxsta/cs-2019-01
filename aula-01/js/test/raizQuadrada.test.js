@@ -11,3 +11,11 @@ test("argumento de formato diferente", () => {
 test("argumento nao inteiro", () => {
   expect(() => { raizQuadrada(10, 5.5); }).toThrow(RangeError);
 });
+
+test("argumento fora da faixa", () => {
+  expect(() => { raizQuadrada(-1, 5); }).toThrow(RangeError);
+});
+
+test("raiz quadrada", () => {
+  expect(raizQuadrada(9, 10)).toBe(3);
+});

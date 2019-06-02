@@ -37,11 +37,11 @@ function yearValidate(year) {
  */
 function diaDaSemana(d, m, y) {
 
-    if (typeof(d) != "number", typeof(m) != "number", typeof(y) != "number") {
+    if (typeof(d) != "number" || typeof(m) != "number" || typeof(y) != "number") {
         throw new TypeError("argumentos devem ser numerais");
     }
-    
-    if (!Number.isInteger(d), !Number.isInteger(m), !Number.isInteger(y)) {
+
+    if (!Number.isInteger(d) || !Number.isInteger(m) || !Number.isInteger(y)) {
         throw new RangeError("numeros devem ser inteiros");
     }
 
@@ -50,8 +50,8 @@ function diaDaSemana(d, m, y) {
     }
 
     if ( m == 1 || m == 2 ) {
-        m = m + 12; 
-        y = y - 1; 
+        m = m + 12;
+        y = y - 1;
     }
 
     let s = parseInt(d + (2*m) + (3*(m+1)/5) + y + (y/4) - (y/100) + (y/400));
