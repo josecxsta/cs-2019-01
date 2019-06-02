@@ -1,11 +1,11 @@
 const funcao = require("../algoritmos/cpf");
 
 test("CPF gerado satisfaz", () => {
-    expect(funcao('54606451076')).toBe(true);
+    expect(funcao("54606451076")).toBe(true);
 });
 
 test("CPF inventado nao satisfaz", () => {
-  expect(funcao("54606451071")).toBe(false);
+    expect(funcao("54606451071")).toBe(false);
 });
 
 test("argumento null/undefined", () => {
@@ -22,4 +22,4 @@ test("valor maior que esperado", () => {
 
 test("deve ser string", () => {
     expect(() => funcao(54606451076)).toThrow(TypeError);
-}); 
+});
