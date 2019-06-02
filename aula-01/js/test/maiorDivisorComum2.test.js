@@ -1,15 +1,15 @@
 const mdc = require("../algoritmos/maiorDivisorComum2");
 
 test("argumento null/undefined", () => {
-  expect(() => { mdc(); }).toThrow();
+    expect(() => { mdc(); }).toThrow();
 });
 
 test("argumento nao numerico", () => {
-  expect(() => { mdc("abcd"); }).toThrow();
+    expect(() => { mdc("abcd"); }).toThrow();
 });
 
 test("argumento de formato diferente", () => {
-  expect(() => { mdc("a", "b"); }).toThrow(TypeError);
+    expect(() => { mdc("a", "b"); }).toThrow(TypeError);
 });
 
 test("devem ser dois numerais", () => {

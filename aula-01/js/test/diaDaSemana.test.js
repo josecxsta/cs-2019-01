@@ -1,25 +1,25 @@
 const diaDaSemana = require("../algoritmos/diaDaSemana");
 
 test("argumento null/undefined", () => {
-  expect(() => { diaDaSemana(); }).toThrow();
+    expect(() => { diaDaSemana(); }).toThrow();
 });
 
 test("argumento de formato diferente", () => {
-  expect(() => { diaDaSemana("2", "2", "1"); }).toThrow(TypeError);
+    expect(() => { diaDaSemana("2", "2", "1"); }).toThrow(TypeError);
 });
 
 test("argumento nao inteiro", () => {
-  expect(() => { diaDaSemana(2.5, 2, 1750); }).toThrow(RangeError);
+    expect(() => { diaDaSemana(2.5, 2, 1750); }).toThrow(RangeError);
 });
 
 test("data invalida", () => {
-  expect(() => { diaDaSemana(25, 20, 1990); }).toThrow(RangeError);
+    expect(() => { diaDaSemana(25, 20, 1990); }).toThrow(RangeError);
 });
 
 test("valor real", () => {
-  expect(diaDaSemana(11, 5, 1750)).toBe(0);
+    expect(diaDaSemana(11, 5, 1750)).toBe(0);
 });
 
 test("valor real", () => {
-  expect(diaDaSemana(11, 2, 1750)).toBe(2);
+    expect(diaDaSemana(11, 2, 1750)).toBe(2);
 });

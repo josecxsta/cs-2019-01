@@ -13,7 +13,7 @@ function primo(n) {
     }
 
     if (!Number.isInteger(n)) {
-        throw new RangeError("")
+        throw new RangeError("Argumento deve ser numero inteiro");
     }
 
     if (n <= 1) {

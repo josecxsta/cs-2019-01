@@ -1,11 +1,11 @@
 const polinomio = require("../algoritmos/polinomio");
 
 test("argumento null/undefined", () => {
-  expect(() => { polinomio(); }).toThrow();
+    expect(() => { polinomio(); }).toThrow();
 });
 
 test("argumento de formato diferente", () => {
-  expect(() => { polinomio("a"); }).toThrow(TypeError);
+    expect(() => { polinomio("a"); }).toThrow(TypeError);
 });
 
 test("polinomio", () => {

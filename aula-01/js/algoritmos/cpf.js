@@ -2,9 +2,7 @@
  * Verifica se o CPF fornecido é válido.
  *
  * @param {string} sequencia Sequência de caracteres correspondente a um CPF.
- *
  * @returns {boolean} O valor lógico verdadeiro se...
- *
  * @throws {TypeError} Se não é fornecido argumento ou null ou não é string.
  * @throws {RangeError} Se há caractere que não correspondente a um dígito.
 */

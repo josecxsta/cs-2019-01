@@ -1,15 +1,15 @@
 const crivoEratostenes = require("../algoritmos/crivoEratostenes");
 
 test("argumento null/undefined", () => {
-  expect(() => { crivoEratostenes(); }).toThrow();
+    expect(() => { crivoEratostenes(); }).toThrow();
 });
 
 test("argumento nao numerico", () => {
-  expect(() => { crivoEratostenes("abcd", "2"); }).toThrow();
+    expect(() => { crivoEratostenes("abcd", "2"); }).toThrow();
 });
 
 test("argumento de formato diferente", () => {
-  expect(() => { crivoEratostenes("a", []); }).toThrow(TypeError);
+    expect(() => { crivoEratostenes("a", []); }).toThrow(TypeError);
 });
 
 test("argumento fora da faixa", () => {
