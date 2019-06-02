@@ -19,15 +19,12 @@ function propriedade153(number) {
     const du = parseInt(number % 100);
     const d = parseInt(du / 10);
     const u = du % 10;
-
     const c3 = Math.pow(c, 3);
     const d3 = Math.pow(d, 3);
     const u3 = Math.pow(u, 3);
-
     const x = c3 + d3 + u3;
 
     return (x == number);
-
 }
 
 module.exports = propriedade153;

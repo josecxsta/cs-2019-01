@@ -19,7 +19,6 @@ function cpf2(d) {
     let c = 7;
     let p = parseInt(d[8]);
     let s = parseInt(d[8]);
-
     while (c >= 0) {
         p = p + parseInt(d[c]);
         s = s + p;

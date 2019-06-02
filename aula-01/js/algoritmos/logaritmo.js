@@ -25,7 +25,6 @@ function logaritmo(n, k) {
     let e = 1 + n;
     let numerador = n;
     let denominador = 1;
-
     while (i <= k) {
         numerador = numerador * numerador;
         denominador = denominador * i;
@@ -34,7 +33,6 @@ function logaritmo(n, k) {
     }
 
     return e;
-
 }
 
 module.exports = logaritmo;

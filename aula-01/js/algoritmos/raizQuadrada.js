@@ -20,16 +20,14 @@ function raizQuadrada(x, y) {
     if (!Number.isInteger(x) || !Number.isInteger(y)) {
         throw new RangeError("argumentos devem ser numeros inteiros");
     }
-    
+
     let r = 1;
-    
     while (0 <= y) {
         r = (r + (x/r))/2;
         y = y - 1;
     }
-    
+
     return r;
-    
 }
 
 module.exports = raizQuadrada;

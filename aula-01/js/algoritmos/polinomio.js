@@ -30,13 +30,11 @@ function polinomio(n, c) {
     }
 
     let p = c[grau - 1];
-
-    for (let i = grau - 2; i >= 0; i--) {
+    for (i = grau - 2; i >= 0; i--) {
         p = p * n + c[i];
     }
 
     return p;
-
 }
 
 module.exports = polinomio;

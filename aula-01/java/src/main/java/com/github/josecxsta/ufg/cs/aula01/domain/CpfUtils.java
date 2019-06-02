@@ -5,7 +5,7 @@ package com.github.josecxsta.ufg.cs.aula01.domain;
 * métodos para validar e apoiar a validação do número do CPF.
 * @author José da Costa
 */
-public class Cpf {
+public final class CpfUtils {
 
     /**
     *
@@ -68,11 +68,9 @@ public class Cpf {
     public static final int DIG_12 = 12;
 
     /**
-    * Evita a instanciação da clase.
-    * @throws UnsupportedOperationException
+    * Construtor privado para evitar instância de classe utilitária.
     */
-    protected Cpf() {
-        throw new UnsupportedOperationException();
+    private CpfUtils() {
     }
 
     /**
@@ -83,8 +81,8 @@ public class Cpf {
     * @return coleção de inteiros
     */
     public static int[] converteSequenciaEmInteiros(final String sequencia) {
-        int[] inteiros = new int[sequencia.length()];
 
+        int[] inteiros = new int[sequencia.length()];
         for (int i = 0; i < sequencia.length(); i++) {
             inteiros[i] = Character.getNumericValue(sequencia.charAt(i));
         }
@@ -133,26 +131,27 @@ public class Cpf {
     */
     public static boolean validaCpf2(final String sequencia) {
 
-        final int[] d = converteSequenciaEmInteiros(sequencia);
+        final int[] inteiros = converteSequenciaEmInteiros(sequencia);
 
-        if (d.length != DIG_11) {
+        if (inteiros.length != DIG_11) {
             throw new IllegalArgumentException("CPF precisa de 11 caracteres");
         }
 
-        int c = DIG_7;
-        int p = d[DIG_8];
-        int s = d[DIG_8];
+        int aux = DIG_7;
+        int regiao = inteiros[DIG_8];
+        int regiaoFiscal = inteiros[DIG_8];
 
-        while (c >= 0) {
-            p = p + d[c];
-            s = s + p;
-            c = c - 1;
+        while (aux >= 0) {
+            regiao = regiao + inteiros[aux];
+            regiaoFiscal = regiaoFiscal + regiao;
+            aux = aux - 1;
         }
 
-        final int verificador1 = (s % DIG_11) % DIG_10;
-        final int verificador2 = ((s - p + DIG_9 * d[DIG_9]) % DIG_11) % DIG_10;
+        final int verificador1 = (regiaoFiscal % DIG_11) % DIG_10;
+        final int verificador2 = ((regiaoFiscal - regiao + DIG_9 * inteiros[DIG_9])
+        % DIG_11) % DIG_10;
 
-        return verificador1 == d[DIG_9] && verificador2 == d[DIG_10];
+        return verificador1 == inteiros[DIG_9] && verificador2 == inteiros[DIG_10];
 
     }
 

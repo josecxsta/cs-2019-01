@@ -4,26 +4,26 @@ package com.github.josecxsta.ufg.cs.aula01.domain;
 * Implementa métodos para validar Data.
 * @author José da Costa
 */
-public class Data {
+public final class DataUtils {
 
     /**
     * Último dia válido na validação de dia.
     */
-    public static final int LAST_DAY = 31;
+    public static final int ULTIMO_DIA = 31;
 
     /**
     * Último mês válido na validação de mês.
     */
-    public static final int LAST_MONTH = 12;
+    public static final int ULTIMO_MES = 12;
     /**
     * Primeiro ano válido na validação de ano.
     */
-    public static final int FIRST_YEAR = 12;
+    public static final int PRIMEIRO_ANO = 12;
 
     /**
     * Último ano válido na validação de ano.
     */
-    public static final int LAST_YEAR = 1753;
+    public static final int ULTIMO_ANO = 1753;
 
     /**
     * Atributo que representa o número 1 a fim de evitar
@@ -82,7 +82,7 @@ public class Data {
     * Atributo que representa o número 12 a fim de evitar
     * a utilização de número mágico.
     */
-    public static final int DIG_12 = 12;
+    public static final int DEZEMBRO = 12;
 
     /**
     * Atributo que representa o número 400 a fim de evitar
@@ -91,11 +91,9 @@ public class Data {
     public static final int DIG_400 = 400;
 
     /**
-    * Evita a instanciação da clase.
-    * @throws UnsupportedOperationException
+    * Construtor privado para evitar instância de classe utilitária.
     */
-    protected Data() {
-        throw new UnsupportedOperationException();
+    private DataUtils() {
     }
 
     /**
@@ -104,7 +102,7 @@ public class Data {
     * @return se o dia é válido (entre 1 e 31)
     */
     public static boolean dayValidate(final int day) {
-        return day >= DIG_1 && day <= LAST_DAY;
+        return day >= DIG_1 && day <= ULTIMO_DIA;
     }
 
     /**
@@ -113,7 +111,7 @@ public class Data {
     * @return se o mês é válido (entre 1 e 12)
     */
     public static boolean monthValidate(final int month) {
-        return month >= DIG_1 && month <= LAST_MONTH;
+        return month >= DIG_1 && month <= ULTIMO_MES;
     }
 
     /**
@@ -122,7 +120,7 @@ public class Data {
     * @return se o ano é válido (entre 12 e 1753)
     */
     public static boolean yearValidate(final int year) {
-        return year >= FIRST_YEAR && year <= LAST_YEAR;
+        return year >= PRIMEIRO_ANO && year <= ULTIMO_ANO;
     }
 
     /**
@@ -139,18 +137,15 @@ public class Data {
             throw new IllegalArgumentException("data invalida");
         }
 
-        int month = mes;
-        int year = ano;
+        final boolean janOuFev = mes == 1 || mes == 2;
+        final int mesAjustado = janOuFev ? mes + DEZEMBRO : mes;
+        final int anoAjustado = janOuFev ? ano - 1 : ano;
 
-        if (month == 1 || month == 2) {
-            month = month + DIG_12;
-            year = year - 1;
-        }
+        final int resultado = dia + (DIG_2 * mesAjustado) + (DIG_3 * (mesAjustado + 1)
+        / DIG_5) + anoAjustado + (anoAjustado / DIG_4) - (anoAjustado / DIG_100)
+        + (anoAjustado / DIG_400);
 
-        int s = (dia + (DIG_2 * month) + (DIG_3 * (month + 1) / DIG_5)
-        + year + (year / DIG_4) - (year / DIG_100) + (year / DIG_400));
-
-        return (int) Math.floor(s % DIG_7);
+        return (int) Math.floor(resultado % DIG_7);
 
     }
 
