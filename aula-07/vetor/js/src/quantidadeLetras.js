@@ -1,8 +1,15 @@
 /**
-* Retornar a quantidade de cada uma das letras presentes em uma sequência de caracteres.
-* @param {string} sequencia
-*/
+ * Retornar a quantidade de cada uma das letras presentes em uma sequência de caracteres.
+ * @param {string} sequencia
+ * @throws {TypeError} se argumento não for string
+ * @returns {array} quantidade de letras
+ */
 function quantidadeLetras(sequencia) {
+
+    if (typeof(sequencia) != "string") {
+        throw new TypeError("argumento deve ser uma string");
+    }
+
     let quantidade = [];
 
     for (let index = 0; index < sequencia.length; index++) {
