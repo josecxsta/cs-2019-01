@@ -4,7 +4,7 @@
   "scripts": {
     "test": "jest \"./test/\"",
     "coverage": "jest --coverage ./",
-    "doc": "jsdoc ./algoritmos",
+    "doc": "jsdoc ./src",
     "lint": "eslint \"./**/*.js\""
   },
   "devDependencies": {
