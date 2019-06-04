@@ -1,0 +1,21 @@
+{
+  "name": "vetor",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "jest \"./test/\"",
+    "coverage": "jest --coverage ./",
+    "doc": "jsdoc ./src",
+    "lint": "eslint \"./**/*.js\""
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "jest": "^24.8.0",
+    "jsdoc": "^3.6.1"
+  },
+  "description": "Projeto de algorítmos em JS",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josecxsta/cs-2019-01.git"
+  },
+  "license": "ISC"
+}
