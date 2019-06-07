@@ -265,16 +265,18 @@ public final class AlgoritmosUtils {
             throw new IllegalArgumentException("Argumento deve ser positivo");
         }
 
+        boolean ehPrimo = true;
+
         int indice = 2;
         while (indice < numero) {
             if (numero % indice == 0) {
-                return false;
+                ehPrimo = false;
             }
 
             indice++;
         }
 
-        return true;
+        return ehPrimo;
     }
 
     /**
@@ -332,13 +334,12 @@ public final class AlgoritmosUtils {
     */
     public static int polinomio(final int numero, final int... coeficientes) {
 
-        final int grau = coeficientes.length;
         if (numero < 0) {
             throw new IllegalArgumentException("argumento deve ser positivo");
         }
 
-        int polinomio = coeficientes[grau - 1];
-        for (int indice = grau - 2; indice >= 0; indice--) {
+        int polinomio = coeficientes[coeficientes.length - 1];
+        for (int indice = coeficientes.length - 2; indice >= 0; indice--) {
             polinomio = polinomio * numero + coeficientes[indice];
         }
 

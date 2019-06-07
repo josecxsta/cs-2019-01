@@ -13,6 +13,9 @@ public class Arquivo {
     private int ocorrencias = 0;
     private ArrayList<String> textoOcorrencias = new ArrayList<String>();
 
+    /**
+     *
+     */
     public Arquivo(final String nomeArquivo, final String sequencia) {
 
         ArrayList<String> linhas = textoArquivo(nomeArquivo);
@@ -49,19 +52,19 @@ public class Arquivo {
 
         try {
 
-            FileInputStream fis = new FileInputStream(nomeArquivo);
-            InputStreamReader isr = new InputStreamReader(fis, "UTF-8");
-            BufferedReader br = new BufferedReader(isr);
+            final FileInputStream fileStream = new FileInputStream(nomeArquivo);
+            final InputStreamReader inputStream = new InputStreamReader(fileStream, "UTF-8");
+            final BufferedReader buffReader = new BufferedReader(inputStream);
 
             String linha;
-            while ((linha = br.readLine()) != null) {
+            while ((linha = buffReader.readLine()) != null) {
                 linhas.add(linha);
             }
 
-            br.close();
+            buffReader.close();
 
         } catch (Exception e) {
-            System.out.println("kkk");
+            linhas.clear();
         }
 
         return linhas;

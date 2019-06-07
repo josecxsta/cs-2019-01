@@ -1,9 +1,12 @@
 package com.github.josecxsta.ufg.cs.aula08.application;
 
 import java.util.Scanner;
-
 import com.github.josecxsta.ufg.cs.aula08.domain.Arquivo;
 
+/**
+ * Implementa o método main do programa para verificar,
+ * através do Arquivo, se um arquivo é ou não JPEG.
+ */
 class Aplicacao {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);

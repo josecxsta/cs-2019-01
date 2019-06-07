@@ -1,7 +1,6 @@
 package com.github.josecxsta.ufg.cs.aula08.application;
 
 import java.util.Scanner;
-
 import com.github.josecxsta.ufg.cs.aula08.domain.Arquivo;
 
 class Aplicacao {
