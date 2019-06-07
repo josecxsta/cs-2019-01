@@ -3,6 +3,10 @@ language: java
 script:
   - cd aula-01/java && mvn clean test checkstyle:check pmd:check spotbugs:check
   - cd aula-01/java && verify -P owasp
+  - cd aula-01/js && npm test
+  - cd aula-08/inteiro && verify -P owasp
+  - cd aula-08/inteiro && verify -P owasp
+  - cd aula-08/jpeg && verify -P owasp
 cache:
   directories:
   - "$HOME/.m2/repository"

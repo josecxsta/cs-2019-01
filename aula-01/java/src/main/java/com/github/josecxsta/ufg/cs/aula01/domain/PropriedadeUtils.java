@@ -125,7 +125,7 @@ public final class PropriedadeUtils {
 
         final int numeroPorCem = number / DIG_100;
         final int resto = number % DIG_100;
-        final int soma = (int) Math.round(numeroPorCem + resto);
+        final int soma = Math.round(numeroPorCem + resto);
         final int quadradoSoma = soma * soma;
 
         return quadradoSoma == number;
