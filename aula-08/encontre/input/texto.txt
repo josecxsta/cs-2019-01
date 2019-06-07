@@ -1,0 +1,3 @@
+Oi, tudo bom? bom.
+Esse texto eh para testar o bom algoritmo do programa encontre.
+Eh esperado que ele encontre e localize determinada sequencia.

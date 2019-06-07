@@ -1,0 +1,11 @@
+language: java
+
+script:
+  - cd aula-01/java && mvn clean test checkstyle:check pmd:check spotbugs:check
+  - cd aula-01/java && verify -P owasp
+cache:
+  directories:
+  - "$HOME/.m2/repository"
+  - "$HOME/.sonar/cache"
+jdk:
+  - oraclejdk11
