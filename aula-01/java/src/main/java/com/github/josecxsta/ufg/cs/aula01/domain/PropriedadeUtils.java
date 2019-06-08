@@ -107,7 +107,8 @@ public final class PropriedadeUtils {
         final int restoPorDezAoCubo = restoPorDez * restoPorDez * restoPorDez;
         final int restoDoRestoCubo = restoDoResto * restoDoResto * restoDoResto;
 
-        return numeroPorCemCubo + restoPorDezAoCubo + restoDoRestoCubo == number;
+        return numeroPorCemCubo + restoPorDezAoCubo
+        + restoDoRestoCubo == number;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class PropriedadeUtils {
 
         final int numeroPorCem = number / DIG_100;
         final int resto = number % DIG_100;
-        final int soma = Math.round(numeroPorCem + resto);
+        final int soma = numeroPorCem + resto;
         final int quadradoSoma = soma * soma;
 
         return quadradoSoma == number;
