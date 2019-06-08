@@ -96,7 +96,8 @@ public final class AlgoritmosUtils {
     * @return razão aurea entre x e y
     * @throws IllegalArgumentException se argumentos estiverem fora da faixa.
     */
-    public static int razaoAurea(final int num1, final int num2, final int prec) {
+    public static int razaoAurea(final int num1, final int num2,
+                                final int prec) {
 
         final boolean num1MenorQueZero = num1 < 0;
         final boolean num1MaiorQuenum2 = num1 > num2;
@@ -281,7 +282,7 @@ public final class AlgoritmosUtils {
 
     /**
     * Calcula a soma dos primeiros numeros naturais.
-    * @param n quantidade de numeros naturais a serem somados.
+    * @param num quantidade de numeros naturais a serem somados.
     * @return resultado da soma.
     * @throws IllegalArgumentException se numero n for menor que 2
     */
@@ -354,7 +355,8 @@ public final class AlgoritmosUtils {
     * @return se o valor é primo
     * @throws IllegalArgumentException se n nao for maior que 1.
     */
-    public static boolean crivoEratostenes(final int[] numeros, final int valor) {
+    public static boolean crivoEratostenes(final int[] numeros,
+    final int valor) {
 
         final boolean valorMenorQue2 = valor < 2;
         if (valorMenorQue2) {
@@ -390,7 +392,8 @@ public final class AlgoritmosUtils {
     public static int potenciaSomas(final int num, final int iteracoes) {
 
         if (num < 0 || iteracoes < 0) {
-            throw new IllegalArgumentException("argumentos devem ser positivos");
+            throw new IllegalArgumentException(
+                "argumentos devem ser positivos");
         }
 
         int potencia = 1;
@@ -420,8 +423,10 @@ public final class AlgoritmosUtils {
         }
 
         final boolean multiplicadorMen = multiplicador < multiplicando;
-        final int totalParcelas = multiplicadorMen ?  multiplicador: multiplicando;
-        final int parcela = multiplicadorMen ? multiplicando: multiplicador;
+        final int totalParcelas = multiplicadorMen
+        ? multiplicador : multiplicando;
+        final int parcela = multiplicadorMen
+        ? multiplicando : multiplicador;
 
         int indice = 1;
         int parcelas = 0;
@@ -439,7 +444,7 @@ public final class AlgoritmosUtils {
     * @param numero número expoente
     * @param precisao precisão
     * @return logaritmo natural
-    * @throws IllegalArgumentException se n for menor que 1 ou precisao menor que 2
+    * @throws IllegalArgumentException se n for negativo ou precisao < que 2
     */
     public static int logaritmo(final int numero, final int precisao) {
 
@@ -462,3 +467,4 @@ public final class AlgoritmosUtils {
     }
 
 }
+

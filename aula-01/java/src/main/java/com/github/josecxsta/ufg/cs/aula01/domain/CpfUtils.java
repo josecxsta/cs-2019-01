@@ -148,11 +148,13 @@ public final class CpfUtils {
         }
 
         final int verificador1 = (regiaoFiscal % DIG_11) % DIG_10;
-        final int verificador2 = ((regiaoFiscal - regiao + DIG_9 * inteiros[DIG_9])
-        % DIG_11) % DIG_10;
+        final int verificador2 = ((regiaoFiscal - regiao + DIG_9
+        * inteiros[DIG_9]) % DIG_11) % DIG_10;
 
-        return verificador1 == inteiros[DIG_9] && verificador2 == inteiros[DIG_10];
+        return verificador1 == inteiros[DIG_9]
+        && verificador2 == inteiros[DIG_10];
 
     }
 
 }
+

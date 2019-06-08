@@ -141,8 +141,9 @@ public final class DataUtils {
         final int mesAjustado = janOuFev ? mes + DEZEMBRO : mes;
         final int anoAjustado = janOuFev ? ano - 1 : ano;
 
-        final int resultado = dia + (DIG_2 * mesAjustado) + (DIG_3 * (mesAjustado + 1)
-        / DIG_5) + anoAjustado + (anoAjustado / DIG_4) - (anoAjustado / DIG_100)
+        final int resultado = dia + (DIG_2 * mesAjustado)
+        + (DIG_3 * (mesAjustado + 1) / DIG_5) + anoAjustado
+        + (anoAjustado / DIG_4) - (anoAjustado / DIG_100)
         + (anoAjustado / DIG_400);
 
         return (int) Math.floor(resultado % DIG_7);
