@@ -1,8 +1,8 @@
 language: java
 
 script:
-  - cd /aula-01/js && npm install && npm test
-  - cd /aula-01/java && mvn clean test
+  - cd aula-01/js && npm install && npm test
+  - cd ../aula-01/java && mvn clean test
 cache:
   directories:
   - "$HOME/.m2/repository"
