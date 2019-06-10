@@ -17,6 +17,14 @@ Repositório para exercício da disciplina de Construção de Software do curso 
 
 [![Known Vulnerabilities](https://snyk.io/test/github/josecxsta/cs-2019-01/badge.svg?targetFile=aula-01/js/package.json)](https://snyk.io/test/github/josecxsta/cs-2019-01)
 
+### aula-07/vetor/java
+
+[![Known Vulnerabilities](https://snyk.io/test/github/josecxsta/cs-2019-01/badge.svg?targetFile=aula-07/vetor/java/pom.xml)](https://snyk.io/test/github/josecxsta/cs-2019-01)
+
+### aula-07/vetor/js
+
+[![Known Vulnerabilities](https://snyk.io/test/github/josecxsta/cs-2019-01/badge.svg?targetFile=aula-07/vetor/js/package.json)](https://snyk.io/test/github/josecxsta/cs-2019-01)
+
 ### aula-08/encontre
 
 [![Known Vulnerabilities](https://snyk.io/test/github/josecxsta/cs-2019-01/badge.svg?targetFile=aula-08/encontre/pom.xml)](https://snyk.io/test/github/josecxsta/cs-2019-01)
