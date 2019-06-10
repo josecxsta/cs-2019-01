@@ -1,4 +1,4 @@
-const crivoEratostenes = require("../src/CrivoEratostenes");
+const crivoEratostenes = require("../src/crivoEratostenes");
 
 test("argumento null/undefined", () => {
     expect(() => { crivoEratostenes(); }).toThrow();
