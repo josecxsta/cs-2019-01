@@ -1,4 +1,4 @@
-const logaritmo = require("../algoritmos/logaritmo");
+const logaritmo = require("../src/logaritmo");
 
 test("argumento null/undefined", () => {
     expect(() => { logaritmo(); }).toThrow();

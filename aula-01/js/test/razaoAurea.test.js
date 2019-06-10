@@ -1,4 +1,4 @@
-const razaoAurea = require("../algoritmos/razaoAurea");
+const razaoAurea = require("../src/razaoAurea");
 
 test("argumento null/undefined", () => {
     expect(() => { razaoAurea(); }).toThrow();

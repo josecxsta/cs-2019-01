@@ -1,4 +1,4 @@
-const funcao = require("../algoritmos/propriedade153");
+const funcao = require("../src/propriedade153");
 
 test("153 satisfaz (caso classico)", () => {
     expect(funcao(153)).toBe(true);
@@ -26,4 +26,4 @@ test("valor com mais de 4 digitos fora da faixa", () => {
 
 test("valor deve ser inteiro", () => {
     expect(() => funcao(10.3)).toThrow(RangeError);
-}); 
+});

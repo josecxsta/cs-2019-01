@@ -1,4 +1,4 @@
-const numeroPrimo = require("../algoritmos/numeroPrimo");
+const numeroPrimo = require("../src/numeroPrimo");
 
 test("argumento null/undefined", () => {
     expect(() => { numeroPrimo(); }).toThrow();

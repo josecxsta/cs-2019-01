@@ -1,4 +1,4 @@
-const funcao = require("../algoritmos/cpf2");
+const funcao = require("../src/cpf2");
 
 test("CPF gerado satisfaz", () => {
     expect(funcao("54606451076")).toBe(true);

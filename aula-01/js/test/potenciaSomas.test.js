@@ -1,4 +1,4 @@
-const potenciaSomas = require("../algoritmos/potenciaSomas");
+const potenciaSomas = require("../src/potenciaSomas");
 
 test("argumento null/undefined", () => {
     expect(() => { potenciaSomas(); }).toThrow();

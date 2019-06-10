@@ -1,4 +1,4 @@
-const produtoDeInteiros = require("../algoritmos/produtoDeInteiros");
+const produtoDeInteiros = require("../src/produtoDeInteiros");
 
 test("argumento null/undefined", () => {
   expect(() => { produtoDeInteiros(); }).toThrow();

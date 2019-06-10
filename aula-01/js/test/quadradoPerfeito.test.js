@@ -1,4 +1,4 @@
-const quadradoPerfeito = require("../algoritmos/quadradoPerfeito");
+const quadradoPerfeito = require("../src/quadradoPerfeito");
 
 test("argumento null/undefined", () => {
     expect(() => { quadradoPerfeito(); }).toThrow();

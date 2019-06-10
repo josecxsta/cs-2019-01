@@ -1,4 +1,4 @@
-const valorPi = require("../algoritmos/valorPi");
+const valorPi = require("../src/valorPi");
 
 test("argumento null/undefined", () => {
     expect(() => { valorPi(); }).toThrow();

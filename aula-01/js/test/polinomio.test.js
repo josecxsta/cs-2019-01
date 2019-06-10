@@ -1,4 +1,4 @@
-const polinomio = require("../algoritmos/polinomio");
+const polinomio = require("../src/polinomio");
 
 test("argumento null/undefined", () => {
     expect(() => { polinomio(); }).toThrow();

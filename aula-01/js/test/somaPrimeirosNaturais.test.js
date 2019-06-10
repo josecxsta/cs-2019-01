@@ -1,4 +1,4 @@
-const funcao = require("../algoritmos/somaPrimeirosNaturais");
+const funcao = require("../src/somaPrimeirosNaturais");
 
 test("25", () => {
     expect(funcao(25)).toBe(325);
@@ -22,4 +22,4 @@ test("valor negativo fora da faixa", () => {
 
 test("valor deve ser inteiro", () => {
     expect(() => funcao(10.3)).toThrow(RangeError);
-}); 
+});

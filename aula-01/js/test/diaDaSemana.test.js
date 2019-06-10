@@ -1,4 +1,4 @@
-const diaDaSemana = require("../algoritmos/diaDaSemana");
+const diaDaSemana = require("../src/diaDaSemana");
 
 test("argumento null/undefined", () => {
     expect(() => { diaDaSemana(); }).toThrow();

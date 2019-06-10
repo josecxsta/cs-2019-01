@@ -1,4 +1,4 @@
-const maiorDivisorComum = require("../algoritmos/maiorDivisorComum");
+const maiorDivisorComum = require("../src/maiorDivisorComum");
 
 test("12 e 6", () => {
     expect(maiorDivisorComum(12, 6)).toBe(6);

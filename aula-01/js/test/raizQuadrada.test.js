@@ -1,4 +1,4 @@
-const raizQuadrada = require("../algoritmos/raizQuadrada");
+const raizQuadrada = require("../src/raizQuadrada");
 
 test("argumento null/undefined", () => {
     expect(() => { raizQuadrada(); }).toThrow();

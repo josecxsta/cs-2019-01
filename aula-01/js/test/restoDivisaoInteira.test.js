@@ -1,4 +1,4 @@
-const restoDivisaoInteira = require("../algoritmos/restoDivisaoInteira");
+const restoDivisaoInteira = require("../src/restoDivisaoInteira");
 
 test("argumento null/undefined", () => {
     expect(() => { restoDivisaoInteira(); }).toThrow();

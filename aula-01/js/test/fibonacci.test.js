@@ -1,4 +1,4 @@
-const fibonacci = require("../algoritmos/fibonacci");
+const fibonacci = require("../src/fibonacci");
 
 test("argumento null/undefined", () => {
     expect(() => { fibonacci(); }).toThrow();
@@ -13,7 +13,7 @@ test("argumento de formato diferente", () => {
 });
 
 test("numero negativo", () => {
-  expect(() => { fibonacci(-1); }).toThrow(RangeError);
+    expect(() => { fibonacci(-1); }).toThrow(RangeError);
 });
 
 test("1 termo da sequencia", () => {

@@ -1,4 +1,4 @@
-const fatorial = require("../algoritmos/fatorial");
+const fatorial = require("../src/fatorial");
 
 test("argumento null/undefined", () => {
     expect(() => { fatorial(); }).toThrow();

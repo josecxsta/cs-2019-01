@@ -1,4 +1,4 @@
-const mdc = require("../algoritmos/maiorDivisorComum2");
+const mdc = require("../src/maiorDivisorComum2");
 
 test("argumento null/undefined", () => {
     expect(() => { mdc(); }).toThrow();
