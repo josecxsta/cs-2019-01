@@ -7,39 +7,41 @@
 
 ## projetos:
 
-### aula-01/java 📝
+### 📝 aula-01/java
 
-[![Known Vulnerabilities](https://snyk.io/test/github/josecxsta/cs-2019-01/badge.svg?targetFile=aula-01/java/pom.xml)](https://snyk.io/test/github/josecxsta/cs-2019-01)
-
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=josecxsta_cs-2019-01&metric=alert_status)](https://sonarcloud.io/dashboard?id=josecxsta_cs-2019-01)
+[![Known Vulnerabilities](https://snyk.io/test/github/josecxsta/cs-2019-01/badge.svg?targetFile=aula-01/java/pom.xml)](https://snyk.io/test/github/josecxsta/cs-2019-01) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=josecxsta_cs-2019-01&metric=alert_status)](https://sonarcloud.io/dashboard?id=josecxsta_cs-2019-01)
 
 Projeto que implementa 21 algorítmos em Java, incluindo validadores de CPF e algorítmos matemáticos.
 
-### aula-01/js 📝
+### 📝 aula-01/js
 
 [![Known Vulnerabilities](https://snyk.io/test/github/josecxsta/cs-2019-01/badge.svg?targetFile=aula-01/js/package.json)](https://snyk.io/test/github/josecxsta/cs-2019-01)
 
 Projeto que implementa 21 algorítmos em JavaScript, incluindo validadores de CPF e algorítmos matemáticos.
 
-### aula-07/vetor/java 🗄
+### 🗄 aula-07/vetor/java
 
 [![Known Vulnerabilities](https://snyk.io/test/github/josecxsta/cs-2019-01/badge.svg?targetFile=aula-07/vetor/java/pom.xml)](https://snyk.io/test/github/josecxsta/cs-2019-01)
 
-### aula-07/vetor/js 🗄
+Implementa em Java métodos para busca de menor elemento em um vetor, letras mais frequentes em uma sequência, palavra mais frequente em uma sequência, intersecção entre vetores e de um sorteio.
+
+### 🗄 aula-07/vetor/js
 
 [![Known Vulnerabilities](https://snyk.io/test/github/josecxsta/cs-2019-01/badge.svg?targetFile=aula-07/vetor/js/package.json)](https://snyk.io/test/github/josecxsta/cs-2019-01)
 
-### aula-08/encontre 🔍
+Implementa em Java métodos para busca de menor elemento em um vetor, letras mais frequentes em uma sequência, palavra mais frequente em uma sequência, intersecção entre vetores e de um sorteio.
+
+### 🔍 aula-08/encontre
 
 [![Known Vulnerabilities](https://snyk.io/test/github/josecxsta/cs-2019-01/badge.svg?targetFile=aula-08/encontre/pom.xml)](https://snyk.io/test/github/josecxsta/cs-2019-01)
 
-### aula-08/inteiro 📁
+### 📁 aula-08/inteiro
 
 [![Known Vulnerabilities](https://snyk.io/test/github/josecxsta/cs-2019-01/badge.svg?targetFile=aula-08/inteiro/pom.xml)](https://snyk.io/test/github/josecxsta/cs-2019-01)
 
 Programa que recebe como único argumento um nome de arquivo e exibe os 4 primeiros bytes (inteiro de 32 bits) em formato hexadecimal no console. 
 
-### aula-08/jpeg 📸
+### 📸 aula-08/jpeg
 
 [![Known Vulnerabilities](https://snyk.io/test/github/josecxsta/cs-2019-01/badge.svg?targetFile=aula-08/jpeg/pom.xml)](https://snyk.io/test/github/josecxsta/cs-2019-01)
 
