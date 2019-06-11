@@ -10,7 +10,7 @@ function palavraMaisFrequente(frase) {
         throw new TypeError("argumento deve ser uma string");
     }
 
-    const palavras = frase.split(' ');
+    const palavras = frase.split(" ");
     let repeticoes = [];
     palavras.forEach(palavra => {
         if (!repeticoes.find(rep => rep.palavra == palavra)) {

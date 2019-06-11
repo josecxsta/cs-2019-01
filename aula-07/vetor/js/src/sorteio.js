@@ -44,9 +44,11 @@ function sorteio() {
  * @returns {number} numero aleatório.
  */
 function numeroAleatorio(min, max) {
-    if (typeof(min) != number || typeof(max) != number) {
+    if (typeof(min) != "number" || typeof(max) != "number") {
         throw TypeError("argumentos devem ser numericos");
     }
 
     return Math.floor(Math.random() * (max - min)) + min;
 }
+
+module.exports = sorteio;

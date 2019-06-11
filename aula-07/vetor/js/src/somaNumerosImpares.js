@@ -5,7 +5,6 @@
  * @returns {number} soma dos números ímpares
  */
 function somaNumerosImpares(numerosInteiros) {
-
     if (!Array.isArray(numerosInteiros)) {
         throw new TypeError("argumento deve ser um vetor");
     }

@@ -16,7 +16,7 @@ function quantidadeLetras(sequencia) {
 
         const sequenciaMinuscula = sequencia.toLowerCase();
 
-        if (sequenciaMinuscula[index] < 'a' || sequenciaMinuscula[index] > 'z') {
+        if (sequenciaMinuscula[index] < "a" || sequenciaMinuscula[index] > "z") {
             continue;
         }
 
