@@ -1,17 +1,31 @@
 package com.github.josecxsta.ufg.cs.aula08.application;
 
+import java.io.IOException;
 import java.util.Scanner;
-import com.github.josecxsta.ufg.cs.aula08.domain.Arquivo;
+import com.github.josecxsta.ufg.cs.aula08.domain.ArquivoUtils;
 
 /**
- * Implementa o método main do programa para verificar,
- * através do Arquivo, se um arquivo é ou não JPEG.
+ * Implementa o método main do programa para verificar, através do Arquivo, se
+ * um arquivo é ou não JPEG.
  */
-class Aplicacao {
-    public static void main(String args[]) {
+public final class Aplicacao {
+
+    /**
+     * Para evitar instanciação.
+     */
+    private Aplicacao() {
+    }
+
+    /**
+     * Método main.
+     *
+     * @param args não utilizado
+     * @throws IOException
+     */
+    public static void main(final String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
         System.out.println("Insira o endereço do arquivo: ");
-        boolean ehJPEG = Arquivo.ehJPEG(sc.nextLine());
+        boolean ehJPEG = ArquivoUtils.ehJPEG(sc.nextLine());
 
         if (ehJPEG) {
             System.out.println("Arquivo selecionado é um JPEG");
