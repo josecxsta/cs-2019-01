@@ -1,5 +1,8 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/cb5eddacea9841ec8a9a953a3a3f0825)](https://app.codacy.com/app/josecxsta/cs-2019-01?utm_source=github.com&utm_medium=referral&utm_content=josecxsta/cs-2019-01&utm_campaign=Badge_Grade_Dashboard)
-[![Build Status](https://travis-ci.com/josecxsta/cs-2019-01.svg?branch=master)](https://travis-ci.com/josecxsta/cs-2019-01)
+[![Build Status](https://travis-ci.com/josecxsta/cs-2019-01.svg?branch=master)](https://travis-ci.com/josecxsta/cs-2019-01)[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
+
 
 # construção de software INF/UFG 2019-01
 🛠 Repositório para exercício da disciplina de Construção de Software do curso de Engenharia de Software INF-UFG.
