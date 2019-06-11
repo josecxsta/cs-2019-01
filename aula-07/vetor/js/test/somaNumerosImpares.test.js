@@ -1,5 +1,9 @@
-const somaNUmerosImpares = require("../src/somaNUmerosImpares");
+const somaNumerosImpares = require("../src/somaNumerosImpares");
+
+test("erro", () => {
+    expect(() => somaNumerosImpares(5)).toThrow();
+});
 
 test("mais frequente", () => {
-    expect(somaNUmerosImpares([5, 3, 2])).toBe(8);
+    expect(somaNumerosImpares([5, 3, 2])).toBe(8);
 });
