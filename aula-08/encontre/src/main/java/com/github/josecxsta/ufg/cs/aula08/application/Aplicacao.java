@@ -6,12 +6,19 @@ import com.github.josecxsta.ufg.cs.aula08.domain.Arquivo;
 /**
  *
  */
-public class Aplicacao {
+public final class Aplicacao {
 
     /**
      *
      */
-    public static void main(String args[]) {
+    private Aplicacao() {
+    }
+
+    /**
+     * Método principal da aplicação.
+     * @param args não utilizado
+     */
+    public static void main(final String args) {
         final Scanner escaner = new Scanner(System.in);
 
         System.out.println("Insira o endereço do arquivo de texto: ");

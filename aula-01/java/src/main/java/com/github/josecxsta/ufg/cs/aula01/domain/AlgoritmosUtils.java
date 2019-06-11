@@ -97,7 +97,7 @@ public final class AlgoritmosUtils {
     * @throws IllegalArgumentException se argumentos estiverem fora da faixa.
     */
     public static int razaoAurea(final int num1, final int num2,
-                                final int prec) {
+    final int prec) {
 
         final boolean num1MenorQueZero = num1 < 0;
         final boolean num1MaiorQuenum2 = num1 > num2;
@@ -393,7 +393,7 @@ public final class AlgoritmosUtils {
 
         if (num < 0 || iteracoes < 0) {
             throw new IllegalArgumentException(
-                "argumentos devem ser positivos");
+            "argumentos devem ser positivos");
         }
 
         int potencia = 1;
@@ -444,7 +444,8 @@ public final class AlgoritmosUtils {
     * @param numero número expoente
     * @param precisao precisão
     * @return logaritmo natural
-    * @throws IllegalArgumentException se n for negativo ou precisao < que 2
+    * @throws IllegalArgumentException se n for negativo ou precisao
+    menor que 2
     */
     public static int logaritmo(final int numero, final int precisao) {
 

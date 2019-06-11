@@ -1,7 +1,7 @@
 /**
- * @see com.github.josecxsta.ufg.cs.aula01.domain.Algoritmos
- * @see com.github.josecxsta.ufg.cs.aula01.domain.Cpf
- * @see com.github.josecxsta.ufg.cs.aula01.domain.Data
- * @see com.github.josecxsta.ufg.cs.aula01.domain.Propriedades
+ * @see com.github.josecxsta.ufg.cs.aula01.domain.AlgoritmosUtils
+ * @see com.github.josecxsta.ufg.cs.aula01.domain.CpfUtils
+ * @see com.github.josecxsta.ufg.cs.aula01.domain.DataUtils
+ * @see com.github.josecxsta.ufg.cs.aula01.domain.PropriedadeUtils
  */
 package com.github.josecxsta.ufg.cs.aula01.domain;

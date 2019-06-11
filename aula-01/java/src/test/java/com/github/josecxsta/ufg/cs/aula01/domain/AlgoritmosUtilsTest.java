@@ -10,7 +10,6 @@ public class AlgoritmosUtilsTest {
     //     assertThrows(UnsupportedOperationException.class, () -> new AlgoritmosUtils());
     // }
 
-
     @Test
     public void quadradoPerfeitoCerto() {
         assertTrue(AlgoritmosUtils.quadradoPerfeito(9));

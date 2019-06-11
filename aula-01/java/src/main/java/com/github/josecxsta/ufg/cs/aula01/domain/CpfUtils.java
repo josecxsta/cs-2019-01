@@ -8,62 +8,62 @@ package com.github.josecxsta.ufg.cs.aula01.domain;
 public final class CpfUtils {
 
     /**
-    *
+    * Constante númerica correspondente ao dígito.
     */
     public static final int DIG_1 = 1;
 
     /**
-    *
+    * Constante númerica correspondente ao dígito.
     */
     public static final int DIG_2 = 2;
 
     /**
-    *
+    * Constante númerica correspondente ao dígito.
     */
     public static final int DIG_3 = 3;
 
     /**
-    *
+    * Constante númerica correspondente ao dígito.
     */
     public static final int DIG_4 = 4;
 
     /**
-    *
+    * Constante númerica correspondente ao dígito.
     */
     public static final int DIG_5 = 5;
 
     /**
-    *
+    * Constante númerica correspondente ao dígito.
     */
     public static final int DIG_6 = 6;
 
     /**
-    *
+    * Constante númerica correspondente ao dígito.
     */
     public static final int DIG_7 = 7;
 
     /**
-    *
+    * Constante númerica correspondente ao dígito.
     */
     public static final int DIG_8 = 8;
 
     /**
-    *
+    * Constante númerica correspondente ao dígito.
     */
     public static final int DIG_9 = 9;
 
     /**
-    *
+    * Constante númerica correspondente ao dígito.
     */
     public static final int DIG_10 = 10;
 
     /**
-    *
+    * Constante númerica correspondente ao dígito.
     */
     public static final int DIG_11 = 11;
 
     /**
-    *
+    * Constante númerica correspondente ao dígito.
     */
     public static final int DIG_12 = 12;
 
