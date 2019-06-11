@@ -43,10 +43,8 @@ public final class ArquivoUtils {
      */
     public static String ultimos2Bytes(final String nomeArquivo)
         throws IOException {
-
         final java.nio.file.Path logPath = Paths.get(nomeArquivo);
         final ByteBuffer buffer = ByteBuffer.allocate(2);
-
         final FileChannel channel = FileChannel
         .open(logPath, StandardOpenOption.READ);
         channel.read(buffer, channel.size() - 2);
