@@ -41,14 +41,14 @@ Implementa em Java métodos para busca de menor elemento em um vetor, letras mai
 
 [![Known Vulnerabilities](https://snyk.io/test/github/josecxsta/cs-2019-01/badge.svg?targetFile=aula-08/encontre/pom.xml)](https://snyk.io/test/github/josecxsta/cs-2019-01)
 
-Programa que recebe dois argumentos como entrada, o nome de um arquivo texto, e uma sequência de caracteres (palavra) a ser localizada no arquivo texto (primeiro argumento). Exibe todas as linhas do arquivo texto nas quais consta o texto fornecido como segundo argumento no seguinte formato: “L<número-linha> C<número-coluna>: <texto-da-linha>”, onde tem-se a letra “L” seguida do número da linha no arquivo, seguido de um espaço em branco seguido pela letra “C” que, por sua vez, é seguida pelo número da coluna onde o texto procurado se inicia, seguido pelo conteúdo da linha em questão. O programa também exibe o número de vezes que a palavra foi encontrada. 
+Programa que recebe dois argumentos como entrada, o nome de um arquivo texto, e uma sequência de caracteres (palavra) a ser localizada no arquivo texto (primeiro argumento). Exibe todas as linhas do arquivo texto nas quais consta o texto fornecido como segundo argumento no seguinte formato: “L<número-linha> C<número-coluna>: <texto-da-linha>”, onde tem-se a letra “L” seguida do número da linha no arquivo, seguido de um espaço em branco seguido pela letra “C” que, por sua vez, é seguida pelo número da coluna onde o texto procurado se inicia, seguido pelo conteúdo da linha em questão. O programa também exibe o número de vezes que a palavra foi encontrada.
 
 
 ### 📁 aula-08/inteiro
 
 [![Known Vulnerabilities](https://snyk.io/test/github/josecxsta/cs-2019-01/badge.svg?targetFile=aula-08/inteiro/pom.xml)](https://snyk.io/test/github/josecxsta/cs-2019-01)
 
-Programa que recebe como único argumento um nome de arquivo e exibe os 4 primeiros bytes (inteiro de 32 bits) em formato hexadecimal no console. 
+Programa que recebe como único argumento um nome de arquivo e exibe os 4 primeiros bytes (inteiro de 32 bits) em formato hexadecimal no console.
 
 
 ### 📸 aula-08/jpeg
@@ -56,3 +56,5 @@ Programa que recebe como único argumento um nome de arquivo e exibe os 4 primei
 [![Known Vulnerabilities](https://snyk.io/test/github/josecxsta/cs-2019-01/badge.svg?targetFile=aula-08/jpeg/pom.xml)](https://snyk.io/test/github/josecxsta/cs-2019-01)
 
 Programa que recebe como argumento um nome de arquivo e determina se o arquivo é um JPEG de acordo com seu primeiro e último par de bytes.
+
+### aula-09
