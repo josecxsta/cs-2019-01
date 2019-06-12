@@ -17,9 +17,9 @@ test("numero fora da faixa", () => {
 });
 
 test("nao quadradoPerfeito", () => {
-  expect(quadradoPerfeito(2)).toBe(false);
+    expect(quadradoPerfeito(2)).toBe(false);
 });
 
 test("quadrado perfeito", () => {
-  expect(quadradoPerfeito(9)).toBe(true);
+    expect(quadradoPerfeito(9)).toBe(true);
 });

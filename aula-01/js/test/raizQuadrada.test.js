@@ -13,9 +13,9 @@ test("argumento nao inteiro", () => {
 });
 
 test("argumento fora da faixa", () => {
-  expect(() => { raizQuadrada(-1, 5); }).toThrow(RangeError);
+    expect(() => { raizQuadrada(-1, 5); }).toThrow(RangeError);
 });
 
 test("raiz quadrada", () => {
-  expect(raizQuadrada(9, 10)).toBe(3);
+    expect(raizQuadrada(9, 10)).toBe(3);
 });

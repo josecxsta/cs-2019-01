@@ -30,7 +30,7 @@ function polinomio(n, c) {
     }
 
     let p = c[grau - 1];
-    for (i = grau - 2; i >= 0; i--) {
+    for (let i = grau - 2; i >= 0; i--) {
         p = p * n + c[i];
     }
 

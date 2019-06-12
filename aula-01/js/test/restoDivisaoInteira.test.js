@@ -13,13 +13,13 @@ test("argumento nao inteiro", () => {
 });
 
 test("argumento menor que zero", () => {
-  expect(() => { restoDivisaoInteira(-1, 2); }).toThrow(RangeError);
+    expect(() => { restoDivisaoInteira(-1, 2); }).toThrow(RangeError);
 });
 
 test("resto", () => {
-  expect(restoDivisaoInteira(20, 3)).toBe(2);
+    expect(restoDivisaoInteira(20, 3)).toBe(2);
 });
 
 test("resto 2", () => {
-  expect(restoDivisaoInteira(100, 5)).toBe(0);
+    expect(restoDivisaoInteira(100, 5)).toBe(0);
 });

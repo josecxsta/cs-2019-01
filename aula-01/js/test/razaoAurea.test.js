@@ -9,10 +9,10 @@ test("argumento de formato diferente", () => {
 });
 
 test("argumento nao inteiro", () => {
-  expect(() => { razaoAurea(10, 2.5, 2); }).toThrow(RangeError);
-  expect(() => { razaoAurea(3, 5, 6.2); }).toThrow(RangeError);
+    expect(() => { razaoAurea(10, 2.5, 2); }).toThrow(RangeError);
+    expect(() => { razaoAurea(3, 5, 6.2); }).toThrow(RangeError);
 });
 
 test("razao aurea", () => {
-  expect(razaoAurea(3, 5, 6)).toBe(1.6181818181818182);
+    expect(razaoAurea(3, 5, 6)).toBe(1.6181818181818182);
 });
