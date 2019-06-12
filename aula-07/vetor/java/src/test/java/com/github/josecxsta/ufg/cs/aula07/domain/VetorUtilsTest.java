@@ -22,4 +22,10 @@ public class VetorUtilsTest {
         assertEquals(9, VetorUtils.menorTemperatura(vet2));
     }
 
+    @Test
+    public void somaImpares() {
+        int[] numeros = {1, 4, 5};
+        assertEquals(6, VetorUtils.somaNumerosImpares(numeros));
+    }
+
 }
