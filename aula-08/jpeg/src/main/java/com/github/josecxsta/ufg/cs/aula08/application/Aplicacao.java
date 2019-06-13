@@ -23,9 +23,9 @@ public final class Aplicacao {
      * @throws IOException
      */
     public static void main(final String[] args) throws IOException {
-        Scanner sc = new Scanner(System.in);
+        final Scanner escanner = new Scanner(System.in);
         System.out.println("Insira o endereço do arquivo: ");
-        boolean ehJPEG = ArquivoUtils.ehJPEG(sc.nextLine());
+        final boolean ehJPEG = ArquivoUtils.ehJPEG(escanner.nextLine());
 
         if (ehJPEG) {
             System.out.println("Arquivo selecionado é um JPEG");
@@ -35,6 +35,6 @@ public final class Aplicacao {
 
         // System.out.println(Arquivo.ehJPEG("input/is-she.jpg"));
 
-        sc.close();
+        escanner.close();
     }
 }

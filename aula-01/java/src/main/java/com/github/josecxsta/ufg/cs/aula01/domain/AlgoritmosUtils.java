@@ -439,8 +439,7 @@ public final class AlgoritmosUtils {
     }
 
     /**
-    * Calcula o logaritmo natural de um número expoente com a
-    precisão fornecida.
+    * Calcula o logaritmo natural
     * @param numero número expoente
     * @param precisao precisão
     * @return logaritmo natural

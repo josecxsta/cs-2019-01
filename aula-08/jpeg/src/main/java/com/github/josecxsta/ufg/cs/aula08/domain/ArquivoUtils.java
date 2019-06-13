@@ -29,10 +29,8 @@ public final class ArquivoUtils {
      * @throws IOException
      */
     public static boolean ehJPEG(final String nomeArquivo) throws IOException {
-        final boolean primeirosBytesOk = primeiros2Bytes(nomeArquivo).equals("ffd8");
-        final boolean ultimosBytesOk = ultimos2Bytes(nomeArquivo).equals("ffd9");
-
-        return primeirosBytesOk && ultimosBytesOk;
+        return primeiros2Bytes(nomeArquivo).equals("ffd8")
+        && ultimos2Bytes(nomeArquivo).equals("ffd9");
     }
 
     /**
@@ -62,15 +60,15 @@ public final class ArquivoUtils {
      */
     public static String primeiros2Bytes(final String nomeArquivo)
         throws IOException {
-        final byte[] bs = new byte[2];
+        final byte[] bytes = new byte[2];
 
         final FileInputStream fis = new FileInputStream(nomeArquivo);
         final InputStreamReader isr = new InputStreamReader(fis, "UTF-8");
-        fis.read(bs, 0, 2);
+        fis.read(bytes, 0, 2);
         fis.close();
         isr.close();
 
-        return bytesToHex(bs);
+        return bytesToHex(bytes);
     }
 
     /**
@@ -80,8 +78,8 @@ public final class ArquivoUtils {
      */
     private static String bytesToHex(final byte[] valorBytes) {
         final StringBuilder stringBuild = new StringBuilder();
-        for (final byte b : valorBytes) {
-            stringBuild.append(String.format("%02x", b));
+        for (final byte valor: valorBytes) {
+            stringBuild.append(String.format("%02x", valor));
         }
 
         return stringBuild.toString();
