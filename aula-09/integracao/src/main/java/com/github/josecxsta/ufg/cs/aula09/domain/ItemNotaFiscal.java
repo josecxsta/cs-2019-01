@@ -21,4 +21,20 @@ public class ItemNotaFiscal {
         this.produto = produto;
     }
 
+    public ItemNotaFiscal() {
+
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
+    public void setProduto(Produto produto) {
+        this.produto = produto;
+    }
+
 }

@@ -17,4 +17,15 @@ public class Produto {
         this.descricao = descricao;
     }
 
+    public Produto() {
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
 }
