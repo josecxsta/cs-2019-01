@@ -4,9 +4,9 @@ package com.github.josecxsta.ufg.cs.aula09.domain;
 *
 */
 public class ItemNotaFiscal {
-    public int quantidade;
-    public double preco;
-    public Produto produto;
+    private int quantidade;
+    private double preco;
+    private Produto produto;
 
     /**
     *

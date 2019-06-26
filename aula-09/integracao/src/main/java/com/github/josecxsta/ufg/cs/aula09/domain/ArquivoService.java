@@ -18,18 +18,17 @@ public class ArquivoService {
     public static final String output = "input/dat/";
 
     public static void monitorar() throws IOException, InterruptedException {
-        //
-        WatchService watchService
-        = FileSystems.getDefault().newWatchService();
+        WatchService watchService = FileSystems.getDefault()
+            .newWatchService();
 
         // Path path = Paths.get(System.getProperty("user.home"));
         Path path = Paths.get(folder);
 
-        path.register(
-        watchService,
+        path.register(watchService,
         StandardWatchEventKinds.ENTRY_CREATE);
 
         WatchKey key;
+
         while ((key = watchService.take()) != null) {
             for (WatchEvent<?> event : key.pollEvents()) {
 
@@ -41,7 +40,7 @@ public class ArquivoService {
 
                 persisteAsZip(bte);
 
-                System.out.println(nf.toString());
+                System.out.println(new String(bte));
             }
             key.reset();
         }
@@ -61,9 +60,9 @@ public class ArquivoService {
 
         String linhas = "";
 
-        final FileInputStream fileStream = new FileInputStream(nomeArquivo);
+        final FileInputStream fStream = new FileInputStream(nomeArquivo);
         final InputStreamReader inSt = new
-        InputStreamReader(fileStream, "UTF-8");
+        InputStreamReader(fStream, "UTF-8");
         final BufferedReader buffReader = new BufferedReader(inSt);
 
         String linha;
@@ -77,9 +76,9 @@ public class ArquivoService {
     }
 
     public static void persisteAsZip(byte[] notaFiscal) throws IOException {
-        try (FileOutputStream fos = new FileOutputStream(output + Seguranca.sha256(notaFiscal) + ".dat")) {
+        String filename = output + Seguranca.sha256(notaFiscal) + ".dat";
+        try (FileOutputStream fos = new FileOutputStream(filename)) {
             fos.write(notaFiscal);
-            //fos.close(); There is no more need for this line since you had created the instance of "fos" inside the try. And this will automatically close the OutputStream
         }
     }
 
