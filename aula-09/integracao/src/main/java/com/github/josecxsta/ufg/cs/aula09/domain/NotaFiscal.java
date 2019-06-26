@@ -27,31 +27,49 @@ public class NotaFiscal {
         this.itens = itens;
     }
 
+    /**
+     *
+     */
     public NotaFiscal() {
-
     }
 
+    /**
+     *
+     * @param total
+     */
     public void setTotal(final Double total) {
         this.total = total;
     }
 
+    /**
+     *
+     */
     public void setData(final String data) {
-        DateFormat format = new SimpleDateFormat("dd/mm/yyyy", Locale.ENGLISH);
+        DateFormat format = new SimpleDateFormat("dd/MM/yyyy", Locale.US);
         try {
             Date date = format.parse(data);
             this.data = date;
         } catch (ParseException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
 
+    /**
+     *
+     */
     public void addItem(ItemNotaFiscal item) {
         this.itens.add(item);
     }
 
-    public void getData() {
+    /**
+     *
+     */
+    public Date getData() {
         return this.data;
+    }
+
+    public ArrayList<ItemNotaFiscal> getItens() {
+        return this.itens;
     }
 
 }

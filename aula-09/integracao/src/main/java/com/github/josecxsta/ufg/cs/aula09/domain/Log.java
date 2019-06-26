@@ -8,7 +8,7 @@ public class Log {
     /**
      *
      */
-    public static void info(){
+    public static void info() {
 
     }
 
