@@ -1,6 +1,7 @@
 package com.github.josecxsta.ufg.cs.aula09.domain;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -40,30 +41,29 @@ public class ArquivoService {
         WatchService watchService = FileSystems.getDefault()
             .newWatchService();
 
-
         Path path = Paths.get(caminho + INPUT);
-
         path.register(watchService,
         StandardWatchEventKinds.ENTRY_CREATE);
 
         WatchKey key;
-
         while ((key = watchService.take()) != null) {
             for (WatchEvent<?> event : key.pollEvents()) {
-
-                String arquivo = getCaminhoPasta() + INPUT + event.context();
-                String text = getConteudoAsString(arquivo);
-                NotaFiscal notaFiscal = FromJsonToNotaFiscal.converte(text);
-                byte[] nfAsByte = FromNotaFiscalToBinario.converte(notaFiscal);
-
-                persisteAsZip(nfAsByte);
-                excluiArquivo(arquivo);
-
-                System.out.println(new String(nfAsByte));
+                trataArquivo(getCaminhoPasta() + INPUT + event.context());
             }
             key.reset();
         }
 
+    }
+
+    private static void trataArquivo(final String arquivo) throws IOException {
+        String text = getConteudoAsString(arquivo);
+        NotaFiscal notaFiscal = FromJsonToNotaFiscal.converte(text);
+        byte[] nfAsByte = FromNotaFiscalToBinario.converte(notaFiscal);
+
+        persisteAsZip(nfAsByte);
+        excluiArquivo(arquivo);
+
+        System.out.println(new String(nfAsByte));
     }
 
     /**
@@ -95,6 +95,7 @@ public class ArquivoService {
             linhas = linhas + removeSinais(linha);
         }
 
+        fStream.close();
         buffReader.close();
 
         return linhas;
@@ -124,7 +125,12 @@ public class ArquivoService {
         return System.getenv().get(VARIAVELAMBIENTE);
     }
 
+    /**
+     * Exclui o arquivo do disco.
+     * @param nomeArquivo nome do arquivo a ser excluído.
+     */
     public static void excluiArquivo(final String nomeArquivo) {
-
+        File arquivo = new File(nomeArquivo);
+        arquivo.delete();
     }
 }
