@@ -8,21 +8,40 @@ import java.io.InputStreamReader;
 import java.nio.file.*;
 import java.text.Normalizer;
 
-
 /**
-*
-*/
+ * Classe que implementa métodos necessários
+ * para manipulação de arquivos.
+ */
 public class ArquivoService {
 
-    public static final String folder = "input/json/";
-    public static final String output = "input/dat/";
+    /**
+     * Variável de ambiente que salva pasta que será monitorada.
+     */
+    public static final String VARIAVELAMBIENTE = "NOTAS_FISCAIS";
 
-    public static void monitorar() throws IOException, InterruptedException {
+    /**
+     * Pasta que recebe arquivos JSON.
+     */
+    public static final String INPUT = "/json/";
+
+    /**
+     * Pasta em que será salvo o arquivo comprimido.
+     */
+    public static final String OUTPUT = "/dat/";
+
+    /**
+     * Monitora a pasta que recebe os arquivos em JSON
+     * que serão serializados, transformados em byte
+     * comprimidos e salvos em outro diretório.
+     * @param caminho caminho da pasta que será monitorada
+     */
+    public static void monitorarPasta(String caminho)
+    throws IOException, InterruptedException {
         WatchService watchService = FileSystems.getDefault()
             .newWatchService();
 
-        // Path path = Paths.get(System.getProperty("user.home"));
-        Path path = Paths.get(folder);
+
+        Path path = Paths.get(caminho + INPUT);
 
         path.register(watchService,
         StandardWatchEventKinds.ENTRY_CREATE);
@@ -32,15 +51,15 @@ public class ArquivoService {
         while ((key = watchService.take()) != null) {
             for (WatchEvent<?> event : key.pollEvents()) {
 
-                String out = folder + event.context();
-                System.out.println(out);
-                String text = getConteudoAsString(out);
-                NotaFiscal nf = FromJsonToNotaFiscal.converte(text);
-                byte[] bte = FromNotaFiscalToBinario.converte(nf);
+                String arquivo = getCaminhoPasta() + INPUT + event.context();
+                String text = getConteudoAsString(arquivo);
+                NotaFiscal notaFiscal = FromJsonToNotaFiscal.converte(text);
+                byte[] nfAsByte = FromNotaFiscalToBinario.converte(notaFiscal);
 
-                persisteAsZip(bte);
+                persisteAsZip(nfAsByte);
+                excluiArquivo(arquivo);
 
-                System.out.println(new String(bte));
+                System.out.println(new String(nfAsByte));
             }
             key.reset();
         }
@@ -48,18 +67,24 @@ public class ArquivoService {
     }
 
     /**
-    * Palavras serão consultadas sem sinais ou acentos
-    */
+     * Remove sinais ou acentos de caracteres UTF-8
+     * @param entrada sequência que terá seus sinais/acentos removidos
+     */
     private static String removeSinais(String entrada) {
         String sa = Normalizer.normalize(entrada, Normalizer.Form.NFD);
         return sa.replaceAll("\\p{M}", "");
     }
 
+    /**
+     * Transforma o conteúdo do arquivo especificado
+     * em uma sequência de caracteres UTF-8.
+     * @param nomeArquivo nome/caminho do arquivo.
+     */
     public static String getConteudoAsString(final String nomeArquivo)
     throws IOException {
 
         String linhas = "";
-
+        System.out.println(nomeArquivo);
         final FileInputStream fStream = new FileInputStream(nomeArquivo);
         final InputStreamReader inSt = new
         InputStreamReader(fStream, "UTF-8");
@@ -75,12 +100,31 @@ public class ArquivoService {
         return linhas;
     }
 
+    /**
+     * Salva o arquivo como zip no diretório
+     * de saída da aplicação
+     * @param notaFiscal nota fiscal já serializada e em array de byte
+     */
     public static void persisteAsZip(byte[] notaFiscal) throws IOException {
-        String filename = output + Seguranca.sha256(notaFiscal) + ".dat";
+        String filename = getCaminhoPasta() + OUTPUT
+            + Seguranca.sha256(notaFiscal) + ".dat";
         try (FileOutputStream fos = new FileOutputStream(filename)) {
             fos.write(notaFiscal);
         }
     }
 
+    /**
+     * Obtém o caminho da pasta que está armazenado
+     * na variável de ambiente NOTAS_FISCAIS
+     */
+    public static String getCaminhoPasta() {
+        if (System.getenv().get(VARIAVELAMBIENTE) == null) {
+            System.out.println("Variavel inválida");
+        }
+        return System.getenv().get(VARIAVELAMBIENTE);
+    }
 
+    public static void excluiArquivo(final String nomeArquivo) {
+
+    }
 }

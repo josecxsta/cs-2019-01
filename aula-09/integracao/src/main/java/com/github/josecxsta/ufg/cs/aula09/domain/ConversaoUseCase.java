@@ -9,7 +9,7 @@ public class ConversaoUseCase {
 
   public static void iniciarMonitoramento() {
     try {
-      ArquivoService.monitorar();
+      ArquivoService.monitorarPasta(ArquivoService.getCaminhoPasta());
     } catch (IOException e) {
       e.printStackTrace();
     } catch (InterruptedException e) {
