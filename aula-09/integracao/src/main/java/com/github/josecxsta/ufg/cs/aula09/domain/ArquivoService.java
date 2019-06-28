@@ -1,17 +1,17 @@
 package com.github.josecxsta.ufg.cs.aula09.domain;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.*;
 import java.text.Normalizer;
+import java.util.List;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipOutputStream;
 
 /**
- * Classe que implementa métodos necessários
- * para manipulação de arquivos.
+ * Classe que implementa métodos necessários para manipulação de arquivos.
  */
 public class ArquivoService {
 
@@ -31,19 +31,18 @@ public class ArquivoService {
     public static final String OUTPUT = "/dat/";
 
     /**
-     * Monitora a pasta que recebe os arquivos em JSON
-     * que serão serializados, transformados em byte
-     * comprimidos e salvos em outro diretório.
+     * Monitora a pasta que recebe os arquivos em JSON que serão serializados,
+     * transformados em byte comprimidos e salvos em outro diretório.
+     *
      * @param caminho caminho da pasta que será monitorada
      */
     public static void monitorarPasta(String caminho)
     throws IOException, InterruptedException {
-        WatchService watchService = FileSystems.getDefault()
-            .newWatchService();
 
+        WatchService watchService = FileSystems.getDefault().newWatchService();
         Path path = Paths.get(caminho + INPUT);
-        path.register(watchService,
-        StandardWatchEventKinds.ENTRY_CREATE);
+        path.register(watchService, StandardWatchEventKinds.ENTRY_CREATE);
+        Log.info("Pasta " + caminho + INPUT + " esta sendo assistida.");
 
         WatchKey key;
         while ((key = watchService.take()) != null) {
@@ -56,81 +55,88 @@ public class ArquivoService {
     }
 
     private static void trataArquivo(final String arquivo) throws IOException {
-        String text = getConteudoAsString(arquivo);
-        NotaFiscal notaFiscal = FromJsonToNotaFiscal.converte(text);
-        byte[] nfAsByte = FromNotaFiscalToBinario.converte(notaFiscal);
+        Log.info("Arquivo " + arquivo + " sera processado.");
+        try {
+            String text = getConteudoAsString(arquivo);
+            NotaFiscal notaFiscal = FromJsonToNotaFiscal.converte(text);
+            byte[] nfAsByte = FromNotaFiscalToBinario.converte(notaFiscal);
+            persisteAsZip(nfAsByte);
+            excluiArquivo(arquivo);
+        } catch (IOException e) {
+            Log.info("Erro");
+        }
 
-        persisteAsZip(nfAsByte);
-        excluiArquivo(arquivo);
-
-        System.out.println(new String(nfAsByte));
+        // System.out.println(new String(nfAsByte));
     }
 
     /**
-     * Remove sinais ou acentos de caracteres UTF-8
-     * @param entrada sequência que terá seus sinais/acentos removidos
-     */
+    * Remove sinais ou acentos de caracteres UTF-8
+    * @param entrada sequência que terá seus sinais/acentos removidos
+    */
     private static String removeSinais(String entrada) {
         String sa = Normalizer.normalize(entrada, Normalizer.Form.NFD);
         return sa.replaceAll("\\p{M}", "");
     }
 
     /**
-     * Transforma o conteúdo do arquivo especificado
-     * em uma sequência de caracteres UTF-8.
-     * @param nomeArquivo nome/caminho do arquivo.
-     */
+    * Transforma o conteúdo do arquivo especificado
+    * em uma sequência de caracteres UTF-8.
+    * @param nomeArquivo nome/caminho do arquivo.
+    */
     public static String getConteudoAsString(final String nomeArquivo)
     throws IOException {
 
-        String linhas = "";
-        System.out.println(nomeArquivo);
-        final FileInputStream fStream = new FileInputStream(nomeArquivo);
-        final InputStreamReader inSt = new
-        InputStreamReader(fStream, "UTF-8");
-        final BufferedReader buffReader = new BufferedReader(inSt);
-
-        String linha;
-        while ((linha = buffReader.readLine()) != null) {
-            linhas = linhas + removeSinais(linha);
+        StringBuilder conteudo = new StringBuilder("");
+        Path path = Paths.get(nomeArquivo);
+        List<String> linhas = Files.readAllLines(path, StandardCharsets.UTF_8);
+        for (String linha : linhas) {
+            conteudo.append(removeSinais(linha));
         }
 
-        fStream.close();
-        buffReader.close();
-
-        return linhas;
+        return conteudo.toString();
     }
 
     /**
-     * Salva o arquivo como zip no diretório
-     * de saída da aplicação
-     * @param notaFiscal nota fiscal já serializada e em array de byte
-     */
+    * Salva o arquivo como zip no diretório
+    * de saída da aplicação
+    * @param notaFiscal nota fiscal já serializada e em array de byte
+    */
     public static void persisteAsZip(byte[] notaFiscal) throws IOException {
         String filename = getCaminhoPasta() + OUTPUT
-            + Seguranca.sha256(notaFiscal) + ".dat";
-        try (FileOutputStream fos = new FileOutputStream(filename)) {
-            fos.write(notaFiscal);
-        }
+        + Seguranca.sha256(notaFiscal) + ".dat";
+
+        ZipOutputStream zipout;
+        FileOutputStream out = new FileOutputStream(filename);
+        zipout = new ZipOutputStream(out);
+        ZipEntry entry = new ZipEntry(filename);
+        zipout.putNextEntry(entry);
+        zipout.write(notaFiscal);
+        zipout.close();
+
+        // try (FileOutputStream fos = new FileOutputStream(filename)) {
+        //     fos.write(notaFiscal);
+        //     Log.info("Arquivo comprimido " + filename);
+        // }
     }
 
     /**
-     * Obtém o caminho da pasta que está armazenado
-     * na variável de ambiente NOTAS_FISCAIS
-     */
+    * Obtém o caminho da pasta que está armazenado
+    * na variável de ambiente NOTAS_FISCAIS
+    */
     public static String getCaminhoPasta() {
         if (System.getenv().get(VARIAVELAMBIENTE) == null) {
-            System.out.println("Variavel inválida");
+            Log.info("Variavel de ambiente inválida");
         }
         return System.getenv().get(VARIAVELAMBIENTE);
     }
 
     /**
-     * Exclui o arquivo do disco.
-     * @param nomeArquivo nome do arquivo a ser excluído.
-     */
+    * Exclui o arquivo do disco.
+    * @param nomeArquivo nome do arquivo a ser excluído.
+    */
     public static void excluiArquivo(final String nomeArquivo) {
         File arquivo = new File(nomeArquivo);
         arquivo.delete();
+        Log.info("Arquivo " + nomeArquivo + " foi excluido.");
     }
 }
