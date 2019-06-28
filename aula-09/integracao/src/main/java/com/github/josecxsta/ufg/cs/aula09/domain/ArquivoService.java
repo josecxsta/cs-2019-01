@@ -54,7 +54,8 @@ public class ArquivoService {
 
     }
 
-    private static void trataArquivo(final String arquivo) throws IOException {
+    private static void trataArquivo(final String arquivo)
+    throws IOException {
         Log.info("Arquivo " + arquivo + " sera processado.");
         try {
             String text = getConteudoAsString(arquivo);
@@ -101,12 +102,14 @@ public class ArquivoService {
     * de saída da aplicação
     * @param notaFiscal nota fiscal já serializada e em array de byte
     */
-    public static void persisteAsZip(byte[] notaFiscal) throws IOException {
-        String filename = getCaminhoPasta() + OUTPUT
-        + Seguranca.sha256(notaFiscal) + ".dat";
+    public static void persisteAsZip(byte[] notaFiscal)
+    throws IOException {
+        String zipname = getCaminhoPasta() + OUTPUT
+        + Seguranca.sha256(notaFiscal) + ".zip";
+        String filename = Seguranca.sha256(notaFiscal) + ".dat";
 
         ZipOutputStream zipout;
-        FileOutputStream out = new FileOutputStream(filename);
+        FileOutputStream out = new FileOutputStream(zipname);
         zipout = new ZipOutputStream(out);
         ZipEntry entry = new ZipEntry(filename);
         zipout.putNextEntry(entry);
@@ -139,4 +142,10 @@ public class ArquivoService {
         arquivo.delete();
         Log.info("Arquivo " + nomeArquivo + " foi excluido.");
     }
+
+    // public static List<String> verificarPasta(){
+    // }
+
+    // public static void moverErro() {}
+
 }

@@ -1,8 +1,10 @@
 package com.github.josecxsta.ufg.cs.aula09.domain;
 
+import java.nio.charset.StandardCharsets;
+
 /**
-* Classe que implementa o modelo de Produto.
-*/
+ * Classe que implementa o modelo de Produto.
+ */
 public class Produto {
     public int codigo;
     public String descricao;
@@ -61,13 +63,15 @@ public class Produto {
     public byte[] getDescricaoAsByteArray() {
         byte[] descricao;
         if (this.get80CaracteresDescricao().length() > 80) {
-            descricao = this.get80CaracteresDescricao().getBytes();
+            descricao = this.get80CaracteresDescricao()
+                .getBytes(StandardCharsets.US_ASCII);
         } else {
             final int bytesRestantes = 80 - this.descricao.length();
             final String space = new String(new char[bytesRestantes])
                 .replace('\0', ' ');
             final String spaceDesc = this.descricao + space;
-            descricao = spaceDesc.getBytes();
+            descricao = spaceDesc
+                .getBytes(StandardCharsets.US_ASCII);
         }
         return descricao;
     }

@@ -6,13 +6,13 @@ import java.io.IOException;
 import java.io.OutputStream;
 
 /**
- *
- */
+*
+*/
 public class FromNotaFiscalToBinario {
 
     /**
-     *
-     */
+    *
+    */
     public static final byte[] converte(NotaFiscal nota) throws IOException {
         OutputStream outputStream = new
         ByteArrayOutputStream();
@@ -20,7 +20,6 @@ public class FromNotaFiscalToBinario {
         DataOutputStream(outputStream);
 
         int data = nota.getDataAsInt();
-
         dataOut.writeInt(data); // 4bytes
 
         for (ItemNotaFiscal item : nota.getItens()) {
