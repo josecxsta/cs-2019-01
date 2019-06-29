@@ -112,7 +112,8 @@ public class ArquivoService {
     public static void persisteAsZip(byte[] notaFiscal)
     throws IOException {
 
-        String filename = Seguranca.sha256(notaFiscal);
+        String filename = SegurancaUtils
+            .sha256(new String(notaFiscal));
         String zipname = getCaminhoPasta() + OUTPUT
         + filename + ".dat";
 

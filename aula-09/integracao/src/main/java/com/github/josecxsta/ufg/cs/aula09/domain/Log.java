@@ -5,17 +5,27 @@ import org.apache.logging.log4j.Logger;
 
 
 /**
-*
-*/
-public class Log {
-
-    private static final Logger logger = LogManager.getLogger("Logger");
+ * Classe que implementa o Log4j.
+ */
+public final class Log {
 
     /**
-     *
+     * Instância do Logger.
      */
-    public static void info(String texto) {
-        logger.info(texto);
+    private static final Logger LOGGER = LogManager.getLogger("LOG");
+
+    /**
+     * Evita a instanciação.
+     */
+    private Log() {
+    }
+
+    /**
+     * Faz log de informação de um texto.
+     * @param texto texto que deve ser informado
+     */
+    public static void info(final String texto) {
+        LOGGER.info(texto);
     }
 
 }
