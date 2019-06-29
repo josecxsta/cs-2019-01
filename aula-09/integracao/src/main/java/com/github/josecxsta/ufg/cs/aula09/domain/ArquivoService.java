@@ -31,6 +31,12 @@ public class ArquivoService {
     public static final String OUTPUT = "/dat/";
 
     /**
+     * Pasta que recebe os JSONs que tiveram
+     * erro ao serem serializados.
+     */
+    public static final String ERROR = "/erros/";
+
+    /**
      * Monitora a pasta que recebe os arquivos em JSON que serão serializados,
      * transformados em byte comprimidos e salvos em outro diretório.
      *
@@ -64,7 +70,8 @@ public class ArquivoService {
             persisteAsZip(nfAsByte);
             excluiArquivo(arquivo);
         } catch (IOException e) {
-            Log.info("Erro");
+            Log.info("Erro ao processar arquivo " + arquivo);
+            moveArquivoErro(arquivo);
         }
 
         // System.out.println(new String(nfAsByte));
@@ -136,17 +143,36 @@ public class ArquivoService {
 
     /**
     * Exclui o arquivo do disco.
-    * @param nomeArquivo nome do arquivo a ser excluído.
+    * @param caminho nome do arquivo a ser excluído.
     */
-    public static void excluiArquivo(final String nomeArquivo) {
-        File arquivo = new File(nomeArquivo);
+    public static void excluiArquivo(final String caminho) {
+        File arquivo = new File(caminho);
         arquivo.delete();
-        Log.info("Arquivo " + nomeArquivo + " foi excluido.");
+        Log.info("Arquivo " + caminho + " foi excluido.");
     }
 
-    // public static List<String> verificarPasta(){
-    // }
+    /**
+     * Lista arquivos da pasta de input
+     * em um determinado diretório
+     * @param caminho caminho do diretório
+     * @return lista dos arquivos
+     */
+    public static File[] listaArquivosPasta(final String caminho){
+        File pasta = new File(caminho + INPUT);
+        return pasta.listFiles();
+    }
 
-    // public static void moverErro() {}
+    /**
+     * Move arquivo em que ocorre algum erro
+     * durante a operação para a pasta de erros.
+     * @param caminho caminho do arquivo JSON
+     */
+    public static void moveArquivoErro(final String caminho) {
+        File arquivo = new File(caminho);
+        String novoNome = caminho.replaceAll(INPUT, ERROR);
+        arquivo.renameTo(new File(novoNome));
+        arquivo.delete();
+        Log.info("Arquivo movido para: " + novoNome);
+    }
 
 }

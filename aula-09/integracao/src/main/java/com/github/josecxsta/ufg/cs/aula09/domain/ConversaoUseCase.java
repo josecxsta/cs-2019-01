@@ -9,6 +9,10 @@ public class ConversaoUseCase {
 
   public static void iniciarMonitoramento() {
     try {
+
+      ArquivoService.listaArquivosPasta(
+        ArquivoService.getCaminhoPasta() + ArquivoService.INPUT);
+
       ArquivoService.monitorarPasta(ArquivoService.getCaminhoPasta());
     } catch (IOException e) {
       e.printStackTrace();
