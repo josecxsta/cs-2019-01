@@ -104,9 +104,10 @@ public class ArquivoService {
     */
     public static void persisteAsZip(byte[] notaFiscal)
     throws IOException {
+
+        String filename = Seguranca.sha256(notaFiscal);
         String zipname = getCaminhoPasta() + OUTPUT
-        + Seguranca.sha256(notaFiscal) + ".zip";
-        String filename = Seguranca.sha256(notaFiscal) + ".dat";
+        + filename + ".dat";
 
         ZipOutputStream zipout;
         FileOutputStream out = new FileOutputStream(zipname);
@@ -115,10 +116,10 @@ public class ArquivoService {
         zipout.putNextEntry(entry);
         zipout.write(notaFiscal);
         zipout.close();
+        Log.info("Arquivo comprimido " + zipname);
 
-        // try (FileOutputStream fos = new FileOutputStream(filename)) {
+        // try (FileOutputStream fos = new FileOutputStream(zipname)) {
         //     fos.write(notaFiscal);
-        //     Log.info("Arquivo comprimido " + filename);
         // }
     }
 

@@ -19,8 +19,8 @@ public class FromNotaFiscalToBinario {
         DataOutputStream dataOut = new
         DataOutputStream(outputStream);
 
-        int data = nota.getDataAsInt();
-        dataOut.writeInt(data); // 4bytes
+        dataOut.writeInt(nota.getDataAsInt()); // 4bytes
+        dataOut.writeDouble(nota.getTotal()); // 8bytes
 
         for (ItemNotaFiscal item : nota.getItens()) {
             dataOut.writeInt(item.getQuantidade()); // 4bytes

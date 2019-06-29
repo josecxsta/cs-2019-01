@@ -45,6 +45,13 @@ public class NotaFiscal {
     /**
      *
      */
+    public double getTotal() {
+        return this.total;
+    }
+
+    /**
+     *
+     */
     public void setData(final String data) {
         DateFormat format = new SimpleDateFormat("dd/MM/yyyy", Locale.US);
         try {
