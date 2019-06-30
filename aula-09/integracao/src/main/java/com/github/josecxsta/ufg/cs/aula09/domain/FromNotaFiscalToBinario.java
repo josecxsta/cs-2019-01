@@ -6,33 +6,45 @@ import java.io.IOException;
 import java.io.OutputStream;
 
 /**
- *
+ * Implementa método para converter
+ * NotaFiscal em binário.
  */
-public class FromNotaFiscalToBinario {
+public final class FromNotaFiscalToBinario {
 
     /**
-     *
+     * Evita a instanciação.
      */
-    public static final byte[] converte(NotaFiscal nota) throws IOException {
+    private FromNotaFiscalToBinario() {
+    }
+
+    /**
+     * Converte NF em binário.
+     * @param nota nota fiscal.
+     * @return binário da NF.
+     * @throws IOException caso haja erro com a manipulação.
+     */
+    public static byte[] converte(final NotaFiscal nota)
+    throws IOException {
         OutputStream outputStream = new
-            ByteArrayOutputStream();
+        ByteArrayOutputStream();
         DataOutputStream dataOut = new
-            DataOutputStream(outputStream);
+        DataOutputStream(outputStream);
 
-        int data = nota.getDataAsInt();
-
-        dataOut.writeInt(data);
+        dataOut.writeInt(nota.getDataAsInt()); // 4bytes
+        dataOut.writeDouble(nota.getTotal()); // 8bytes
 
         for (ItemNotaFiscal item : nota.getItens()) {
-            dataOut.writeInt(item.getQuantidade());
-            dataOut.writeDouble(item.getPreco());
-            dataOut.writeInt(item.getProduto().getCodigo());
+            dataOut.writeInt(item.getQuantidade()); // 4bytes
+            dataOut.writeDouble(item.getPreco()); // 8bytes
+            dataOut.writeInt(item.getProduto().getCodigo()); // 4bytes
             dataOut.write(item.getProduto().getDescricaoAsByteArray());
         }
 
-        byte[] c = ((ByteArrayOutputStream) outputStream).toByteArray();
+        final byte[] c = ((ByteArrayOutputStream) outputStream)
+            .toByteArray();
 
         return c;
     }
+
 
 }

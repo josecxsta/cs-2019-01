@@ -1,50 +1,86 @@
 package com.github.josecxsta.ufg.cs.aula09.domain;
 
 /**
-*
-*/
+ * Implementa o modelo de ItemNotaFiscal.
+ */
 public class ItemNotaFiscal {
+    /**
+     * Quantidade do item.
+     */
     private int quantidade;
+    /**
+     * Preço do item.
+     */
     private double preco;
+    /**
+     * Produto do item.
+     */
     private Produto produto;
 
     /**
-    *
-    * @param quantidade
-    * @param preco
-    * @param produto
-    */
-    public ItemNotaFiscal(final int quantidade, final double preco,
-    final Produto produto) {
-        this.quantidade = quantidade;
-        this.preco = preco;
-        this.produto = produto;
+     * Construtor.
+     * @param quantidadeParam Qtde de produtos.
+     * @param precoParam Preço do produto.
+     * @param produtoParam Produto.
+     */
+    public ItemNotaFiscal(final int quantidadeParam,
+    final double precoParam, final Produto produtoParam) {
+        this.setQuantidade(quantidadeParam);
+        this.setPreco(precoParam);
+        this.setProduto(produtoParam);
     }
 
+    /**
+     * Construtor vazio.
+     */
     public ItemNotaFiscal() {
     }
 
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
+    /**
+     * setter de quantidade.
+     * @param quantidadeParam quantidade
+     */
+    public final void setQuantidade(final int quantidadeParam) {
+        this.quantidade = quantidadeParam;
     }
 
-    public void setPreco(double preco) {
-        this.preco = preco;
+    /**
+     * setter de preço.
+     * @param precoParam preço
+     */
+    public final void setPreco(final double precoParam) {
+        this.preco = precoParam;
     }
 
-    public void setProduto(Produto produto) {
-        this.produto = produto;
+    /**
+     * setter de produto.
+     * @param produtoParam produto
+     */
+    public final void setProduto(final Produto produtoParam) {
+        this.produto = produtoParam;
     }
 
-    public Produto getProduto() {
+    /**
+     * getter de produto.
+     * @return produto
+     */
+    public final Produto getProduto() {
         return this.produto;
     }
 
-    public double getPreco() {
+    /**
+     * getter de preço.
+     * @return preco
+     */
+    public final double getPreco() {
         return this.preco;
     }
 
-    public int getQuantidade() {
+    /**
+     * getter de quantiddade.
+     * @return quantidade
+     */
+    public final int getQuantidade() {
         return this.quantidade;
     }
 

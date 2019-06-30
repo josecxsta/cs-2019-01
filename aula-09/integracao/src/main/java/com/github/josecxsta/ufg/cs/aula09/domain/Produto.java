@@ -1,58 +1,97 @@
 package com.github.josecxsta.ufg.cs.aula09.domain;
 
+import java.nio.charset.StandardCharsets;
+
 /**
-*
-*/
+ * Classe que implementa o modelo de Produto.
+ */
 public class Produto {
-    public int codigo;
-    public String descricao;
+    /**
+     * Código do produto.
+     */
+    private int codigo;
+    /**
+     * Descrição do produto.
+     */
+    private String descricao;
 
     /**
-    *
-    * @param codigo
-    * @param descricao
+     * Quantidade máxima de caracteres na
+     * descrição em byte.
+     */
+    public static final int MAX_DESC = 80;
+
+    /**
+     * Construtor com código e descrição.
+     *
+     * @param codigoParam codigo do produto.
+     * @param descricaoParam descrição do produto.
+     */
+    public Produto(final int codigoParam, final String descricaoParam) {
+        this.codigo = codigoParam;
+        this.descricao = descricaoParam;
+    }
+
+    /**
+    * Setter de código.
+    * @param codigoParam código
     */
-    public Produto(final int codigo, final String descricao) {
-        this.codigo = codigo;
-        this.descricao = descricao;
+    public final void setCodigo(final int codigoParam) {
+        this.codigo = codigoParam;
     }
 
-    public Produto() {
+    /**
+    * Setter de descrição.
+    * @param descParam descrição
+    */
+    public final void setDescricao(final String descParam) {
+        this.descricao = descParam;
     }
 
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
-    public String getDescricao() {
+    /**
+    * Getter de descrição.
+    * @return descrição
+    */
+    public final String getDescricao() {
         return this.descricao;
     }
 
-    public int getCodigo() {
+    /**
+     * getter do código.
+     * @return codigo do produto
+     */
+    public final int getCodigo() {
         return this.codigo;
     }
 
-    public byte[] getDescricaoAsByteArray() {
-        byte[] descricao;
-        if (this.get80CaracteresDescricao().length() > 80) {
-            descricao = this.get80CaracteresDescricao().getBytes();
+    /**
+     * Obtém a descrição do produto em um array de bytes.
+     * @return array de bytes com a descrição
+     */
+    public final byte[] getDescricaoAsByteArray() {
+        byte[] descricaoByte;
+        if (this.get80CaracteresDescricao().length() > MAX_DESC) {
+            descricaoByte = this.get80CaracteresDescricao()
+            .getBytes(StandardCharsets.US_ASCII);
         } else {
-            final int bytesRestantes = 80 - this.descricao.length();
+            final int bytesRestantes = MAX_DESC - this.descricao.length();
             final String space = new String(new char[bytesRestantes])
-                .replace('\0', ' ');
+            .replace('\0', ' ');
             final String spaceDesc = this.descricao + space;
-            descricao = spaceDesc.getBytes();
+            descricaoByte = spaceDesc
+            .getBytes(StandardCharsets.US_ASCII);
         }
-        return descricao;
+        return descricaoByte;
     }
 
-    public String get80CaracteresDescricao() {
-        if (this.descricao.length() > 80) {
-            return this.descricao.substring(0, 79);
+    /**
+     * Pega os primeiros 80 caracteres da
+     * descrição do produto.
+     * @return 80 caracteres de descrição
+     */
+    public final String get80CaracteresDescricao() {
+        if (this.descricao.length() > MAX_DESC) {
+            return this.descricao.substring(0, MAX_DESC - 1);
         } else {
             return this.descricao;
         }

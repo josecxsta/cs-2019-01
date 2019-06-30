@@ -7,6 +7,12 @@
       "preco": 7.0,
       "codigo": 18854,
       "descricao": "Sabão Azul Novo"
+    },
+    {
+      "quantidade": 3,
+      "preco": 9.0,
+      "codigo": 184,
+      "descricao": "Arroz Integral"
     }
   ]
 }
