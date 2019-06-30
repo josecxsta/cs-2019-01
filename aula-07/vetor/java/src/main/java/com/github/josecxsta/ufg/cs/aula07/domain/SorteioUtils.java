@@ -1,24 +1,30 @@
 package com.github.josecxsta.ufg.cs.aula07.domain;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 import java.util.Map.Entry;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
- *
+ * Classe que implementa o sorteio de números.
  */
 public final class SorteioUtils {
 
     /**
-     *
+     * Quantidade de vezes que será sorteado.
      */
-    public final static int QUANTIDADE = 1000000;
+    public static final int QUANTIDADE = 1000000;
 
     /**
-     *
+     * Número máximo a ser sorteado.
      */
-    public final static int MAXIMO = 1000;
+    public static final int MAXIMO = 1000;
+
+    /**
+     * Evita instanciação da classe.
+     */
+    private SorteioUtils() {
+    }
 
     /**
     * Sortea aleatoriamente 1.000.000 de valores inteiros de 0 a 1000 e
@@ -29,25 +35,21 @@ public final class SorteioUtils {
     * @return numero com mais repeticoes e quantidade de repeticoes
     */
     public static Entry<Integer, Integer> sorteio() {
-        final int quantidade = QUANTIDADE;
-        final int numeroMaximo = MAXIMO;
-        final Map<Integer, Integer> sorteados = new HashMap<>();
-        for (int indice = 0; indice < quantidade; indice++) {
-            int numero = numeroAleatorio(0, numeroMaximo);
+        final Map<Integer, Integer> sorteados = new ConcurrentHashMap<>();
+        for (int indice = 0; indice < QUANTIDADE; indice++) {
+            final int numero = numeroAleatorio(0, MAXIMO);
             final Integer repeticoesNum = sorteados.get(numero);
             final boolean numInserido = repeticoesNum != null;
-            if (!numInserido) {
-                sorteados.put(numero, 1);
-            } else {
+            if (numInserido) {
                 sorteados.put(numero, repeticoesNum + 1);
+            } else {
+                sorteados.put(numero, 1);
             }
 
         }
 
-        Entry<Integer, Integer> sorteadosEmOrdem = sorteados.entrySet()
-        .stream().max(Map.Entry.comparingByValue()).get();
-
-        return sorteadosEmOrdem;
+        return sorteados.entrySet().stream()
+        .max(Map.Entry.comparingByValue()).get();
     }
 
 
@@ -57,8 +59,8 @@ public final class SorteioUtils {
     * @param max fim do intervalo.
     * @return numero aleatório.
     */
-    public static int numeroAleatorio(int min, int max) {
-        Random rand = new Random();
+    public static int numeroAleatorio(final int min, final int max) {
+        final Random rand = new Random();
         return rand.nextInt((max - min) + 1) + min;
     }
 
