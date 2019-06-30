@@ -39,12 +39,6 @@ public class NotaFiscal {
     }
 
     /**
-     * Construtor vazio.
-     */
-    public NotaFiscal() {
-    }
-
-    /**
      * Setter do total.
      * @param totalParam valor total.
      */

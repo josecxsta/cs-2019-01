@@ -62,8 +62,9 @@ public final class ArquivoService {
     public static void monitorarPasta(final String caminho)
     throws IOException, InterruptedException {
 
-        WatchService watchService = FileSystems.getDefault().newWatchService();
-        Path path = Paths.get(caminho + INPUT);
+        final WatchService watchService = FileSystems.getDefault()
+            .newWatchService();
+        final Path path = Paths.get(caminho + INPUT);
         path.register(watchService, StandardWatchEventKinds.ENTRY_CREATE);
         Log.info("Pasta " + caminho + INPUT + " esta sendo assistida.");
 
@@ -87,9 +88,11 @@ public final class ArquivoService {
     throws IOException {
         Log.info("Arquivo " + arquivo + " sera processado.");
         try {
-            String text = getConteudoAsString(arquivo);
-            NotaFiscal notaFiscal = FromJsonToNotaFiscal.converte(text);
-            byte[] nfAsByte = FromNotaFiscalToBinario.converte(notaFiscal);
+            final String text = getConteudoAsString(arquivo);
+            final NotaFiscal notaFiscal = FromJsonToNotaFiscal
+                .converte(text);
+            final byte[] nfAsByte = FromNotaFiscalToBinario
+                .converte(notaFiscal);
             persisteAsZip(nfAsByte);
             excluiArquivo(arquivo);
         } catch (IOException e) {
@@ -106,8 +109,9 @@ public final class ArquivoService {
      * @return sequência sem sinais especiais.
      */
     private static String removeSinais(final String entrada) {
-        String sa = Normalizer.normalize(entrada, Normalizer.Form.NFD);
-        return sa.replaceAll("\\p{M}", "");
+        final String sequencia = Normalizer
+            .normalize(entrada, Normalizer.Form.NFD);
+        return sequencia.replaceAll("\\p{M}", "");
     }
 
     /**
@@ -120,9 +124,10 @@ public final class ArquivoService {
     public static String getConteudoAsString(final String nomeArquivo)
     throws IOException {
 
-        StringBuilder conteudo = new StringBuilder("");
-        Path path = Paths.get(nomeArquivo);
-        List<String> linhas = Files.readAllLines(path, StandardCharsets.UTF_8);
+        final StringBuilder conteudo = new StringBuilder("");
+        final Path path = Paths.get(nomeArquivo);
+        final List<String> linhas = Files
+            .readAllLines(path, StandardCharsets.UTF_8);
         for (String linha : linhas) {
             conteudo.append(removeSinais(linha));
         }
@@ -139,15 +144,15 @@ public final class ArquivoService {
     public static void persisteAsZip(final byte[] notaFiscal)
     throws IOException {
 
-        String filename = SegurancaUtils
+        final String filename = SegurancaUtils
             .sha256(new String(notaFiscal));
-        String zipname = getCaminhoPasta() + OUTPUT
+        final String zipname = getCaminhoPasta() + OUTPUT
         + filename + ".dat";
 
-        ZipOutputStream zipout;
-        FileOutputStream out = new FileOutputStream(zipname);
+        final ZipOutputStream zipout;
+        final FileOutputStream out = new FileOutputStream(zipname);
         zipout = new ZipOutputStream(out);
-        ZipEntry entry = new ZipEntry(filename);
+        final ZipEntry entry = new ZipEntry(filename);
         zipout.putNextEntry(entry);
         zipout.write(notaFiscal);
         zipout.close();
@@ -175,7 +180,7 @@ public final class ArquivoService {
     * @param caminho nome do arquivo a ser excluído
     */
     public static void excluiArquivo(final String caminho) {
-        File arquivo = new File(caminho);
+        final File arquivo = new File(caminho);
         arquivo.delete();
         Log.info("Arquivo " + caminho + " foi excluido.");
     }
@@ -187,7 +192,7 @@ public final class ArquivoService {
      * @return lista dos arquivos
      */
     public static File[] listaArquivosPasta(final String caminho) {
-        File pasta = new File(caminho + INPUT);
+        final File pasta = new File(caminho + INPUT);
         return pasta.listFiles();
     }
 
@@ -197,8 +202,8 @@ public final class ArquivoService {
      * @param caminho caminho do arquivo JSON
      */
     public static void moveArquivoErro(final String caminho) {
-        File arquivo = new File(caminho);
-        String novoNome = caminho.replaceAll(INPUT, ERROR);
+        final File arquivo = new File(caminho);
+        final String novoNome = caminho.replaceAll(INPUT, ERROR);
         arquivo.renameTo(new File(novoNome));
         arquivo.delete();
         Log.info("Arquivo movido para: " + novoNome);

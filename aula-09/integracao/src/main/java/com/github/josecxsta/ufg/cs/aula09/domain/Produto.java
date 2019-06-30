@@ -33,12 +33,6 @@ public class Produto {
     }
 
     /**
-    * Construtor de produto vazio.
-    */
-    public Produto() {
-    }
-
-    /**
     * Setter de código.
     * @param codigoParam código
     */
@@ -97,7 +91,7 @@ public class Produto {
      */
     public final String get80CaracteresDescricao() {
         if (this.descricao.length() > MAX_DESC) {
-            return this.descricao.substring(0, (MAX_DESC - 1));
+            return this.descricao.substring(0, MAX_DESC - 1);
         } else {
             return this.descricao;
         }
