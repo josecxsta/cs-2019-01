@@ -2,6 +2,7 @@ language: java
 
 script:
   - cd aula-01/java && mvn clean test checkstyle:check verify -P cobertura spotbugs:check
+  - cd ../js && npm install && npm run lint && npm run coverage
   - cd ../..
   - cd aula-07/vetor/java && mvn clean checkstyle:check verify -P cobertura
   - cd ../../..
