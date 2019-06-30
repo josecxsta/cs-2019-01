@@ -1,5 +1,6 @@
 package com.github.josecxsta.ufg.cs.aula08.application;
 
+import java.io.IOException;
 import java.util.Scanner;
 import com.github.josecxsta.ufg.cs.aula08.domain.Arquivo;
 
@@ -16,6 +17,7 @@ public final class Aplicacao {
 
     /**
      * Método principal da aplicação.
+     *
      * @param args não utilizado
      */
     public static void main(final String args) {
@@ -27,7 +29,10 @@ public final class Aplicacao {
         System.out.println("Insira a sequência a ser localizada no arquivo: ");
         final String sequencia = escaner.nextLine();
 
-        new Arquivo(arquivo, sequencia);
+        try {
+            new Arquivo(arquivo, sequencia);
+        } catch (IOException e) {
+        }
         // new Arquivo("input/texto.txt", "bom");
 
         escaner.close();
