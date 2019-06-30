@@ -3,6 +3,8 @@ language: java
 script:
   - cd aula-01/java && mvn clean test checkstyle:check verify -P cobertura spotbugs:check
   - cd ../..
+  - cd aula-07/vetor/java && mvn clean checkstyle:check
+  - cd ../../..
   - cd aula-09/integracao && mvn clean checkstyle:check
 cache:
   directories:

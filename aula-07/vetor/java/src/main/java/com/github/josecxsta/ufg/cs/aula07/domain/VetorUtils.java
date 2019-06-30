@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -81,10 +82,11 @@ public final class VetorUtils {
     * @param sequencia sequência de caracteres
     * @return quantidade de letras
     */
-    public static HashMap<Character, Integer> quantidadeLetras(
+    public static Map<Character, Integer> quantidadeLetras(
         final String sequencia) {
 
-        final HashMap<Character, Integer> quantidade = new HashMap<>();
+        final Map<Character, Integer> quantidade =
+            new ConcurrentHashMap<>();
         for (int index = 0; index < sequencia.length(); index++) {
             final String seqMinuscula = sequencia
                 .toLowerCase(Locale.getDefault());
