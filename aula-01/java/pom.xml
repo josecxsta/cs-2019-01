@@ -575,10 +575,10 @@
                             <threshold>Low</threshold>
                             <failOnError>true</failOnError>
                             <includeFilterFile>
-                                ${project.basedir}\spotbugs-security-include.xml
+                                ${project.basedir}/src/main/resources/spotbgugs.xml
                             </includeFilterFile>
                             <excludeFilterFile>
-                                ${project.basedir}\spotbugs-security-exclude.xml
+                                ${project.basedir}/src/main/resources/spotbgugs.xml
                             </excludeFilterFile>
                             <plugins>
                                 <plugin>
