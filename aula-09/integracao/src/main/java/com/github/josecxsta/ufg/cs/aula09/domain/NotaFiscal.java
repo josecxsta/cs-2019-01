@@ -29,13 +29,10 @@ public class NotaFiscal {
      * Construtor de Nota Fiscal.
      * @param dataParam data da nf
      * @param totalParam valor total da nf
-     * @param itensParam qtde de itens da nf
      */
-    public NotaFiscal(final Date dataParam, final double totalParam,
-        final ArrayList<ItemNotaFiscal> itensParam) {
+    public NotaFiscal(final Date dataParam, final double totalParam) {
         this.data = dataParam;
         this.setTotal(totalParam);
-        this.itens = itensParam;
     }
 
     /**

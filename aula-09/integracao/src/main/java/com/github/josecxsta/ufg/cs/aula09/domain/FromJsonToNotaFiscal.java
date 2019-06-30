@@ -28,9 +28,7 @@ public final class FromJsonToNotaFiscal {
             .getAsDouble();
         final String dataNf = jsonObject.get("data")
             .getAsString();
-        final NotaFiscal nota = new NotaFiscal();
-        nota.setTotal(totalNf);
-        nota.setData(dataNf);
+        final NotaFiscal nota = new NotaFiscal(totalNf, dataNf);
 
         final JsonArray arr = jsonObject.getAsJsonArray("itens");
         for (int i = 0; i < arr.size(); i++) {
