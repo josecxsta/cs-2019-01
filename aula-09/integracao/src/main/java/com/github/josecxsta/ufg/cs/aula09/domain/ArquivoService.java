@@ -4,7 +4,16 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.*;
+// import java.nio.file.*;
+import java.nio.file.FileSystems;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardWatchEventKinds;
+import java.nio.file.WatchKey;
+import java.nio.file.WatchEvent;
+import java.nio.file.WatchService;
+import java.nio.file.Files;
+
 import java.text.Normalizer;
 import java.util.List;
 import java.util.zip.ZipEntry;
@@ -47,8 +56,8 @@ public final class ArquivoService {
      * transformados em byte comprimidos e salvos em outro diretório.
      *
      * @param caminho caminho da pasta que será monitorada
-     * @throws IOException
-     * @throws InterruptedException
+     * @throws IOException caso haja erro de entrada/saída.
+     * @throws InterruptedException caso a operação seja interrompida.
      */
     public static void monitorarPasta(final String caminho)
     throws IOException, InterruptedException {
@@ -72,7 +81,7 @@ public final class ArquivoService {
      * Chama os métodos necessários
      * para o tratamento do arquivo.
      * @param arquivo arquivo JSON.
-     * @throws IOException
+     * @throws IOException caso haja erro de entrada/saída.
      */
     private static void trataArquivo(final String arquivo)
     throws IOException {
@@ -106,6 +115,7 @@ public final class ArquivoService {
      * em uma sequência de caracteres UTF-8.
      * @param nomeArquivo nome/caminho do arquivo.
      * @return conteúdo do arquivo como string.
+     * @throws IOException caso haja erro de entrada/saída.
      */
     public static String getConteudoAsString(final String nomeArquivo)
     throws IOException {
@@ -149,9 +159,10 @@ public final class ArquivoService {
     }
 
     /**
-    * Obtém o caminho da pasta que está armazenado
-    * na variável de ambiente NOTAS_FISCAIS.
-    */
+     * Obtém o caminho da pasta que está armazenado
+     * na variável de ambiente NOTAS_FISCAIS.
+     * @return caminho da pasta
+     */
     public static String getCaminhoPasta() {
         if (System.getenv().get(VARIAVELAMBIENTE) == null) {
             Log.info("Variavel de ambiente inválida");
@@ -161,7 +172,7 @@ public final class ArquivoService {
 
     /**
     * Exclui o arquivo do disco.
-    * @param caminho nome do arquivo a ser excluído.
+    * @param caminho nome do arquivo a ser excluído
     */
     public static void excluiArquivo(final String caminho) {
         File arquivo = new File(caminho);

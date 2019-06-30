@@ -19,15 +19,15 @@ public class ItemNotaFiscal {
 
     /**
      * Construtor.
-     * @param quantidade Qtde de produtos.
-     * @param preco Preço do produto.
-     * @param produto Produto.
+     * @param quantidadeParam Qtde de produtos.
+     * @param precoParam Preço do produto.
+     * @param produtoParam Produto.
      */
-    public ItemNotaFiscal(final int quantidade, final double preco,
-    final Produto produto) {
-        this.setQuantidade(quantidade);
-        this.setPreco(preco);
-        this.setProduto(produto);
+    public ItemNotaFiscal(final int quantidadeParam,
+    final double precoParam, final Produto produtoParam) {
+        this.setQuantidade(quantidadeParam);
+        this.setPreco(precoParam);
+        this.setProduto(produtoParam);
     }
 
     /**
@@ -38,26 +38,26 @@ public class ItemNotaFiscal {
 
     /**
      * setter de quantidade.
-     * @param quantidade quantidade
+     * @param quantidadeParam quantidade
      */
-    public final void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
+    public final void setQuantidade(final int quantidadeParam) {
+        this.quantidade = quantidadeParam;
     }
 
     /**
      * setter de preço.
-     * @param preco preço
+     * @param precoParam preço
      */
-    public final void setPreco(double preco) {
-        this.preco = preco;
+    public final void setPreco(final double precoParam) {
+        this.preco = precoParam;
     }
 
     /**
      * setter de produto.
-     * @param produto produto
+     * @param produtoParam produto
      */
-    public final void setProduto(Produto produto) {
-        this.produto = produto;
+    public final void setProduto(final Produto produtoParam) {
+        this.produto = produtoParam;
     }
 
     /**

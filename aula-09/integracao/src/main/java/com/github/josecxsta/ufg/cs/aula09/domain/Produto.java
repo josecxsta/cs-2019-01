@@ -24,12 +24,12 @@ public class Produto {
     /**
      * Construtor com código e descrição.
      *
-     * @param codigo codigo do produto.
-     * @param descricao descrição do produto.
+     * @param codigoParam codigo do produto.
+     * @param descricaoParam descrição do produto.
      */
-    public Produto(final int codigo, final String descricao) {
-        this.codigo = codigo;
-        this.descricao = descricao;
+    public Produto(final int codigoParam, final String descricaoParam) {
+        this.codigo = codigoParam;
+        this.descricao = descricaoParam;
     }
 
     /**
@@ -40,18 +40,18 @@ public class Produto {
 
     /**
     * Setter de código.
-    * @param codigo
+    * @param codigoParam código
     */
-    public final void setCodigo(final int codigo) {
-        this.codigo = codigo;
+    public final void setCodigo(final int codigoParam) {
+        this.codigo = codigoParam;
     }
 
     /**
     * Setter de descrição.
-    * @param descricao descrição
+    * @param descParam descrição
     */
-    public final void setDescricao(final String descricao) {
-        this.descricao = descricao;
+    public final void setDescricao(final String descParam) {
+        this.descricao = descParam;
     }
 
     /**
@@ -75,19 +75,19 @@ public class Produto {
      * @return array de bytes com a descrição
      */
     public final byte[] getDescricaoAsByteArray() {
-        byte[] descricao;
+        byte[] descricaoByte;
         if (this.get80CaracteresDescricao().length() > MAX_DESC) {
-            descricao = this.get80CaracteresDescricao()
+            descricaoByte = this.get80CaracteresDescricao()
             .getBytes(StandardCharsets.US_ASCII);
         } else {
             final int bytesRestantes = MAX_DESC - this.descricao.length();
             final String space = new String(new char[bytesRestantes])
             .replace('\0', ' ');
             final String spaceDesc = this.descricao + space;
-            descricao = spaceDesc
+            descricaoByte = spaceDesc
             .getBytes(StandardCharsets.US_ASCII);
         }
-        return descricao;
+        return descricaoByte;
     }
 
     /**

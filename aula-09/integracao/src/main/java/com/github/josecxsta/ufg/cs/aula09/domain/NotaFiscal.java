@@ -27,15 +27,15 @@ public class NotaFiscal {
 
     /**
      * Construtor de Nota Fiscal.
-     * @param data data da nf
-     * @param total valor total da nf
-     * @param itens qtde de itens da nf
+     * @param dataParam data da nf
+     * @param totalParam valor total da nf
+     * @param itensParam qtde de itens da nf
      */
-    public NotaFiscal(final Date data, final double total,
-        final ArrayList<ItemNotaFiscal> itens) {
-        this.data = data;
-        this.setTotal(total);
-        this.itens = itens;
+    public NotaFiscal(final Date dataParam, final double totalParam,
+        final ArrayList<ItemNotaFiscal> itensParam) {
+        this.data = dataParam;
+        this.setTotal(totalParam);
+        this.itens = itensParam;
     }
 
     /**
@@ -46,10 +46,10 @@ public class NotaFiscal {
 
     /**
      * Setter do total.
-     * @param total valor total.
+     * @param totalParam valor total.
      */
-    public final void setTotal(final Double total) {
-        this.total = total;
+    public final void setTotal(final Double totalParam) {
+        this.total = totalParam;
     }
 
     /**
@@ -62,13 +62,13 @@ public class NotaFiscal {
 
     /**
      * setter de data.
-     * @param data data em "dd/MM/yyyy"
+     * @param dataParam data em "dd/MM/yyyy"
      */
-    public final void setData(final String data) {
+    public final void setData(final String dataParam) {
         final DateFormat format = new SimpleDateFormat(
             "dd/MM/yyyy", Locale.US);
         try {
-            final Date date = format.parse(data);
+            final Date date = format.parse(dataParam);
             this.data = date;
         } catch (ParseException e) {
             Log.info("Data informada é inválida");
@@ -102,10 +102,10 @@ public class NotaFiscal {
         final int year = cal.get(Calendar.YEAR);
         final int month = cal.get(Calendar.MONTH) + 1;
         final int day = cal.get(Calendar.DAY_OF_MONTH);
-        final String data = String.valueOf(year)
+        final String dataText = String.valueOf(year)
         + String.valueOf(month) + String.valueOf(day);
 
-        return Integer.valueOf(data);
+        return Integer.valueOf(dataText);
     }
 
     /**
