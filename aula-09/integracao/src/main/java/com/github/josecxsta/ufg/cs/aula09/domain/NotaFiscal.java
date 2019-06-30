@@ -30,8 +30,8 @@ public class NotaFiscal {
      * @param dataParam data da nf
      * @param totalParam valor total da nf
      */
-    public NotaFiscal(final Date dataParam, final double totalParam) {
-        this.data = dataParam;
+    public NotaFiscal(final String dataParam, final double totalParam) {
+        this.setData(dataParam);
         this.setTotal(totalParam);
     }
 
