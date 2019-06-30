@@ -20,7 +20,7 @@ public final class Aplicacao {
      * Método main.
      *
      * @param args não utilizado
-     * @throws IOException
+     * @throws IOException se houver erro de entrada/saída.
      */
     public static void main(final String[] args) throws IOException {
         final Scanner escanner = new Scanner(System.in);

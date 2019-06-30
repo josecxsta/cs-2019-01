@@ -26,7 +26,7 @@ public final class ArquivoUtils {
      *
      * @param nomeArquivo nome/diretório do arquivo.
      * @return se arquivo é ou não um JPEG de acordo com seu conjunto de bytes.
-     * @throws IOException
+     * @throws IOException se houver erro de entrada/saída.
      */
     public static boolean ehJPEG(final String nomeArquivo) throws IOException {
         return primeiros2Bytes(nomeArquivo).equals("ffd8")
@@ -37,7 +37,7 @@ public final class ArquivoUtils {
      * Busca os 2 últimos bytes de um arquivo em hexadecimal.
      * @param nomeArquivo nome/diretório do arquivo.
      * @return últimos 2 bytes do arquivo em hexadecimal.
-     * @throws IOException
+     * @throws IOException se houver erro de entrada/saída.
      */
     public static String ultimos2Bytes(final String nomeArquivo)
         throws IOException {
@@ -56,7 +56,7 @@ public final class ArquivoUtils {
      *
      * @param nomeArquivo nome/diretório do arquivo.
      * @return primeiros 2 bytes do arquivo em hexadecimal.
-     * @throws IOException
+     * @throws IOException se houver erro de entrada/saída.
      */
     public static String primeiros2Bytes(final String nomeArquivo)
         throws IOException {

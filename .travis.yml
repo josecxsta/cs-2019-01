@@ -9,6 +9,7 @@ script:
   - cd ../../..
   - cd aula-08/encontre && mvn clean checkstyle:check
   - cd ../inteiro && mvn clean checkstyle:check
+  - cd ../jpeg && mvn clean checkstyle:check
   - cd ../..
   - cd aula-09/integracao && mvn clean checkstyle:check
 cache:
