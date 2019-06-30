@@ -84,7 +84,7 @@ public final class ArquivoService {
      * @param arquivo arquivo JSON.
      * @throws IOException caso haja erro de entrada/saída.
      */
-    private static void trataArquivo(final String arquivo)
+    public static void trataArquivo(final String arquivo)
     throws IOException {
         Log.info("Arquivo " + arquivo + " sera processado.");
         try {
@@ -108,7 +108,7 @@ public final class ArquivoService {
      * @param entrada sequência que terá seus sinais/acentos removidos
      * @return sequência sem sinais especiais.
      */
-    private static String removeSinais(final String entrada) {
+    public static String removeSinais(final String entrada) {
         final String sequencia = Normalizer
             .normalize(entrada, Normalizer.Form.NFD);
         return sequencia.replaceAll("\\p{M}", "");

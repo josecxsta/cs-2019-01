@@ -1,5 +1,6 @@
 package com.github.josecxsta.ufg.cs.aula09.domain;
 
+import java.io.File;
 import java.io.IOException;
 
 /**
@@ -14,20 +15,25 @@ public final class ConversaoUseCase {
     }
 
     /**
-    * Inicia o monitoramento da pasta.
-    */
-    public static void iniciarMonitoramento() {
-        try {
+     * Inicia o monitoramento da pasta.
+     *
+     * @throws IOException se houver erro de entrada/saída.
+     * @throws InterruptedException se houver interrupção
+     */
+    public static void iniciarMonitoramento()
+    throws IOException, InterruptedException {
+        String caminho = ArquivoService.getCaminhoPasta();
+        File[] arquivos = ArquivoService.listaArquivosPasta(
+        caminho);
 
-            ArquivoService.listaArquivosPasta(
-            ArquivoService.getCaminhoPasta() + ArquivoService.INPUT);
-
-            ArquivoService.monitorarPasta(ArquivoService.getCaminhoPasta());
-        } catch (IOException e) {
-            Log.info("");
-        } catch (InterruptedException e) {
-            Log.info("");
+        if (arquivos != null) {
+            for (final File arquivo : arquivos) {
+                ArquivoService.trataArquivo(caminho
+                + ArquivoService.INPUT + arquivo.getName());
+            }
         }
+
+        ArquivoService.monitorarPasta(caminho);
     }
 
 }

@@ -1,5 +1,7 @@
 package com.github.josecxsta.ufg.cs.aula09.application;
 
+import java.io.IOException;
+
 import com.github.josecxsta.ufg.cs.aula09.domain.ConversaoUseCase;
 
 /**
@@ -16,10 +18,11 @@ public final class Aplicacao {
     /**
      * Método principal da aplicação.
      * @param args não utilizado
-     * @throws InterruptedException
-     * @throws IOException
+     * @throws InterruptedException se houver interrupção
+     * @throws IOException se houver erro de entrada/saída
      */
-    public static void main(final String[] args) {
+    public static void main(final String[] args)
+    throws InterruptedException, IOException {
         ConversaoUseCase.iniciarMonitoramento();
     }
 }

@@ -9,8 +9,8 @@ public class SegurancaUtilsTest {
 
     @Test
     public void sha256() {
-      String hash = "E24B6224F4ED1FAC90CDADE13EA2873549349994DC7E2D491E56F90FF7B073B0";
-        assertFalse(SegurancaUtils.sha256("sequenciaTeste") == hash.toLowerCase());
+        String hash = "e24b6224f4ed1fac90cdade13ea2873549349994dc7e2d491e56f90ff7b073b0";
+        assertEquals(hash, SegurancaUtils.sha256("sequenciaTeste"));
     }
 
 }
