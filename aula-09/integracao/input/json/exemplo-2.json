@@ -1,0 +1,18 @@
+{
+  "data": "31/12/2018",
+  "total": 13.0,
+  "itens": [
+    {
+      "quantidade": 2,
+      "preco": 7.0,
+      "codigo": 18854,
+      "descricao": "Sabão Azul Novo"
+    },
+    {
+      "quantidade": 3,
+      "preco": 9.0,
+      "codigo": 184,
+      "descricao": "Arroz Integral"
+    }
+  ]
+}

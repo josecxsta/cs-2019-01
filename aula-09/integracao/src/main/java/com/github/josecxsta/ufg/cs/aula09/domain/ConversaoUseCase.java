@@ -3,10 +3,19 @@ package com.github.josecxsta.ufg.cs.aula09.domain;
 import java.io.IOException;
 
 /**
- *
+ * Implementa o caso da conversão.
  */
-public class ConversaoUseCase {
+public final class ConversaoUseCase {
 
+  /**
+   * Evita a instanciação.
+   */
+  private ConversaoUseCase() {
+  }
+
+  /**
+   * Inicia o monitoramento da pasta.
+   */
   public static void iniciarMonitoramento() {
     try {
 

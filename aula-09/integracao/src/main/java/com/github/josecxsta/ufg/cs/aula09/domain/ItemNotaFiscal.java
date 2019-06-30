@@ -1,50 +1,86 @@
 package com.github.josecxsta.ufg.cs.aula09.domain;
 
 /**
-*
-*/
+ * Implementa o modelo de ItemNotaFiscal.
+ */
 public class ItemNotaFiscal {
+    /**
+     * Quantidade do item.
+     */
     private int quantidade;
+    /**
+     * Preço do item.
+     */
     private double preco;
+    /**
+     * Produto do item.
+     */
     private Produto produto;
 
     /**
-    *
-    * @param quantidade
-    * @param preco
-    * @param produto
-    */
+     * Construtor.
+     * @param quantidade Qtde de produtos.
+     * @param preco Preço do produto.
+     * @param produto Produto.
+     */
     public ItemNotaFiscal(final int quantidade, final double preco,
     final Produto produto) {
-        this.quantidade = quantidade;
-        this.preco = preco;
-        this.produto = produto;
+        this.setQuantidade(quantidade);
+        this.setPreco(preco);
+        this.setProduto(produto);
     }
 
+    /**
+     * Construtor vazio.
+     */
     public ItemNotaFiscal() {
     }
 
-    public void setQuantidade(int quantidade) {
+    /**
+     * setter de quantidade.
+     * @param quantidade quantidade
+     */
+    public final void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
     }
 
-    public void setPreco(double preco) {
+    /**
+     * setter de preço.
+     * @param preco preço
+     */
+    public final void setPreco(double preco) {
         this.preco = preco;
     }
 
-    public void setProduto(Produto produto) {
+    /**
+     * setter de produto.
+     * @param produto produto
+     */
+    public final void setProduto(Produto produto) {
         this.produto = produto;
     }
 
-    public Produto getProduto() {
+    /**
+     * getter de produto.
+     * @return produto
+     */
+    public final Produto getProduto() {
         return this.produto;
     }
 
-    public double getPreco() {
+    /**
+     * getter de preço.
+     * @return preco
+     */
+    public final double getPreco() {
         return this.preco;
     }
 
-    public int getQuantidade() {
+    /**
+     * getter de quantiddade.
+     * @return quantidade
+     */
+    public final int getQuantidade() {
         return this.quantidade;
     }
 

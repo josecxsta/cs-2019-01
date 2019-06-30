@@ -9,92 +9,110 @@ import java.util.Date;
 import java.util.Locale;
 
 /**
-*
-*/
+ * Classe que implementa o modelo de NF.
+ */
 public class NotaFiscal {
-    public Date data;
-    public double total;
-    public ArrayList<ItemNotaFiscal> itens = new ArrayList<>();
+    /**
+     * Data da NF.
+     */
+    private Date data;
+    /**
+     * Valor total da NF.
+     */
+    private double total;
+    /**
+     * Itens da NF, que contém produto.
+     */
+    private ArrayList<ItemNotaFiscal> itens = new ArrayList<>();
 
     /**
-     *
-     * @param data
-     * @param total
-     * @param itens
+     * Construtor de Nota Fiscal.
+     * @param data data da nf
+     * @param total valor total da nf
+     * @param itens qtde de itens da nf
      */
-    public NotaFiscal(final Date data, final double total, final ArrayList<ItemNotaFiscal> itens) {
+    public NotaFiscal(final Date data, final double total,
+        final ArrayList<ItemNotaFiscal> itens) {
         this.data = data;
-        this.total = total;
+        this.setTotal(total);
         this.itens = itens;
     }
 
     /**
-     *
+     * Construtor vazio.
      */
     public NotaFiscal() {
     }
 
     /**
-     *
-     * @param total
+     * Setter do total.
+     * @param total valor total.
      */
-    public void setTotal(final Double total) {
+    public final void setTotal(final Double total) {
         this.total = total;
     }
 
     /**
-     *
+     * getter de total.
+     * @return valor total
      */
-    public double getTotal() {
+    public final double getTotal() {
         return this.total;
     }
 
     /**
-     *
+     * setter de data.
+     * @param data data em "dd/MM/yyyy"
      */
-    public void setData(final String data) {
-        DateFormat format = new SimpleDateFormat("dd/MM/yyyy", Locale.US);
+    public final void setData(final String data) {
+        final DateFormat format = new SimpleDateFormat(
+            "dd/MM/yyyy", Locale.US);
         try {
-            Date date = format.parse(data);
+            final Date date = format.parse(data);
             this.data = date;
         } catch (ParseException e) {
-            e.printStackTrace();
+            Log.info("Data informada é inválida");
         }
     }
 
     /**
-     *
+     * Adiciona item de NF.
+     * @param item item de nf.
      */
-    public void addItem(ItemNotaFiscal item) {
+    public final void addItem(final ItemNotaFiscal item) {
         this.itens.add(item);
     }
 
     /**
-     *
+     * getter de Data.
+     * @return data
      */
-    public Date getData() {
+    public final Date getData() {
         return this.data;
     }
 
     /**
-     *
+     * Obtém a data em inteiro.
+     * @return data em inteiro (yyyymmdd)
      */
-    public int getDataAsInt() {
+    public final int getDataAsInt() {
         Calendar cal = Calendar.getInstance();
         cal.setTime(this.data);
 
         final int year = cal.get(Calendar.YEAR);
         final int month = cal.get(Calendar.MONTH) + 1;
         final int day = cal.get(Calendar.DAY_OF_MONTH);
-        final String data = String.valueOf(year) + String.valueOf(month) + String.valueOf(day);
+        final String data = String.valueOf(year)
+        + String.valueOf(month) + String.valueOf(day);
 
         return Integer.valueOf(data);
     }
 
     /**
-     *
+     * getter de itens.
+     * @return itens de nf.
      */
-    public ArrayList<ItemNotaFiscal> getItens() {
+    public final ArrayList<ItemNotaFiscal> getItens() {
         return this.itens;
     }
 

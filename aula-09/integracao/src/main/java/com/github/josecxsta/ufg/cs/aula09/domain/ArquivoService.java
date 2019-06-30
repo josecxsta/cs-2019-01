@@ -13,7 +13,7 @@ import java.util.zip.ZipOutputStream;
 /**
  * Classe que implementa métodos necessários para manipulação de arquivos.
  */
-public class ArquivoService {
+public final class ArquivoService {
 
     /**
      * Variável de ambiente que salva pasta que será monitorada.
@@ -37,12 +37,20 @@ public class ArquivoService {
     public static final String ERROR = "/erros/";
 
     /**
+     * Evita instanciação.
+     */
+    private ArquivoService() {
+    }
+
+    /**
      * Monitora a pasta que recebe os arquivos em JSON que serão serializados,
      * transformados em byte comprimidos e salvos em outro diretório.
      *
      * @param caminho caminho da pasta que será monitorada
+     * @throws IOException
+     * @throws InterruptedException
      */
-    public static void monitorarPasta(String caminho)
+    public static void monitorarPasta(final String caminho)
     throws IOException, InterruptedException {
 
         WatchService watchService = FileSystems.getDefault().newWatchService();
@@ -60,6 +68,12 @@ public class ArquivoService {
 
     }
 
+    /**
+     * Chama os métodos necessários
+     * para o tratamento do arquivo.
+     * @param arquivo arquivo JSON.
+     * @throws IOException
+     */
     private static void trataArquivo(final String arquivo)
     throws IOException {
         Log.info("Arquivo " + arquivo + " sera processado.");
@@ -78,19 +92,21 @@ public class ArquivoService {
     }
 
     /**
-    * Remove sinais ou acentos de caracteres UTF-8
-    * @param entrada sequência que terá seus sinais/acentos removidos
-    */
-    private static String removeSinais(String entrada) {
+     * Remove sinais ou acentos de caracteres UTF-8.
+     * @param entrada sequência que terá seus sinais/acentos removidos
+     * @return sequência sem sinais especiais.
+     */
+    private static String removeSinais(final String entrada) {
         String sa = Normalizer.normalize(entrada, Normalizer.Form.NFD);
         return sa.replaceAll("\\p{M}", "");
     }
 
     /**
-    * Transforma o conteúdo do arquivo especificado
-    * em uma sequência de caracteres UTF-8.
-    * @param nomeArquivo nome/caminho do arquivo.
-    */
+     * Transforma o conteúdo do arquivo especificado
+     * em uma sequência de caracteres UTF-8.
+     * @param nomeArquivo nome/caminho do arquivo.
+     * @return conteúdo do arquivo como string.
+     */
     public static String getConteudoAsString(final String nomeArquivo)
     throws IOException {
 
@@ -105,11 +121,12 @@ public class ArquivoService {
     }
 
     /**
-    * Salva o arquivo como zip no diretório
-    * de saída da aplicação
-    * @param notaFiscal nota fiscal já serializada e em array de byte
-    */
-    public static void persisteAsZip(byte[] notaFiscal)
+     * Salva o arquivo como zip no diretório
+     * de saída da aplicação.
+     * @param notaFiscal nota fiscal já serializada e em array de byte
+     * @throws IOException caso haja erro com arquivo.
+     */
+    public static void persisteAsZip(final byte[] notaFiscal)
     throws IOException {
 
         String filename = SegurancaUtils
@@ -133,7 +150,7 @@ public class ArquivoService {
 
     /**
     * Obtém o caminho da pasta que está armazenado
-    * na variável de ambiente NOTAS_FISCAIS
+    * na variável de ambiente NOTAS_FISCAIS.
     */
     public static String getCaminhoPasta() {
         if (System.getenv().get(VARIAVELAMBIENTE) == null) {
@@ -154,17 +171,17 @@ public class ArquivoService {
 
     /**
      * Lista arquivos da pasta de input
-     * em um determinado diretório
+     * em um determinado diretório.
      * @param caminho caminho do diretório
      * @return lista dos arquivos
      */
-    public static File[] listaArquivosPasta(final String caminho){
+    public static File[] listaArquivosPasta(final String caminho) {
         File pasta = new File(caminho + INPUT);
         return pasta.listFiles();
     }
 
     /**
-     * Move arquivo em que ocorre algum erro
+     * Move arquivo em que ocorre algum erro.
      * durante a operação para a pasta de erros.
      * @param caminho caminho do arquivo JSON
      */
