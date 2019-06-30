@@ -5,6 +5,7 @@ script:
   - cd ../js && npm install && npm run lint && npm run coverage
   - cd ../..
   - cd aula-07/vetor/java && mvn clean checkstyle:check verify -P cobertura
+  - cd ../js && npm install && npm run lint && npm run coverage
   - cd ../../..
   - cd aula-09/integracao && mvn clean checkstyle:check
 cache:

@@ -1,5 +1,5 @@
 const sorteio = require("../src/sorteio");
 
-test("erro", () => {
-
+test("sorteio", () => {
+    expect(typeof(sorteio())).toBe("object");
 });

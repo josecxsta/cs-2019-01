@@ -23,15 +23,14 @@ function sorteio() {
     }
 
     const sorteadosEmOrdem = sorteados.sort((a, b) => b.quantidade - a.quantidade);
-    let maiores = sorteadosEmOrdem.filter(sort => sort.quantidade == sorteadosEmOrdem[0].quantidade);
-    let resultado;
-    if (maiores.length == 1) {
-        resultado = maiores[0].numero;
-    } else {
-        maiores.forEach(numero => {
-            resultado.push(numero);
-        });
-    }
+    let maiores = sorteadosEmOrdem
+        .filter(sort => sort.quantidade == sorteadosEmOrdem[0].quantidade);
+
+    let resultado = [];
+
+    maiores.forEach(numero => {
+        resultado.push(numero);
+    });
 
     return maiores;
 }
@@ -40,13 +39,12 @@ function sorteio() {
  * Calcula um numero aleatório entre um intervalo.
  * @param {number} min início do intervalo.
  * @param {number} max fim do intervalo.
- * @throws {TypeError} se argumentos não forem números.
  * @returns {number} numero aleatório.
  */
 function numeroAleatorio(min, max) {
-    if (typeof(min) != "number" || typeof(max) != "number") {
-        throw TypeError("argumentos devem ser numericos");
-    }
+    // if (typeof(min) != "number" || typeof(max) != "number") {
+    //     throw TypeError("argumentos devem ser numericos");
+    // }
 
     return Math.floor(Math.random() * (max - min)) + min;
 }
