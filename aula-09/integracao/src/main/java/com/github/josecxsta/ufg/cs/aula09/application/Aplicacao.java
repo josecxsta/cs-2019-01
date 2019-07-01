@@ -17,12 +17,16 @@ public final class Aplicacao {
 
     /**
      * Método principal da aplicação.
+     *
      * @param args não utilizado
      * @throws InterruptedException se houver interrupção
-     * @throws IOException se houver erro de entrada/saída
+     * @throws IOException          se houver erro de entrada/saída
      */
-    public static void main(final String[] args)
-    throws InterruptedException, IOException {
-        ConversaoUseCase.iniciarMonitoramento();
+    public static void main(final String[] args) {
+        try {
+            ConversaoUseCase.iniciarMonitoramento();
+        } catch (Exception e) {
+            System.exit(1);
+        }
     }
 }
