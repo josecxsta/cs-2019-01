@@ -57,4 +57,6 @@ Programa que recebe como único argumento um nome de arquivo e exibe os 4 primei
 
 Programa que recebe como argumento um nome de arquivo e determina se o arquivo é um JPEG de acordo com seu primeiro e último par de bytes.
 
-### aula-09
+### 📃 aula-09/integracao
+
+Monitora uma pasta que quando recebe um arquivo JSON referente a uma Nota Fiscal serializa os dados dessa Nota Fiscal e gera um arquivo binário, comprimido em um arquivo .dat com o nome {sha-256}.dat, onde {sha-265} se refere a uma hash do binário seguindo o algorítmo sha-256.
