@@ -25,26 +25,23 @@ public final class FromNotaFiscalToBinario {
      */
     public static byte[] converte(final NotaFiscal nota)
     throws IOException {
-        OutputStream outputStream = new
+        final OutputStream outputStream = new
         ByteArrayOutputStream();
-        DataOutputStream dataOut = new
+        final DataOutputStream dataOut = new
         DataOutputStream(outputStream);
 
         dataOut.writeInt(nota.getDataAsInt()); // 4bytes
         dataOut.writeDouble(nota.getTotal()); // 8bytes
 
-        for (ItemNotaFiscal item : nota.getItens()) {
+        for (final ItemNotaFiscal item : nota.getItens()) {
             dataOut.writeInt(item.getQuantidade()); // 4bytes
             dataOut.writeDouble(item.getPreco()); // 8bytes
             dataOut.writeInt(item.getProduto().getCodigo()); // 4bytes
             dataOut.write(item.getProduto().getDescricaoAsByteArray());
         }
 
-        final byte[] c = ((ByteArrayOutputStream) outputStream)
-            .toByteArray();
-
-        return c;
+        return ((ByteArrayOutputStream) outputStream)
+        .toByteArray();
     }
-
 
 }

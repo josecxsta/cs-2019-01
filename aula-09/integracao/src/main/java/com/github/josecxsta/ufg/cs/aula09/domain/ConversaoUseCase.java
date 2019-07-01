@@ -22,9 +22,9 @@ public final class ConversaoUseCase {
      */
     public static void iniciarMonitoramento()
     throws IOException, InterruptedException {
-        String caminho = ArquivoService.getCaminhoPasta();
-        File[] arquivos = ArquivoService.listaArquivosPasta(
-        caminho);
+        final String caminho = ArquivoService.getCaminhoPasta();
+        final File[] arquivos = ArquivoService
+        .listaArquivosPasta(caminho);
 
         if (arquivos != null) {
             for (final File arquivo : arquivos) {

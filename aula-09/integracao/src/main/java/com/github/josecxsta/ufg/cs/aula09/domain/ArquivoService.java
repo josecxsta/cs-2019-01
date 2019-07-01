@@ -66,11 +66,14 @@ public final class ArquivoService {
             .newWatchService();
         final Path path = Paths.get(caminho + INPUT);
         path.register(watchService, StandardWatchEventKinds.ENTRY_CREATE);
-        Log.info("Pasta " + caminho + INPUT + " esta sendo assistida.");
+
+        if (path != null) {
+            Log.info("Pasta " + caminho + INPUT + " esta sendo assistida.");
+        }
 
         WatchKey key;
         while ((key = watchService.take()) != null) {
-            for (WatchEvent<?> event : key.pollEvents()) {
+            for (final WatchEvent<?> event : key.pollEvents()) {
                 trataArquivo(getCaminhoPasta() + INPUT + event.context());
             }
             key.reset();
@@ -96,8 +99,10 @@ public final class ArquivoService {
             persisteAsZip(nfAsByte);
             excluiArquivo(arquivo);
         } catch (IOException e) {
-            Log.info("Erro ao processar arquivo " + arquivo);
-            moveArquivoErro(arquivo);
+            if (e != null) {
+                Log.info("Erro ao processar arquivo " + arquivo);
+                moveArquivoErro(arquivo);
+            }
         }
 
         // System.out.println(new String(nfAsByte));
@@ -123,12 +128,11 @@ public final class ArquivoService {
      */
     public static String getConteudoAsString(final String nomeArquivo)
     throws IOException {
-
         final StringBuilder conteudo = new StringBuilder("");
         final Path path = Paths.get(nomeArquivo);
         final List<String> linhas = Files
             .readAllLines(path, StandardCharsets.UTF_8);
-        for (String linha : linhas) {
+        for (final String linha : linhas) {
             conteudo.append(removeSinais(linha));
         }
 
@@ -145,7 +149,7 @@ public final class ArquivoService {
     throws IOException {
 
         final String filename = SegurancaUtils
-            .sha256(new String(notaFiscal));
+        .sha256(new String(notaFiscal, StandardCharsets.US_ASCII));
         final String zipname = getCaminhoPasta() + OUTPUT
         + filename + ".dat";
 
@@ -156,6 +160,7 @@ public final class ArquivoService {
         zipout.putNextEntry(entry);
         zipout.write(notaFiscal);
         zipout.close();
+
         Log.info("Arquivo comprimido " + zipname);
 
         // try (FileOutputStream fos = new FileOutputStream(zipname)) {
@@ -181,8 +186,10 @@ public final class ArquivoService {
     */
     public static void excluiArquivo(final String caminho) {
         final File arquivo = new File(caminho);
-        arquivo.delete();
-        Log.info("Arquivo " + caminho + " foi excluido.");
+        final boolean excluido = arquivo.delete();
+        if (excluido) {
+            Log.info("Arquivo " + caminho + " foi excluido.");
+        }
     }
 
     /**
@@ -204,9 +211,10 @@ public final class ArquivoService {
     public static void moveArquivoErro(final String caminho) {
         final File arquivo = new File(caminho);
         final String novoNome = caminho.replaceAll(INPUT, ERROR);
-        arquivo.renameTo(new File(novoNome));
-        arquivo.delete();
-        Log.info("Arquivo movido para: " + novoNome);
+        if (arquivo.renameTo(new File(novoNome))
+            && arquivo.delete()) {
+            Log.info("Arquivo movido para: " + novoNome);
+        }
     }
 
 }

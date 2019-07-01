@@ -22,7 +22,7 @@ public final class FromJsonToNotaFiscal {
      * @return nota fiscal referente ao JSON.
      */
     public static NotaFiscal converte(final String data) {
-        JsonObject jsonObject = new JsonParser().parse(data)
+        final JsonObject jsonObject = new JsonParser().parse(data)
             .getAsJsonObject();
         final Double totalNf = jsonObject.get("total")
             .getAsDouble();

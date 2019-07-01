@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 /**
@@ -23,7 +24,7 @@ public class NotaFiscal {
     /**
      * Itens da NF, que contém produto.
      */
-    private ArrayList<ItemNotaFiscal> itens = new ArrayList<>();
+    private final List<ItemNotaFiscal> itens = new ArrayList<>();
 
     /**
      * Construtor de Nota Fiscal.
@@ -75,19 +76,11 @@ public class NotaFiscal {
     }
 
     /**
-     * getter de Data.
-     * @return data
-     */
-    public final Date getData() {
-        return this.data;
-    }
-
-    /**
      * Obtém a data em inteiro.
      * @return data em inteiro (yyyymmdd)
      */
     public final int getDataAsInt() {
-        Calendar cal = Calendar.getInstance();
+        final Calendar cal = Calendar.getInstance();
         cal.setTime(this.data);
 
         final int year = cal.get(Calendar.YEAR);
@@ -103,7 +96,7 @@ public class NotaFiscal {
      * getter de itens.
      * @return itens de nf.
      */
-    public final ArrayList<ItemNotaFiscal> getItens() {
+    public final List<ItemNotaFiscal> getItens() {
         return this.itens;
     }
 
