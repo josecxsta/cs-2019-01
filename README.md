@@ -10,27 +10,27 @@
 
 ## projetos:
 
-### 📝 aula-01/java
+### 📝 [aula-01/java](https://github.com/josecxsta/cs-2019-01/tree/master/aula-01/java)
 
 [![Known Vulnerabilities](https://snyk.io/test/github/josecxsta/cs-2019-01/badge.svg?targetFile=aula-01/java/pom.xml)](https://snyk.io/test/github/josecxsta/cs-2019-01?targetFile=aula-01/java/pom.xml) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=josecxsta_cs-2019-01&metric=alert_status)](https://sonarcloud.io/dashboard?id=josecxsta_cs-2019-01)
 
 Projeto que implementa 21 algorítmos em Java, incluindo validadores de CPF e algorítmos matemáticos.
 
 
-### 📝 aula-01/js
+### 📝 [aula-01/js](https://github.com/josecxsta/cs-2019-01/tree/master/aula-01/js)
 
 [![Known Vulnerabilities](https://snyk.io/test/github/josecxsta/cs-2019-01/badge.svg?targetFile=aula-01/js/package.json)](https://snyk.io/test/github/josecxsta/cs-2019-01?targetFile=aula-01/js/package.json)
 
 Projeto que implementa 21 algorítmos em JavaScript, incluindo validadores de CPF e algorítmos matemáticos.
 
 
-### 🗄 aula-07/vetor/java
+### 🗄 [aula-07/vetor/java](https://github.com/josecxsta/cs-2019-01/tree/master/aula-07/vetor/java)
 
 [![Known Vulnerabilities](https://snyk.io/test/github/josecxsta/cs-2019-01/badge.svg?targetFile=aula-07/vetor/java/pom.xml)](https://snyk.io/test/github/josecxsta/cs-2019-01?targetFile=aula-07/vetor/java/pom.xml)
 
 Implementa em Java métodos para busca de menor elemento em um vetor, letras mais frequentes em uma sequência, palavra mais frequente em uma sequência, intersecção entre vetores e de um sorteio.
 
-### 🗄 aula-07/vetor/js
+### 🗄 [aula-07/vetor/js](https://github.com/josecxsta/cs-2019-01/tree/master/aula-07/vetor/js)
 
 [![Known Vulnerabilities](https://snyk.io/test/github/josecxsta/cs-2019-01/badge.svg?targetFile=aula-07/vetor/js/package.json)](https://snyk.io/test/github/josecxsta/cs-2019-01?targetFile=aula-07/vetor/js/package.json)
 
