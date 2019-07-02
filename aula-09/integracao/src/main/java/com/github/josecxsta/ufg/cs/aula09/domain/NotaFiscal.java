@@ -1,13 +1,7 @@
 package com.github.josecxsta.ufg.cs.aula09.domain;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 
 /**
  * Classe que implementa o modelo de NF.
@@ -16,7 +10,7 @@ public class NotaFiscal {
     /**
      * Data da NF.
      */
-    private Date data;
+    private String data;
     /**
      * Valor total da NF.
      */
@@ -57,14 +51,7 @@ public class NotaFiscal {
      * @param dataParam data em "dd/MM/yyyy"
      */
     public final void setData(final String dataParam) {
-        final DateFormat format = new SimpleDateFormat(
-            "dd/MM/yyyy", Locale.US);
-        try {
-            final Date date = format.parse(dataParam);
-            this.data = date;
-        } catch (ParseException e) {
-            Log.info("Data informada é inválida");
-        }
+        this.data = dataParam;
     }
 
     /**
@@ -80,16 +67,9 @@ public class NotaFiscal {
      * @return data em inteiro (yyyymmdd)
      */
     public final int getDataAsInt() {
-        final Calendar cal = Calendar.getInstance();
-        cal.setTime(this.data);
-
-        final int year = cal.get(Calendar.YEAR);
-        final int month = cal.get(Calendar.MONTH) + 1;
-        final int day = cal.get(Calendar.DAY_OF_MONTH);
-        final String dataText = String.valueOf(year)
-        + String.valueOf(month) + String.valueOf(day);
-
-        return Integer.valueOf(dataText);
+        final String[] seqData = this.data.split("/");
+        return Integer.parseInt(seqData[2]
+        + seqData[1] + seqData[0]);
     }
 
     /**

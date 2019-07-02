@@ -31,12 +31,6 @@ public class ItemNotaFiscal {
     }
 
     /**
-     * Construtor vazio.
-     */
-    public ItemNotaFiscal() {
-    }
-
-    /**
      * setter de quantidade.
      * @param quantidadeParam quantidade
      */
