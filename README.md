@@ -60,3 +60,7 @@ Programa que recebe como argumento um nome de arquivo e determina se o arquivo �
 ### 📃 [aula-09/integracao](https://github.com/josecxsta/cs-2019-01/tree/master/aula-09/integracao)
 
 Monitora uma pasta que quando recebe um arquivo JSON referente a uma Nota Fiscal serializa os dados dessa Nota Fiscal e gera um arquivo binário, comprimido em um arquivo .dat com o nome {sha-256}.dat, onde {sha-265} se refere a uma hash do binário seguindo o algorítmo sha-256.
+
+### 📅 [aula-11](https://github.com/josecxsta/cs-2019-01/tree/master/aula-11)
+
+API em Java que serve como serviço para uma interface gráfica baseada na web para calcular a diferença em dias entre duas datas.
