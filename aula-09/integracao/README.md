@@ -10,5 +10,5 @@ O programa irá monitorar a pasta 'json' contida no diretório definido pela var
 
 ### executável
 
-O comando `mvn package -P integracao` gera um .jar executável na pasta /target.
+O comando `mvn package -P integracao` gera um .jar executável na pasta /target. O comando `java -jar target/integracao.jar` executa o .jar gerado.
 O comando `mvn exec:java` executa o método main da classe indicada na configuração do plugin pertinente no arquivo pom.xml. Depende de `mvn compile`.
