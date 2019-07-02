@@ -48,7 +48,7 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.mainClass>
-            com.github.josecxsta.ufg.cs.aula11.Application
+            com.github.josecxsta.ufg.cs.aula11.application.api.Application
         </project.mainClass>
     </properties>
 
@@ -493,7 +493,7 @@
                         <configuration>
                             <targetClasses>
                                 <param>
-                                    com.github.josecxsta.ufg.cs.aula11.application.Application
+                                    com.github.josecxsta.ufg.cs.aula11.application.api.Application
                                 </param>
                             </targetClasses>
                             <targetTests>
