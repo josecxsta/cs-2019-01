@@ -8,6 +8,7 @@ package com.github.josecxsta.ufg.cs.aula11.domain;
 
 import org.junit.jupiter.api.Test;
 
+import java.text.ParseException;
 import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -16,33 +17,28 @@ public class CalendarioTest {
 
     @Test
     public void diaMenorQueUmInvalido() {
-        assertThrows(IllegalArgumentException.class,
-                () -> Calendario.diaDaSemana(0, 8, 2016));
+        assertThrows(IllegalArgumentException.class, () -> Calendario.diaDaSemana(0, 8, 2016));
     }
 
     @Test
     public void diaMaiorQue31Invalido() {
-        assertThrows(IllegalArgumentException.class,
-                () -> Calendario.diaDaSemana(32, 8, 2016));
+        assertThrows(IllegalArgumentException.class, () -> Calendario.diaDaSemana(32, 8, 2016));
     }
 
     @Test
 
     public void mesMenorQueUmInvalido() {
-        assertThrows(IllegalArgumentException.class,
-                () -> Calendario.diaDaSemana(1, 0, 2016));
+        assertThrows(IllegalArgumentException.class, () -> Calendario.diaDaSemana(1, 0, 2016));
     }
 
     @Test
     public void mesMaiorQue12Invalido() {
-        assertThrows(IllegalArgumentException.class,
-                () -> Calendario.diaDaSemana(1, 13, 2016));
+        assertThrows(IllegalArgumentException.class, () -> Calendario.diaDaSemana(1, 13, 2016));
     }
 
     @Test
     public void anoMenorQue1753Invalido() {
-        assertThrows(IllegalArgumentException.class,
-                () -> Calendario.diaDaSemana(31, 12, 1752));
+        assertThrows(IllegalArgumentException.class, () -> Calendario.diaDaSemana(31, 12, 1752));
     }
 
     @Test
@@ -95,6 +91,11 @@ public class CalendarioTest {
         int ajustado = (diaDaSemanaJava + 6) % 7;
 
         assertTrue(hojeStr.contains(Calendario.semana()[ajustado]));
+    }
+
+    @Test
+    public void diferencaEntreDatas() throws ParseException {
+        assertEquals(2, Calendario.diferencaEntreDatas("02-10-2018","04-10-2018"));
     }
 
     @Test
