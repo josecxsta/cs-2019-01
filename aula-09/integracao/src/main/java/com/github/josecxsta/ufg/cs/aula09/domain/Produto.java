@@ -77,8 +77,10 @@ public class Produto {
             final int bytesRestantes = MAX_DESC - this.descricao.length();
             final String space = new String(new char[bytesRestantes])
             .replace('\0', ' ');
-            final String spaceDesc = this.descricao + space;
-            descricaoByte = spaceDesc
+            final StringBuilder spaceDesc = new
+            StringBuilder(this.descricao);
+            spaceDesc.append(space);
+            descricaoByte = spaceDesc.toString()
             .getBytes(StandardCharsets.US_ASCII);
         }
         return descricaoByte;
@@ -90,11 +92,15 @@ public class Produto {
      * @return 80 caracteres de descrição
      */
     public final String get80CaracteresDescricao() {
-        if (this.descricao.length() > MAX_DESC) {
-            return this.descricao.substring(0, MAX_DESC - 1);
+        String desc;
+        final boolean maiorQueMax = this.descricao.length() > MAX_DESC;
+        if (maiorQueMax) {
+            desc = this.descricao
+            .substring(0, MAX_DESC - 1);
         } else {
-            return this.descricao;
+            desc = this.descricao;
         }
+        return desc;
     }
 
 }

@@ -78,4 +78,20 @@ public class ItemNotaFiscal {
         return this.quantidade;
     }
 
+    /**
+     * Previne corrente de métodos.
+     * @return descrição como array de bytes.
+     */
+    public final byte[] getDescricaoAsByteArray() {
+        return this.produto.getDescricaoAsByteArray();
+    }
+
+    /**
+     * Previne corrente de métodos.
+     * @return código do produto.
+     */
+    public final int getCodigo() {
+        return this.produto.getCodigo();
+    }
+
 }

@@ -36,8 +36,8 @@ public final class FromNotaFiscalToBinario {
         for (final ItemNotaFiscal item : nota.getItens()) {
             dataOut.writeInt(item.getQuantidade()); // 4bytes
             dataOut.writeDouble(item.getPreco()); // 8bytes
-            dataOut.writeInt(item.getProduto().getCodigo()); // 4bytes
-            dataOut.write(item.getProduto().getDescricaoAsByteArray());
+            dataOut.writeInt(item.getCodigo()); // 4bytes
+            dataOut.write(item.getDescricaoAsByteArray());
         }
 
         return ((ByteArrayOutputStream) outputStream)
