@@ -64,3 +64,8 @@ Monitora uma pasta que quando recebe um arquivo JSON referente a uma Nota Fiscal
 ### 📅 [aula-11](https://github.com/josecxsta/cs-2019-01/tree/master/aula-11)
 
 API em Java que serve como serviço para uma interface gráfica baseada na web para calcular a diferença em dias entre duas datas.
+
+### 🔤 [aula-12](https://github.com/josecxsta/cs-2019-01/tree/master/aula-12)
+
+API em Java que serve como serviço para uma interface gráfica baseada na web para retornar determinando número em extenso.
+Exemplo: dado o número 50, a sequência 'cinquenta' é retornada.
