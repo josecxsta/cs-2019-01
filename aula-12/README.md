@@ -1,19 +1,14 @@
-﻿[![Build Status](https://travis-ci.com/kyriosdata/exemplo.svg)](https://travis-ci.com/kyriosdata/exemplo)
-[![SonarCloud Status](https://sonarcloud.io/api/project_badges/measure?project=com.github.kyriosdata%3Aexemplo&metric=alert_status)](https://sonarcloud.io/dashboard?id=com.github.kyriosdata%3Aexemplo)
-[![Known Vulnerabilities](https://snyk.io/test/github/kyriosdata/exemplo/badge.svg?targetFile=pom.xml)](https://snyk.io/test/github/kyriosdata/exemplo?targetFile=pom.xml)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.kyriosdata/exemplo/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.kyriosdata/exemplo)
-
-# Escopo e objetivo
+﻿# Escopo e objetivo
 Projeto de referência para software em Java contendo uma biblioteca com um único
-método que identifica o dia da semana para uma data fornecida; uma aplicação
+método que identifica um número e o retorna por extenso; uma aplicação
 e uma RESTFul API ambas para acesso à funcionalidade.
 
 > _Objetivo: ilustrar uma organização de código em Java usando
 "boas práticas" para inspirar projetos reais_.
 
 ## Iniciando...
-- `git clone https://github.com/kyriosdata/exemplo`
-- `cd exemplo`
+- `git clone https://github.com/josecxsta/cs-2019-01/`
+- `cd aula-12`
 
 Agora você poderá executar os vários comandos abaixo.
 
@@ -58,17 +53,17 @@ gera _exemplo-dir.jar_, executável, mas dependente do diretório _jars_,
  comando `java -jar target/exemplo-unico.jar`.
 
  - `mvn package -P api`<br>
- gera jar executável juntamente com todas as dependências em um único arquivo, 
+ gera jar executável juntamente com todas as dependências em um único arquivo,
  _target/api.jar_. Este arquivo jar pode ser transferido para outro diretório
-  ou máquina e ser executado pelo comando `java -jar target/api.jar`. Para 
+  ou máquina e ser executado pelo comando `java -jar target/api.jar`. Para
   verificar:
-   - Abra o endereço _http://localhost:8080/ds_ no seu navegador, ou forneça 
+   - Abra o endereço _http://localhost:8080/ds_ no seu navegador, ou forneça
    a seguinte URL para um dia específico
  _http://localhost:8080/ds?data=01-01-2015_.
-   - Via linha de comandos (curl), `curl http://localhost:8080/ds` ou `curl 
+   - Via linha de comandos (curl), `curl http://localhost:8080/ds` ou `curl
  http://localhost:8080/ds?data=01-01-200`.
    - Página HTML (há uma interface gráfica) no diretório **gui**, basta abrir
-     o arquivo _index.html_. 
+     o arquivo _index.html_.
 
 
 ## Executando a aplicação e a RESTFul API
@@ -100,10 +95,10 @@ o JDK 9.
 
 ## Análise estática
 Trata-se da análise do código sem que seja executado. Esta análise produz
-uma "noção de quão bom" está o código sob alguns aspecto e, em consequência, 
-permite orientar eventuais ações de melhoria. Fique atento, "sair 
-bem" na análise estática não significa que "agrada usuários". A análise 
-estática observa o código. 
+uma "noção de quão bom" está o código sob alguns aspecto e, em consequência,
+permite orientar eventuais ações de melhoria. Fique atento, "sair
+bem" na análise estática não significa que "agrada usuários". A análise
+estática observa o código.
 
 Todas estas análises devem ser realizadas em todos os projetos? Não!
 Aquelas relevantes para um dado projeto deverão ser
