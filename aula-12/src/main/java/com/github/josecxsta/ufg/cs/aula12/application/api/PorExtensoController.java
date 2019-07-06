@@ -26,6 +26,7 @@ public class NumeroController {
     @RequestParam(value = "numero", defaultValue = "não fornecida")
     String numero) {
         int num = Integer.parseInt(numero);
-        return Numero.porExtenso(num);
+        // return Numero.porExtenso(num);
+        return "tres";
     }
 }
