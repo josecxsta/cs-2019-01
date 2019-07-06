@@ -13,20 +13,20 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class NumeroController {
+public class PorExtensoController {
 
     /**
-     *
-     * @param numero
-     * @return
+     * Retorna o número por extenso de determinado
+     * número.
+     * @param numero numero
+     * @return numero por extenso
      */
     @CrossOrigin
     @RequestMapping("ds")
-    public String porExtenso(
-    @RequestParam(value = "numero", defaultValue = "não fornecida")
-    String numero) {
-        int num = Integer.parseInt(numero);
-        // return Numero.porExtenso(num);
-        return "tres";
+    public String numeroPorExtenso(
+    @RequestParam(value = "num", defaultValue = "não fornecida")
+    String numParam) {
+        final int num = Integer.parseInt(numParam);
+        return Numero.porExtenso(num);
     }
 }
