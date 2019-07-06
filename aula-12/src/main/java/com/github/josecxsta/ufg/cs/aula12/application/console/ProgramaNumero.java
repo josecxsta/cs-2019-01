@@ -11,7 +11,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * Programa que exibe o dia da semana para o dia em que é executado.
+ * Programa que exibe o número em extenso
+ * para determinado número.
  *
  */
 public final class ProgramaNumero {
@@ -27,14 +28,16 @@ public final class ProgramaNumero {
     }
 
     /**
-     * Ponto de entrada da aplicação. Apenas para ilustra chamada de método.
+     * Ponto de entrada da aplicação. Apenas para ilustrar
+     * chamada de método.
      *
      * @param args Ignorados.
      */
     public static void main(final String[] args) {
 
         logger.info("iniciado");
-        Numero.porExtenso(2);
+        System.out.println(Numero
+                .porExtenso(2));
 
     }
 

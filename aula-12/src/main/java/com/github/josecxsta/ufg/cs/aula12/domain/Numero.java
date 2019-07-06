@@ -5,7 +5,7 @@
 */
 
 package com.github.josecxsta.ufg.cs.aula12.domain;
-
+import java.math.BigDecimal;
 /**
  * Implementação da conversão do número
  * pelo seu correspondente em extenso.
@@ -20,12 +20,14 @@ public final class Numero {
     }
 
     /**
-     *
-     * @param numero
-     * @return
+     * Retorna o número por extenso.
+     * @param numero número
+     * @return número por extenso
      */
     public static final String porExtenso(int numero) {
-        String extenso = "";
+        CurrencyWriter cw = CurrencyWriter.getInstance();
+        String extenso = cw.write(new BigDecimal(numero));
         return extenso;
     }
+
 }

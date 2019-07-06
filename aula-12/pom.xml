@@ -12,8 +12,9 @@
     <name>${project.groupId}:${project.artifactId}</name>
 
     <description>
-        Projeto que disponibiliza a diferença entre duas datas em uma interface
-        gráfica baseada na web.
+        API em Java que serve como serviço para uma interface gráfica baseada na web
+        para retornar determinando número em extenso.
+        Exemplo: dado o número 50, a sequência 'cinquenta' é retornada.
     </description>
 
     <url>https://github.com/josecxsta/cs-2019-01</url>
@@ -48,7 +49,7 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.mainClass>
-            com.github.josecxsta.ufg.cs.aula11.application.api.Application
+            com.github.josecxsta.ufg.cs.aula12.application.api.Application
         </project.mainClass>
     </properties>
 
@@ -493,7 +494,7 @@
                         <configuration>
                             <targetClasses>
                                 <param>
-                                    com.github.josecxsta.ufg.cs.aula11.application.api.Application
+                                    com.github.josecxsta.ufg.cs.aula12.application.api.Application
                                 </param>
                             </targetClasses>
                             <targetTests>

@@ -6,6 +6,7 @@
 
 package com.github.josecxsta.ufg.cs.aula12.application.api;
 
+import com.github.josecxsta.ufg.cs.aula12.domain.Numero;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -13,6 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Application {
 
     public static void main(String[] args) {
+        Numero.porExtenso(350);
         SpringApplication.run(Application.class, args);
     }
 }
