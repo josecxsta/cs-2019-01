@@ -59,6 +59,8 @@ Programa que recebe como argumento um nome de arquivo e determina se o arquivo �
 
 ### 📃 [aula-09/integracao](https://github.com/josecxsta/cs-2019-01/tree/master/aula-09/integracao)
 
+[![Known Vulnerabilities](https://snyk.io/test/github/josecxsta/cs-2019-01/badge.svg?targetFile=aula-09/integracao/pom.xml)](https://snyk.io/test/github/josecxsta/cs-2019-01?targetFile=aula-09/integracao/pom.xml)
+
 Monitora uma pasta que quando recebe um arquivo JSON referente a uma Nota Fiscal serializa os dados dessa Nota Fiscal e gera um arquivo binário, comprimido em um arquivo .dat com o nome {sha-256}.dat, onde {sha-265} se refere a uma hash do binário seguindo o algorítmo sha-256.
 
 ### 📅 [aula-11](https://github.com/josecxsta/cs-2019-01/tree/master/aula-11)
