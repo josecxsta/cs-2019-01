@@ -230,23 +230,3 @@ exibe POM de fato empregado
 exibe detalhes da fase _clean_
 
 
-## Integração contínua
-Notou os emblemas (_badges_) no início da página? Todo _commit_ na presente
-página automaticamente irá realizar uma série de operações, como compilação,
-execução dos testes de unidade e várias análises estáticas. O resultado
-geral é imediatamente acessível por meio dos emblemas (clique neles),
-onde detalhes são disponibilizados nas páginas correspondentes.
-Observe que isso se transforma em um significativo **instrumento
-de visibilidade do projeto**.
-
-Para projetos _open source_ os serviços oferecidos são gratuitos. Seguem aqui os
-merecidos agradecimentos a:
-- https://travis-ci.com
-- https://sonarcloud.io
-- https://snyk.io
-
-A lista acima não tem a pretensão de ser exclusiva. Abaixo seguem outros serviços:
-- https://www.codacy.com/
-- https://codescene.io/
-- https://codecov.io/
-- http://circleci.com/

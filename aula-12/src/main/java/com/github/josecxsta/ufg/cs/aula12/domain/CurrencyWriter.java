@@ -10,9 +10,9 @@ This file is part of PorExtenso.
     GNU Lesser General Public License for more details.
     You should have received a copy of the GNU Lesser General Public License
     along with PorExtenso.  If not, see <http://www.gnu.org/licenses/>.
-    
-    
-Copyright 2008, Marcelo Criscuolo.    
+
+
+Copyright 2008, Marcelo Criscuolo.
 */
 
 package com.github.josecxsta.ufg.cs.aula12.domain;
@@ -203,7 +203,8 @@ public class CurrencyWriter {
     }
 
     private Stack<Integer> decompose(BigDecimal value) {
-        BigInteger intermediate = value.multiply(new BigDecimal(100)).toBigInteger();
+        BigInteger intermediate = value.multiply(new BigDecimal(100))
+            .toBigInteger();
         Stack<Integer> decomposed = new Stack<Integer>();
 
         BigInteger[] result = intermediate.divideAndRemainder(HUNDRED);

@@ -6,15 +6,26 @@
 
 package com.github.josecxsta.ufg.cs.aula12.application.api;
 
-import com.github.josecxsta.ufg.cs.aula12.domain.Numero;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * Implementa o método main.
+ */
 @SpringBootApplication
 public class Application {
 
-    public static void main(String[] args) {
-        Numero.porExtenso(350);
+    /**
+     * Evita a instanciação.
+     */
+    private Application() {
+    }
+
+    /**
+     * Método main da aplicação.
+     * @param args utilizado na execução.
+     */
+    public static void main(final String[] args) {
         SpringApplication.run(Application.class, args);
     }
 }
