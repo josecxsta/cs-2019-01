@@ -12,20 +12,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * Classe controller do Spring.
+ */
 @RestController
 public class PorExtensoController {
 
     /**
      * Retorna o número por extenso de determinado
      * número.
-     * @param numero numero
+     *
+     * @param numParam numero
      * @return numero por extenso
      */
     @CrossOrigin
     @RequestMapping("ds")
-    public String numeroPorExtenso(
+    public final String numeroPorExtenso(
     @RequestParam(value = "num", defaultValue = "não fornecida")
-    String numParam) {
+    final String numParam) {
         final int num = Integer.parseInt(numParam);
         return Numero.porExtenso(num);
     }
