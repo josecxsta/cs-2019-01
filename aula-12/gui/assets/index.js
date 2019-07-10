@@ -1,8 +1,13 @@
-// Path para a requisição (URL)
+/**
+ * Caminho para requisições a API.
+ */
 const PATH = "http://localhost:8080/ds?num=";
 
+/**
+ * Faz a requisição e atualiza o número na página.
+ */
 function atualizaNumeroPorExtenso() {
-    var xhttp = new XMLHttpRequest();
+    let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             let dds = extraiResposta(xhttp.responseText);
@@ -17,8 +22,10 @@ function atualizaNumeroPorExtenso() {
     xhttp.send();
 }
 
-// Funções para integração (satisfazer contrato do servidor)
-
+/**
+ * Pega resposta do servidor.
+ * @param {number} resposta resposta resposta do servidor
+ */
 function extraiResposta(resposta) {
     return resposta;
 }
