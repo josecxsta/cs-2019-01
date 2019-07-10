@@ -65,6 +65,11 @@ Monitora uma pasta que quando recebe um arquivo JSON referente a uma Nota Fiscal
 
 ### 📅 [aula-10](https://github.com/josecxsta/cs-2019-01/tree/master/aula-10)
 
+[![Known Vulnerabilities](https://snyk.io/test/github/josecxsta/cs-2019-01/badge.svg?targetFile=aula-10/pom.xml)](https://snyk.io/test/github/josecxsta/cs-2019-01?targetFile=aula-10/pom.xml)
+
+Identifica o dia da semana de uma determinada data a partir de uma informação sobre o dia da semana de outra data e de um ano bissexto de referência. Ou seja, dado que 09/07/2019 foi um dia de Domingo e que 2019 seja um ano bissexto (dados não reais), é possível calcular que dia da semana seria no dia 28/03/1986, por exemplo, caso esses dados fossem reais.
+
+
 ### 📅 [aula-11](https://github.com/josecxsta/cs-2019-01/tree/master/aula-11)
 
 [![Known Vulnerabilities](https://snyk.io/test/github/josecxsta/cs-2019-01/badge.svg?targetFile=aula-11/pom.xml)](https://snyk.io/test/github/josecxsta/cs-2019-01?targetFile=aula-11/pom.xml)
